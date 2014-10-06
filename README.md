@@ -11,12 +11,13 @@ https://github.com/Etiene/BMONS/blob/master/LICENSE
 
 # Software Part
 
-The software part of this project is based on a web application framework to record, analyse ans display all the beehive's parameters.  
+The software part of this project is based on a web application framework to record, analyse and display all the beehive's parameters.  
 
 
 # Hardware Part
 
 The hardware part is based on :
+
 1. open source electronics,
 2. low-cost sensors,
 3. a communication module. 
