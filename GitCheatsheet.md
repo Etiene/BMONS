@@ -59,7 +59,7 @@ Fusionne une branche avec la branche master
  
 Il peut y avoir des conflits si plusieurs modifications d'un même fichier ne sont pas compatibles dans ce cas utilisez un outils comme mergetool
  
-Congiguration
+Configuration
 * git config --global merge.tool meld
  
   git config --global mergetool.meld.path c:/... 
