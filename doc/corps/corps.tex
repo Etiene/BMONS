@@ -1,0 +1,311 @@
+\section{Introduction}
+
+La structure de ce document et certaines parties sont inspirées de
+\autocite{guide}.
+
+L'objectif de ce guide est de donner un cadre à l'écriture de rapports 
+bibliographiques dans le cadre de l'\gls{uv}1.4
+à l'\gls{enstab}.
+
+La section \ref{sec:gen} présente les généralités sur la nature d'un rapport
+de projet. La section \ref{sec:struct} décrit la structure attendue d'un rapport de
+projet.
+Enfin, la section
+\ref{sec:outils} offre un aperçu des outils contribuant à l'écriture d'un rapport.
+
+
+\section{Généralités}
+\label{sec:gen}
+
+En rédigeant un rapport, vous laissez une trace de votre travail, qui restera
+disponible sur le long terme. Il faudra donc veiller à la qualité du fond
+comme de la forme.
+
+Afin d'être largement compris, le rapport doit privilégier une
+écriture simple (mais non simpliste) faite de phrases courtes,
+employant un vocabulaire explicite. Tous les acronymes doivent être explicités
+et tous les termes techniques expliqués.
+
+L'orthographe contribue à l'image que vous laissez de vous-même. Si les
+correcteurs orthographiques sont d'un usage indispensable, ils ne remplacent
+jamais une relecture soigneuse.
+De plus, les usages typographiques de la langue employée doivent être respectés.
+
+
+\section{Structure du rapport}
+\label{sec:struct}
+
+Il n'y a pas de forme unique et universelle pour un rapport.
+Néanmoins, la structure devra toujours comporter des éléments qui en
+permettent l'utilisation efficace.\index{Structure (rapport)}
+Dans tous les cas le rapport devra être paginé et le texte justifié.
+
+ Le rapport devra \emph{obligatoirement} contenir~:
+ \begin{itemize}
+ \item un résumé~; 
+ \item une page titre~;
+ \item une table des matières~;
+ \item une introduction~;
+ \item un développement~; 
+ \item une conclusion~;
+\item une bibliographie.
+ \end{itemize}
+
+\emph{Dans la plupart des cas}, on trouvera  également~:
+\begin{itemize}
+\item une liste de mots-clés~;  
+\item une ou plusieurs annexes.
+\end{itemize}
+
+\emph{Dans certains cas}, il contiendra enfin~:
+\begin{itemize}
+\item un index~;
+\item un glossaire.
+\end{itemize}
+
+Voyons les caractéristiques de ces différents éléments.
+
+\subsection{Page de titre}
+
+La page de titre doit permettre d'identifier le document. Pour cela, elle doit
+comprendre~: \index{Page de garde}
+\begin{itemize}
+\item un titre~;
+\item le type du document (par exemple \og{}Rapport de projet\fg{})~;
+\item le nom du ou des auteurs du document~;
+\item la date de parution (ou de remise du rapport) et éventuellement le
+  numéro de version~;
+\item le nom et le logo de l'organisme dont est issu l'auteur (par exemple
+  \textsc{Ensta} Bretagne).
+\end{itemize}
+
+\subsection{Résumé}
+
+Le résumé fait la synthèse du projet en une page au maximum. Il
+devra contenir une brève description du problème et des objectifs du projet,
+mentionner les résultats les plus
+importants et dresser une conclusion. Dans le résumé il faut surtout mettre en
+évidence les résultats car ce sont eux qui rendent mieux compte de votre
+travail et donnent l'envie de lire votre rapport. 
+
+Le résumé est souvent accompagné de quelques mots-clés et il est, dans
+certains cas, traduit en une ou plusieurs langues.\index{Resume@Résumé}
+
+\subsection{Table des matières}
+
+Encore baptisée \og{} sommaire \fg{}, la table des matières permet de
+synthétiser, en début de document, les différents chapitres qui y sont
+traités. Elle doit faire
+référence à la pagination du document pour permettre au lecteur
+d'accéder directement à toute partie du document.\index{Table des
+  matieres@Table des matières}\index{Sommaire} 
+
+La table des matières se génère automatiquement ; ne la créez pas
+manuellement, car vous pourriez oublier d'y apporter des
+modifications.
+
+\subsection{Introduction}
+
+L'introduction doit permettre de situer le contexte de votre travail. En
+particulier, elle doit~:\index{Introduction}
+\begin{itemize}
+\item présenter le contexte de l'étude~;
+\item définir le problème que le projet cherche à résoudre~; 
+\item définir le cadre du travail ; par exemple quelles ont été les
+  contraintes, la méthodologie choisie~;
+\item annoncer le plan, qui n'est pas un ennoncé plat des différentes parties,
+  mais qui vise à définir l'orientation de la recherche, les hypothèses, le
+  cheminement choisi pour tenter de répondre à la question.
+\end{itemize}
+
+\subsection{Développement}
+
+Le développement est la partie substantielle de votre document. Il doit être
+structuré et découpé en plusieurs parties. Les enchaînements entre les parties
+doivent être fluides (par exemple grâce à une courte introduction en début de
+partie et un court bilan à la fin). Il peut s'appuyer sur des compléments
+d'information (notes de bas de page, références, annexes, glossaires ou listes
+d'acronymes). N'hésitez pas à illustrer vos propos par des figures, tables
+ou équations.
+
+\subsubsection{Notes de bas de page}
+
+Les notes de bas de page servent à apporter un complément d'information
+non essentiel. Le texte doit pouvoir être compris sans y faire appel.
+Elles sont très utiles lorsque l'on veut que le document puisse avoir
+plusieurs niveaux de lecture.\index{Notes de bas de page}
+
+
+\subsubsection{Tables}
+
+De la même manière que les figures, les tables servent à illustrer certains
+éléments du rapport. Elles doivent posséder un titre et être
+référencées dans le corps du document. Il faut prendre garde à leur
+lisibilité. Un exemple \emph{à ne pas suivre} est présenté table
+\ref{tab:tab1} (table extraite du manuel de \LaTeX). Dans cet exemple, les
+lignes (horizontales et verticales) sont 
+trop nombreuses et nuisent à la lisibilité, les alignements sont erratiques,
+les unités ne sont pas correctement indiquées et les nombres sont représentés
+avec des précisions différentes. Enfin, les titres de chaque colonne ne sont
+pas apparents.\index{Tables}
+
+\begin{table}[htbp]
+  \centering
+\begin{tabular}{||l|lr||} 
+\hline
+\hline
+~~~~~gnats     & gram      & 013.65\euro \\ \cline{2-3}
+          & each      & .01 \\ \hline
+gnu       & stuffed   & 92.5 \\ \cline{1-1} \cline{3-3}
+~~~emu       &           & 33.33 \\ \hline
+armadillo & frozen    & 8.9887 \\ \hline
+\end{tabular}
+  \caption{Une table très mal présentée}
+  \label{tab:tab1}
+\end{table}
+
+La table \ref{tab:tab2} corrige tous les problèmes de la table
+\ref{tab:tab1}. Cette fois, la table est lisible et elle peut apporter un
+complément d'information au texte.
+
+\begin{table}[htbp]
+  \centering
+\begin{tabular}{@{}llr@{}} 
+  \toprule
+  \multicolumn{2}{c}{\textbf{Item}} \\ 
+  \cmidrule(r){1-2}
+  \textbf{Animal} & \textbf{Description} & \textbf{Price (\euro)}\\ 
+  \midrule
+  Gnat  & per gram  & 13.65 \\
+           & each      & 0.01 \\
+      Gnu   & stuffed   & 92.50 \\
+      Emu   & stuffed   & 33.33 \\
+      Armadillo & frozen & 8.99 \\ 
+      \bottomrule
+\end{tabular}
+  \caption{Une table correctement présentée}
+  \label{tab:tab2}
+\end{table}
+
+
+\subsection{Conclusion}
+
+La conclusion est une sythèse de votre travail et doit en faire un bilan
+(critique) vis-à-vis des 
+objectifs initiaux. 
+\index{Conclusion}
+
+\emph{Introduction et conclusion sont des parties essentielles d'un
+  document. En les lisant, le lecteur doit pouvoir se faire une idée
+  précise du contenu développé dans le corps du texte. Il est
+  important d'y apporter le plus grand soin.}
+
+
+\subsection{Annexes}
+
+Les annexes regroupent les informations qui ne sont pas essentielles à la
+compréhension générale du rapport et dont la présence dans le texte principal
+nuirait à la fluidité de la lecture. Les annexes peuvent par exemple
+contenir~:\index{Annexes}
+\begin{itemize}
+\item des démonstrations ou des calculs détaillés~;
+\item des données techniques (de matériel par exemple)~;
+\item des données brutes\footnote{uniquement si leur lecture apporte un
+    complément d'information utile au lecteur.}~;
+\item des glossaires et index.
+\end{itemize}
+
+
+\subsection{Index et glossaire}
+
+L'index et le glossaire sont placés dans les dernières pages du
+document. L'index permet de retrouver les termes clés du document par une
+recherche alphabétique~; il accélère la recherche d'information dans les
+rapports volumineux.\index{Index}
+
+Le glossaire permet de regrouper la description de termes techniques et de
+sigles à la fin du document. Il permet une meilleure compréhension des
+concepts dont l'explication n'est pas reprise en détail dans le texte.\index{Glossaire}
+
+
+\subsection{Règles de typographie}
+
+Les usages de typographie diffèrent d'une langue à l'autre. Si le rapport est
+écrit en anglais, vous devez alors respecter les usages
+anglo--américains~; consultez par exemple \autocite{typoUS} pour des
+informations détaillées. \index{Typographie}
+
+De même, dans tous les cas où vous écrivez votre rapport en
+français, il est important de respecter les règles de typographie française.
+Dans ce cas,
+la lecture de \autocite{andreTypo} vous donnera un très bon aperçu des règles
+à respecter et des écueils à éviter.
+
+\subsection{Règles de présentation de résultats numériques}
+
+Sauf dans le cas de valeurs dimensionnelles, les unités des résultats
+numériques doivent toujours être précisées. 
+
+Il est également important d'être conscient du sens implicite donné lors de la
+présentation de valeurs numériques. En particulier, le nombre de chiffres
+significatifs présenté traduit la fidélité de la mesure. Les chiffres
+significatifs excessifs doivent être supprimés par arrondi.
+
+\section{Outils d'aide à la production de documents}
+\label{sec:outils}
+
+Lors de votre scolarité à l'\gls{enstab}, vous avez généralement le
+choix des outils utilisés pour la production de documents. 
+
+\subsection{Traitement de texte et formateur de texte}
+
+Un traitement de texte est un outil de mise en page de documents. Il est
+généralement de type \gls{wysiwyg}\footnote{What You See Is What You Get}
+et permet donc de voir l'aspect du document se modifier en continu. Dans cette
+catégorie, les outils les plus connus sont \emph{Microsoft Word} et
+\emph{LibreOffice}. Le formatage du texte est
+obtenu par application de {\em styles}. Malheureusement, de nombreux
+utilisateurs, insuffisamment formés, n'utilisent pas ou utilisent mal
+cette fonctionnalité.
+
+Le formateur de texte le plus connu est \LaTeX. Il procède en séparant le fond
+et la forme du document et possède des bibliothèques de style qui permettent
+de respecter les règles typographiques. Cet outil est généralement
+non-\gls{wysiwyg} et requiert un certain investissement avant d'être
+utilisé efficacement.
+
+
+\subsection{Outils collaboratifs}
+
+Rédiger un rapport à plusieurs est toujours une opération
+délicate. L'utilisation d'outils collaboratifs permet de simplifier cette
+phase, de manipuler plusieurs versions du document et de gérer les conflits.
+Plusieurs solutions sont disponibles~:
+\begin{itemize}
+\item utiliser le mode \og{}Modifications\fg{} de \emph{Microsoft Word} ou de
+  \emph{LibreOffice}~; l'échange de fichiers et la gestion de version doivent
+  alors être assurés manuellement~;
+\item utiliser un gestionnaire de version\footnote{Par exemple du \textsc{cvs}
+  ou du \emph{subversion} hébergé sur le serveur
+  \url{https://gforge.ensta-bretagne.fr/gf} ou une gestion décentralisée avec
+  \url{https://github.com}.} pour héberger le code source
+\LaTeX\footnote{Cette méthode ne fonctionne que si le document est au format
+  texte.}~;
+\item héberger le rapport sur un service \emph{cloud} tel que
+  \emph{Google drive} ou \emph{Microsoft Office 365}.
+\end{itemize}
+
+\section{Conclusion}
+
+Dans ce guide, les objectifs d'un rapport de projet ont
+été précisés ainsi que la structure classique de son plan. Ensuite,
+les règles de base pour sa rédaction ont été présentées, suivies d'un
+rapide traitement des problématiques liées aux outils de production de
+documents. 
+
+
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "../guide"
+%%% End: 
