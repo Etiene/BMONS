@@ -25,6 +25,14 @@ quel type donnée traiter et envoyer à l'apiculteur et/ou au serveur en fonctio
 
 \section{Spécification des comportements}
 
+Nous allons ici décrire le fonctionnement de notre système. Il est résumé dans la figure XXX.
+
+Figure
+
+Les capteurs mesurent plusieurs critères : l’humidité, la température et le poids de la ruche. Les données sont ensuite transmises au système embarqué. Dès que le système embarqué les reçoit, il traite les données, sélectionne celles qui sont valides et les envoi au serveur soit par le réseau sans fil, soit par le réseau téléphone si besoin. Une fois que le serveur reçoit les données, elles sont traitées et stockées dans une base de données sécurisée. Une représentation sous forme de graphiques permet une vision pratique et exploitable des informations par l'apiculteur.
+
+Quand les mesures effectuées dépassent certain critères. Par exemple, si la température est plus hausse que la température maximum pour la ruche, le serveur va générer un alerte qui sera envoyée à l’utilisateur, c’est-à-dire l’apiculteur, par SMS ou par e-mail. Par ailleurs, les apiculteurs peuvent consulter l’état de la ruche à distance afin de bien gérer la productivité de la ruche ou de limiter les situations problématiques. 
+
 
 \chapter{Architecture fonctionnelle}
 
