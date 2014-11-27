@@ -1,0 +1,120 @@
+\documentclass[12pt,fleqn]{book} %taille de la police par défaut, et équations jusitifées à gauche
+\input{packages}     % Ce fichier contient tous les packages nécessaires à la compilation
+\makeindex           % donne l'ordre de créer l'index
+\include{glossaire}  % ce fichier contient les entrées du glossaire
+\makeglossaries      % donne l'ordre de créer le glossaire
+
+\begin{document}
+\renewcommand{\contentsname}{Sommaire}                % des jolis noms pour la table des matières
+\renewcommand{\bibname}{Références bibliographiques}  % des jolis noms pour les sections bibliographiques
+\renewcommand{\glossaryname}{Glossaire}               % et glossaire
+
+
+%----------------------------------------------------------------------------------------
+%	 PAGE DE TITRE
+%-----------------------------	-----------------------------------------------------------
+\input{PageDeTitre}
+
+%----------------------------------------------------------------------------------------
+%	COPYRIGHT PAGE
+%----------------------------------------------------------------------------------------
+\newpage
+\input{CopyrightPage}
+
+%----------------------------------------------------------------------------------------
+%	SOMMAIRE
+%----------------------------------------------------------------------------------------
+\tableofcontents  % Imprime le sommaire
+\cleardoublepage  % pour commencer sur une page impaire
+
+%----------------------------------------------------------------------------------------
+%	Préambules
+%----------------------------------------------------------------------------------------
+\frontmatter      % La partie non numérotée préalable au document principal
+
+\input{Remerciements}
+\input{Preambule}
+
+\mainmatter       % La partie principale du document
+
+%----------------------------------------------------------------------------------------
+%	PART I 
+%----------------------------------------------------------------------------------------
+\part{Introduction au projet}
+\input{FormulationInitialeDuProjet}
+\input{EtatDeLArt}
+
+%----------------------------------------------------------------------------------------
+%	PART II 
+%----------------------------------------------------------------------------------------
+\part{Dossier fonctionnel}
+\input{DossierFonctionnel}
+
+%----------------------------------------------------------------------------------------
+%	PART III 
+%----------------------------------------------------------------------------------------
+%\part{Implémentation}
+%\input{ArchitecturePhysique}
+%\input{Interfaces}
+%\input{WBS} 
+%\input{TestsUnitaires}
+
+%----------------------------------------------------------------------------------------
+%	PART IV 
+%----------------------------------------------------------------------------------------
+%\part{Intégration et validation}
+%\input{Integration}
+%\input{Validation}
+
+%----------------------------------------------------------------------------------------
+%	PART V 
+%----------------------------------------------------------------------------------------
+\part{Organisation}
+\input{Organisation}
+
+%----------------------------------------------------------------------------------------
+%	PART VI 
+%----------------------------------------------------------------------------------------
+\part{Journal du projet}
+\input{DossierJustificatif}
+
+
+\appendix
+\part{Annexes}
+\chapter{Première annexe}
+\chapter{Deuxième annexe}
+\chapter{Troisième annexe}
+
+\backmatter % Partie finale du document, non numérotée
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHIE
+%----------------------------------------------------------------------------------------
+\addcontentsline{toc}{part}{Bibliographie}
+%\bibliographystyle{apalike-fr}
+\bibliographystyle{plain-fr}
+\bibliography{bibliographie.bib}
+\nocite{*}
+
+%----------------------------------------------------------------------------------------
+%	INDEX
+%----------------------------------------------------------------------------------------
+\cleardoublepage
+\phantomsection
+\setlength{\columnsep}{0.75cm}
+\addcontentsline{toc}{part}{Index}
+\label{sec:index}
+\printindex
+
+%----------------------------------------------------------------------------------------
+%	GLOSSAIRE
+%----------------------------------------------------------------------------------------
+\cleardoublepage
+\phantomsection
+\setlength{\columnsep}{0.75cm}
+\addcontentsline{toc}{part}{Glossaire}
+\printglossaries
+
+%----------------------------------------------------------------------------------------
+
+\end{document}

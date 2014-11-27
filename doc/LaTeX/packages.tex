@@ -1,0 +1,67 @@
+\usepackage[top=3cm,bottom=3cm,left=3.2cm,right=3.2cm,headsep=10pt,a4paper]{geometry} % marges
+\usepackage{xcolor}
+\definecolor{enstabGreen}{HTML}{C8D200} 	%vert  	#c8d200 
+\definecolor{enstabLightGreen}{HTML}{E9ED99} 	%vert  	#c8d200 
+\definecolor{enstabLightBlue}{HTML}{009EE0} %bleu clair 	#009ee0
+\definecolor{enstabVeryLightBlue}{HTML}{99D8F3} %bleu clair 	#009ee0
+\definecolor{enstabDarkBlue}{HTML}{005C8F}	%bleu foncé 	#005c8f
+\definecolor{enstabDarkGrey}{HTML}{333333}	%gris fort 	#333333
+\definecolor{enstabLightGrey}{RGB}{48,48,48}	%gris fort 	#333333
+\definecolor{enstabParme}{HTML}{8878B2}		%parme 	#8878b2
+\definecolor{enstabOrange}{HTML}{F18E00} 	%orange 	#f18e00
+\usepackage[colorlinks=true,
+        urlcolor=enstabLightBlue,
+        anchorcolor=enstabDarkBlue,
+        linkcolor=enstabDarkBlue,
+        citecolor=enstabDarkGrey,
+        pdfauthor={Johan B. C. Engelen},
+        pdfkeywords={SVG; LaTeX; Inkscape},
+        pdftitle={How to include an SVG image in LaTeX},
+        pdfsubject={Describes how to include an SVG image easily in LaTeX using Inkscape}] {hyperref}
+\usepackage{url}
+\usepackage[utf8]{inputenc} % lettres accentuées
+\usepackage[T1]{fontenc}    % Use 8-bit encoding that has 256 glyphs
+\usepackage[frenchb]{babel} % Pour le français
+\usepackage{cclicenses}     % Licences CC
+\usepackage{epigraph}
+\usepackage{eso-pic}        % pour une image en fond, page de titre
+\usepackage{graphicx}       % Pour inclure des images
+\graphicspath{{images/}}    % Où sont les images ?
+
+\usepackage{listings}      % Pour coloriser les codes que vous insérez
+\lstset{ %
+  backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or 
+  basicstyle=\footnotesize\ttfamily,        % the size of the fonts that are used for the code
+  breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+  breaklines=true,                 % sets automatic line breaking
+  captionpos=b,                    % sets the caption-position to bottom
+  commentstyle=\color{enstabOrange},    % comment style
+  deletekeywords={...},            % if you want to delete keywords from the given language
+  escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+  extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+  %frame=single,                    % adds a frame around the code
+  keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+  keywordstyle=\color{enstabDarkBlue},       % keyword style
+  %language=Octave,                 % the language of the code
+  morekeywords={*,...},            % if you want to add more keywords to the set
+  numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+  numbersep=8pt,                   % how far the line-numbers are from the code
+  numberstyle=\tiny\color{enstabDarkGrey}, % the style that is used for the line-numbers
+  rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+  showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+  showstringspaces=false,          % underline spaces within strings only
+  showtabs=false,                  % show tabs within strings adding particular underscores
+  stepnumber=5,                    % the step between two line-numbers. If it's 1, each line will be numbered
+  stringstyle=\color{enstabParme},     % string literal style
+  tabsize=2,                       % sets default tabsize to 2 spaces
+  title=\lstname                   % show the filename of files included with \lstinputlisting; also try caption instead of title
+}
+
+
+
+
+
+\usepackage{booktabs}       % pour de jolis tableaux
+%\usepackage{fancyhdr}       % pour des entêtes et pieds de pages améliorés.
+\usepackage{makeidx}        % requis pour faire les index
+\usepackage{glossaries} %requis pour faire le glossaire
