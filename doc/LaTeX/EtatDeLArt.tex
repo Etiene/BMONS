@@ -1,16 +1,27 @@
 \chapter{État de l'art}
 
-En effectuant nos recherches sur le sujet nous avons trouvé beaucoup d'informations sur les abeilles et le travail des apiculteurs en général, ainsi que des systèmes "maison" développés par des particuliers pour surveiller un peu mieux leurs ruches. Cependant nous avons également découvert l'existence de quatre projets similaires au notre: trois projets en cours ayant une approche OpenSource et un projet commercial déjà développé. Ce dernier appartient à la société anglaise Arnia. Ce système est décrit [CF SITE] comme permettant à l'utilisateur d'avoir des informations sur une ou plusieurs ruches telles que la température, l'humidité et l'intensité acoustique dans la ruche ainsi que la température du couvain. Les apiculteurs peuvent ensuite visualiser ces informations sur une partie sécurisée du site internet d'arnia. Ils peuvent également comparer les informations et évolution d'une ou plusieurs ruches, comme on peut le voir sur la figure XXX.
+En effectuant nos recherches sur le sujet nous avons trouvé beaucoup d'informations sur les abeilles et le travail des apiculteurs en général, ainsi que des systèmes "maison" développés par des particuliers pour surveiller un peu mieux leurs ruches. Cependant nous avons également découvert l'existence de quatre projets similaires au notre: trois projets en cours ayant une approche OpenSource et un projet commercial déjà développé. Ce dernier appartient à la société anglaise Arnia. Ce système est décrit \cite{arnia} comme permettant à l'utilisateur d'avoir des informations sur une ou plusieurs ruches telles que la température, l'humidité et l'intensité acoustique dans la ruche ainsi que la température du couvain. Les apiculteurs peuvent ensuite visualiser ces informations sur une partie sécurisée du site internet d'arnia. Ils peuvent également comparer les informations et évolution d'une ou plusieurs ruches, comme on peut le voir sur la figure \ref{fig:arnia1}.
 
-IMAGE
+\begin{figure}[h]
+\centering\includegraphics{arnia1.jpg}
+\caption{\label{fig:arnia1} Interface du système d'arnia: comparaison des données d'une ruche}
+\end{figure}
 
-L'un des projets OpenSource est développé par Ken Meyer sur le site hackaday [CF SITE] et consiste à mesurer la température, l'humidité et le poids d'une ruche. Ce projet est encore en développement et plusieurs prototypes ont déjà été testés.
+L'un des projets OpenSource est développé par Ken Meyer sur le site hackaday \cite{hackaday} et consiste à mesurer la température, l'humidité et le poids d'une ruche. Ce projet est encore en développement et plusieurs prototypes ont déjà été testés.
 
-Il existe également un autre projet OpenSource sur le sujet. Il s'agit de Bzzz[CF SITE], développé par le Fablab de Lannion. Ce système propose une supervision de la température intérieure, de la luminosité extérieure et la masse d'une seule ruche via un envoi de données périodique par SMS et par visualisation des données sur un portail en ligne. L'utilisateur pourra également configurer des alertes via le portail.
+Il existe également un autre projet OpenSource sur le sujet. Il s'agit de Bzzz \cite{projetBzzz}, développé par le Fablab de Lannion. Ce système propose une supervision de la température intérieure, de la luminosité extérieure et la masse d'une seule ruche via un envoi de données périodique par SMS et par visualisation des données sur un portail en ligne. L'utilisateur pourra également configurer des alertes via le portail.
 
-Enfin le dernier système existant que nous avons trouvé a été développé conjointement par le Fablab de Barcelone et Open Tech Collaborative, Denver, USA [CF SITE]. Ce projet OpenSource, appelé Open Source BeeHive, ne s'adapte pas aux ruches classiques mais propose une architecture simple qui permet de construire sa propre ruche entièrement, comme on peut le voir sur la figure XXX.
+Enfin le dernier système existant que nous avons trouvé a été développé conjointement par le Fablab de Barcelone et Open Tech Collaborative, Denver, USA \cite{OpenBeehives}. Ce projet OpenSource, appelé Open Source BeeHive, ne s'adapte pas aux ruches classiques mais propose une architecture simple qui permet de construire sa propre ruche entièrement, comme on peut le voir sur les figures \ref{fig:OSBH2} et \ref{fig:OSBH}.
 
-IMAGE
+\begin{figure}[h]
+\centering\includegraphics[scale=0.3]{OSBH.jpg}
+\caption{\label{fig:OSBH} Modèle de ruche Open Source Beehive}
+\end{figure}
+
+\begin{figure}[h]
+\centering\includegraphics[scale=0.3]{OSBH2.jpg}
+\caption{\label{fig:OSBH2} Plan de la ruche Open Source Beehive}
+\end{figure}
 
 Ensuite un kit de capteurs à installer permet de mesurer la température, l'humidité, l'intensité acoustique et le nombre d'abeilles via un capteur infrarouge. Les données seront ensuite visibles de tous sur la plateforme Smart Citizen.
 
