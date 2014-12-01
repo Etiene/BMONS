@@ -9,7 +9,7 @@
 </XPD:HEADER>
 <XPD:BODY>
 <XPD:OBJ name="DocumentElement" type="UMLProject" guid="01r4wU9GLkqmxKy9+w69JwAA">
-<XPD:ATTR name="Title" type="string">BMONS</XPD:ATTR>
+<XPD:ATTR name="Title" type="string">Untitled</XPD:ATTR>
 <XPD:ATTR name="#OwnedElements" type="integer">5</XPD:ATTR>
 <XPD:OBJ name="OwnedElements[0]" type="UMLModel" guid="AP2py6O+Vkm7qx/E8gJtOQAA">
 <XPD:ATTR name="Name" type="string">Use Case Model</XPD:ATTR>
