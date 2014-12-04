@@ -17,9 +17,9 @@ Les fonctions principale, services et contraintes du système sont regroupées d
 \chapter{Spécification fonctionnelle  3 axes}
 
 \section{Raffinement FAST}
-Le diagramme FAST regroupe les fonctions techniques globales définies dans les 
-exigences ainsi que leur raffinements en sous fonctions et les solutions technique 
-associées a celles-ci. Il a évolué au cours du projet en fonction des autres documents 
+Le diagramme FAST regroupe les fonctions principales, techniques et contraintes globales définies dans lors de 
+l'établissement des exigences et après leur discussion avec le client. Leur raffinement en sous fonctions et les solutions techniques 
+associées a celles-ci apparaissent également. Il a évolué au cours du projet en fonction des autres documents 
 d'ingénierie système et des solutions techniques retenues. On peut voir la version finale du FAST sur la figure \ref{fig:fast}
 
 \clearpage
@@ -46,12 +46,20 @@ Nous allons ici décrire le fonctionnement de notre système. Il est résumé da
 \caption{\label{fig:sp_comp} Diagramme de spécification des comportements}
 \end{figure}
 
-Les capteurs mesurent plusieurs critères : l'humidité, la température et le poids de la ruche. Les données sont ensuite transmises au système embarqué. Dès que le système embarqué les reçoit, il traite les données, sélectionne celles qui sont valides et les envoi au serveur soit par le réseau sans fil, soit par le réseau téléphone si besoin. Une fois que le serveur reçoit les données, elles sont traitées et stockées dans une base de données sécurisée. Une représentation sous forme de graphiques permet une vision pratique et exploitable des informations par l'apiculteur.
+Les capteurs mesurent plusieurs paramètres internes à la ruche : l'humidité, la température et le poids de la ruche. Les données sont ensuite transmises au système embarqué. Dès que le système embarqué les reçoit, il traite les données, sélectionne celles qui sont valides et les envoi au serveur soit par le réseau sans fil (2G ou 3G), soit par le réseau téléphone si besoin. Une fois que le serveur reçoit les données, elles sont traitées et stockées dans une base de données sécurisée. Une représentation sous forme de graphiques permet une vision pratique et exploitable des informations par l'apiculteur.
 
-Quand les mesures effectuées dépassent certain critères. Par exemple, si la température est plus hausse que la température maximum pour la ruche, le serveur va générer un alerte qui sera envoyée à l'utilisateur, c’est-à-dire l'apiculteur, par SMS ou par e-mail. Par ailleurs, les apiculteurs peuvent consulter l’état de la ruche à distance afin de bien gérer la productivité de la ruche ou de limiter les situations problématiques. 
+Quand les mesures effectuées dépassent certain critères, par exemple, si la température est plus élevée que la température maximum pour la ruche, le serveur va générer un alerte qui sera envoyée à l'utilisateur, c’est-à-dire l'apiculteur, par SMS ou par e-mail. Par ailleurs, les apiculteurs peuvent consulter l’état de la ruche à distance afin de bien gérer la productivité de la ruche ou de limiter les situations problématiques. 
 
 \pagebreak
 
 \chapter{Architecture fonctionnelle}
 
+L'étude de la spécification fonctionnelle trois axes a permis d'établir l'architecture fonctionnelle du système qui est représentée sur la figure \ref{fig:anaFonc}.
+Ce schéma résume les interactions entre chaque partie: Bee_Monitor qui regroupe l'ensemble des capteurs, la carte Arduino ainsi que la carte SSD pour l'enregistrement local des données, le module de transmission et le système d'alimentation rendant notre projet autonome en énergie. Chaque acteur interagissant avec le système y sont également représentés. 
+  
+
+\begin{figure}[h]
+\centering\includegraphics[scale=0.7]{analyseFonctionelle1.pdf}
+\caption{\label{fig:anaFonc} Architecture fonctionnelle}
+\end{figure}    
 
