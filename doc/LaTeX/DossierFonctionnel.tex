@@ -6,7 +6,7 @@
 
 \section{Fonctions principales du système}
 
-Les fonctions principale, services et contraintes du système sont regroupées dans ce diagramme pieuvre, figure \ref{fig:diagpieuvre]}. Les buts et les contraintes imposées au système y sont également représentés. 
+Les fonctions principale, services et contraintes du système sont regroupées dans ce diagramme pieuvre, figure \ref{fig:diagpieuvre}. Les buts et les contraintes imposées au système y sont également représentés. 
  
 \begin{figure}[h]
 \centering\includegraphics[scale=0.7]{diagpieuvre.pdf}
@@ -22,7 +22,9 @@ exigences ainsi que leur raffinements en sous fonctions et les solutions techniq
 associées a celles-ci. Il a évolué au cours du projet en fonction des autres documents 
 d'ingénierie système et des solutions techniques retenues. On peut voir la version finale du FAST sur la figure \ref{fig:fast}
 
-\begin{figure}[h]
+\clearpage
+
+\begin{figure}[h!]
 \centering\includegraphics[scale=0.7]{FAST_BMONS.pdf}
 \caption{\label{fig:fast} Diagramme FAST du système BMONS}
 \end{figure}
@@ -39,7 +41,7 @@ quel type donnée traiter et envoyer à l'apiculteur et/ou au serveur en fonctio
 
 Nous allons ici décrire le fonctionnement de notre système. Il est résumé dans la figure \ref{fig:sp_comp}.
 
-\begin{figure}[h]
+\begin{figure}[h!]
 \centering\includegraphics[scale=0.7]{specif_comp.pdf}
 \caption{\label{fig:sp_comp} Diagramme de spécification des comportements}
 \end{figure}
@@ -48,6 +50,7 @@ Les capteurs mesurent plusieurs critères : l'humidité, la température et le p
 
 Quand les mesures effectuées dépassent certain critères. Par exemple, si la température est plus hausse que la température maximum pour la ruche, le serveur va générer un alerte qui sera envoyée à l'utilisateur, c’est-à-dire l'apiculteur, par SMS ou par e-mail. Par ailleurs, les apiculteurs peuvent consulter l’état de la ruche à distance afin de bien gérer la productivité de la ruche ou de limiter les situations problématiques. 
 
+\pagebreak
 
 \chapter{Architecture fonctionnelle}
 
