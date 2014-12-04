@@ -1,6 +1,15 @@
 \chapter{Ingénierie des exigences}
 \section{Approche Top-Down}
-\label{sec:top-down}
+
+Dans cette partie nous allons analyser notre système avec une approche Top-Down. Cela signifie que nous adopterons une démarche de conception descendante. Pour cela nous avons tracé le diagramme "bête à cornes", que l'on peut voir sur la figure \ref{fig:beteacorne}. Il permet de représenter graphiquement l'expression du besoin. Comme on peut le voir sur le diagramme, le système BMONS rend service aux apiculteurs en agissant sur une ou plusieurs ruches. Il a pour but d'aider la surveillance d'un rucher et d'avertir l'apiculteur en cas de problème.
+
+\clearpage
+
+\begin{figure}[h!]
+\centering\includegraphics[scale=0.7]{BeteACornesBMONS.pdf}
+\caption{\label{fig:beteacorne} Diagramme "bête à cornes" du système BMONS}
+\end{figure}
+
 
 \section{Approche Bottom-Up}
 
@@ -55,11 +64,11 @@ Quand les mesures effectuées dépassent certain critères, par exemple, si la t
 \chapter{Architecture fonctionnelle}
 
 L'étude de la spécification fonctionnelle trois axes a permis d'établir l'architecture fonctionnelle du système qui est représentée sur la figure \ref{fig:anaFonc}.
-Ce schéma résume les interactions entre chaque partie: Bee_Monitor qui regroupe l'ensemble des capteurs, la carte Arduino ainsi que la carte SSD pour l'enregistrement local des données, le module de transmission et le système d'alimentation rendant notre projet autonome en énergie. Chaque acteur interagissant avec le système y sont également représentés. 
+Ce schéma résume les interactions entre chaque partie: Bee Monitor qui regroupe l'ensemble des capteurs, la carte Arduino ainsi que la carte SSD pour l'enregistrement local des données, le module de transmission et le système d'alimentation rendant notre projet autonome en énergie. Chaque acteur interagissant avec le système y sont également représentés. 
   
 
 \begin{figure}[h]
-\centering\includegraphics[scale=0.7]{analyseFonctionelle1.pdf}
+\centering\includegraphics[scale=0.7]{analyseFonctionelle.pdf}
 \caption{\label{fig:anaFonc} Architecture fonctionnelle}
 \end{figure}    
 
