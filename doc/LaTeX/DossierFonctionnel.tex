@@ -30,6 +30,7 @@ Les fonctions principale, services et contraintes du système sont regroupées d
 \chapter{Spécification fonctionnelle  3 axes}
 
 \section{Raffinement FAST}
+
 Le diagramme FAST regroupe les fonctions principales, techniques et contraintes globales définies dans lors de 
 l'établissement des exigences et après leur discussion avec le client. Ainsi, certaines exigences que nous avons préalablement établit ont été acceptée mais d'autres ont écartée comme l'analyse des odeurs dans la ruche jugée finalement trop compliquée à mettre en place et difficile à exploiter. D'autres exigences ont vu le jours après les échanges avec l'apiculteur ce qui est venus enrichir et compléter notre tableau des exigences. Le raffinement des trois types de fonctions en sous fonctions et les solutions techniques 
 associées a celles-ci apparaissent également. Il a évolué au cours du projet en fonction des autres documents 
@@ -44,12 +45,19 @@ On peut voir la version finale du FAST sur la figure \ref{fig:fast}
 \clearpage
 
 \section{Spécification des données}
+
 La spécification des données permet de mettre à jour les différentes grandeurs 
 et unités intervenant dans notre système. Grâce à cela, nous savons exactement 
-quel type donnée traiter et comment convertir les données numériques de sortie des capteurs en grandeur physique facilement compréhensible pour l'apiculteur. Il faudra ensuite envoyer ces données traitées au serveur qui les stockera dans une base de données. Cette étude a aussi permis d'établir les alertes qu'il va falloir prévoir afin d'avertir le propriétaire de l'état de son rucher. Ces dernières seront aussi stockée sur le serveur qui viendront compléter l'historique de la ruche. 
-Il existera deux types d'alertes: les alertes actives qui préconiserons l'apiculteur à agir directement sur la ruche (par exemple lorsque le développement de la grappe est excentrée par rapport aux cadres) et des alertes passives qui encourageront le client à se rendre sur le serveur pour consulter les derniers relevés.    
+quel type de donnée traiter et comment convertir les données numériques de sortie des capteurs en grandeurs physiques facilement compréhensible pour l'apiculteur. Il faudra ensuite envoyer ces données traitées au serveur qui les stockera dans une base de données. Cette étude a aussi permis d'établir les alertes qu'il va falloir prévoir afin d'avertir le propriétaire de l'état de son rucher. Ces dernières seront aussi stockées sur le serveur qui viendront compléter l'historique de la ruche. Il est possible qu'une alerte soit envoyée après avoir effectué un recoupement d'informations Par exemple, pour alerter l'apiculteur d'un essaimage en cours, il est nécessaire de détecter une agitation dans la ruche (chant de la reine) grâce au microphone et une chute importante de la masse grâce à la balance. 
 
-!!!  image de spécification des données  !!!
+Il existera deux types d'alertes: les alertes actives qui préconiserons l'apiculteur à agir directement sur la ruche (par exemple lorsque le développement de la grappe est excentrée par rapport aux cadres) et des alertes passives qui encourageront le client à se rendre sur le serveur pour consulter les derniers relevés.   
+
+L'axe Data comportant la spécification des messages, des évènements et des alarmes est fourni en annexe.
+Le diagramme des données est décris dans la figure 
+
+!!!  diagramme de flux des données  !!!
+
+
 
 \clearpage
 
@@ -71,11 +79,11 @@ Quand les mesures effectuées dépassent certain critères, par exemple, si la t
 \chapter{Architecture fonctionnelle}
 
 L'étude de la spécification fonctionnelle trois axes a permis d'établir l'architecture fonctionnelle du système qui est représentée sur la figure \ref{fig:anaFonc}.
-Ce schéma résume les interactions entre chaque partie: Bee Monitor qui regroupe l'ensemble des capteurs, la carte Arduino ainsi que la carte SSD pour l'enregistrement local des données, le module de transmission et le système d'alimentation rendant notre projet autonome en énergie. Chaque acteur interagissant avec le système y sont également représentés. 
+Ce schéma résume les interactions entre chaque partie: Bee Monitor qui regroupe l'ensemble des capteurs, la carte Arduino ainsi que la carte SSD pour l'enregistrement local des données, le module de transmission et le système d'alimentation rendant notre projet autonome en énergie et le serveur. Chaque acteur interagissant avec le système y sont également représentés: Les abeilles/ruche, l'apiculteur et l'environnement.   
   
 
 \begin{figure}[h]
-\centering\includegraphics[scale=0.4]{analyseFonctionelle1.pdf}
+\centering\includegraphics[scale=0.5]{analyseFonctionelle1.pdf}
 \caption{\label{fig:anaFonc} Architecture fonctionnelle}
 \end{figure}    
 
