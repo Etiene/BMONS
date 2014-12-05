@@ -23,7 +23,7 @@ Les fonctions principale, services et contraintes du système sont regroupées d
 \end{figure}
 
 \begin{figure}[h!]
-\centering\includegraphics[scale=0.8]{pieuvre2.png}
+\centering\includegraphics[scale=0.5]{pieuvre2.png}
 \caption{\label{fig:diagpieuvre2} Légende diagramme pieuvre du système BMONS}
 \end{figure}
 
@@ -31,10 +31,10 @@ Les fonctions principale, services et contraintes du système sont regroupées d
 
 \section{Raffinement FAST}
 Le diagramme FAST regroupe les fonctions principales, techniques et contraintes globales définies dans lors de 
-l'établissement des exigences et après leur discussion avec le client. Leur raffinement en sous fonctions et les solutions techniques 
+l'établissement des exigences et après leur discussion avec le client. Ainsi, certaines exigences que nous avons préalablement établit ont été acceptée mais d'autres ont écartée comme l'analyse des odeurs dans la ruche jugée finalement trop compliquée à mettre en place et difficile à exploiter. D'autres exigences ont vu le jours après les échanges avec l'apiculteur ce qui est venus enrichir et compléter notre tableau des exigences. Le raffinement des trois types de fonctions en sous fonctions et les solutions techniques 
 associées a celles-ci apparaissent également. Il a évolué au cours du projet en fonction des autres documents 
-d'ingénierie système et des solutions techniques retenues. On peut voir la version finale du FAST sur la figure \ref{fig:fast}
-
+d'ingénierie système et des solutions techniques retenues. 
+On peut voir la version finale du FAST sur la figure \ref{fig:fast}
 
 \begin{figure}[h!]
 \centering\includegraphics[scale=0.8]{FAST_BMONS.pdf}
@@ -43,13 +43,14 @@ d'ingénierie système et des solutions techniques retenues. On peut voir la ver
 
 \clearpage
 
-
 \section{Spécification des données}
 La spécification des données permet de mettre à jour les différentes grandeurs 
 et unités intervenant dans notre système. Grâce à cela, nous savons exactement 
-quel type donnée traiter et envoyer à l'apiculteur et/ou au serveur en fonction des évènements. Cette étude a aussi permis d'établir les alertes qu'il va falloir prévoir afin d'avertir le propriétaire de l'état de son rucher. 
+quel type donnée traiter et comment convertir les données numériques de sortie des capteurs en grandeur physique facilement compréhensible pour l'apiculteur. Il faudra ensuite envoyer ces données traitées au serveur qui les stockera dans une base de données. Cette étude a aussi permis d'établir les alertes qu'il va falloir prévoir afin d'avertir le propriétaire de l'état de son rucher. Ces dernières seront aussi stockée sur le serveur qui viendront compléter l'historique de la ruche. Il existera deux types d'alertes: les alertes actives qui préconiserons l'apiculteur à agir directement sur la ruche (par exemple lorsque le développement de la grappe est excentrée par rapport aux cadres) et des alertes passives qui encourageront le client à se rendre sur le serveur pour consulter les derniers relevées.    
 
 !!!  image de spécification des données  !!!
+
+\clearpage
 
 \section{Spécification des comportements}
 
@@ -73,7 +74,7 @@ Ce schéma résume les interactions entre chaque partie: Bee Monitor qui regroup
   
 
 \begin{figure}[h]
-\centering\includegraphics[scale=0.7]{analyseFonctionelle.pdf}
+\centering\includegraphics[scale=0.4]{analyseFonctionelle1.pdf}
 \caption{\label{fig:anaFonc} Architecture fonctionnelle}
 \end{figure}    
 
