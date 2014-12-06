@@ -22,6 +22,11 @@ Les fonctions principale, services et contraintes du système sont regroupées d
 \caption{\label{fig:diagpieuvre1} Diagramme pieuvre du système BMONS}
 \end{figure}
 
+\begin{figure}[h!]
+\centering\includegraphics[scale=0.8]{pieuvre2.png}
+\caption{\label{fig:diagpieuvre2} Légende diagramme pieuvre du système BMONS}
+\end{figure}
+
 
 \chapter{Spécification fonctionnelle  3 axes}
 
@@ -60,6 +65,27 @@ Les capteurs mesurent plusieurs paramètres internes à la ruche : l'humidité, 
 
 Quand les mesures effectuées dépassent certain critères, par exemple, si la température est plus élevée que la température maximum pour la ruche, le serveur va générer un alerte qui sera envoyée à l'utilisateur, c’est-à-dire l'apiculteur, par SMS ou par e-mail. Par ailleurs, les apiculteurs peuvent consulter l’état de la ruche à distance afin de bien gérer la productivité de la ruche ou de limiter les situations problématiques. 
 
+La spécification du comportement ce fait également grace aux diagrammes de séquence. Ces diagrammes expliquent précisément comment les different parties du systeme interagisent dans le but d'executer une action. Ils détail l'ordre des actions ainsi que leur nature et leur durée d'execussion. A ce jour 5 diagrames de séquence ont été réalisé ils concernent l'action de récuperation de la mémoire flash, l'analyse des information par le serveur, le service permetant à l'apiculteur d'avertir le serveur d'une intervention sur une ruche, la fonction permetant la configuratiion des alertes et l'action de connecxion d'un apiculteur à son compte.
+\begin{figure}[h!]
+\centering\includegraphics[scale=0.7]{recupererMemoireFlash.jpeg}
+\caption{\label{fig:sp_comp} Diagramme de spécification des comportements}
+\end{figure}
+\begin{figure}[h!]
+\centering\includegraphics[scale=0.7]{analyserInformation.jpeg}
+\caption{\label{fig:sp_comp} Diagramme de spécification des comportements}
+\end{figure}
+\begin{figure}[h!]
+\centering\includegraphics[scale=0.7]{avertirOperationRuche.jpeg}
+\caption{\label{fig:sp_comp} Diagramme de spécification des comportements}
+\end{figure}
+\begin{figure}[h!]
+\centering\includegraphics[scale=0.7]{configurerAlerte.jpeg}
+\caption{\label{fig:sp_comp} Diagramme de spécification des comportements}
+\end{figure}
+\begin{figure}[h!]
+\centering\includegraphics[scale=0.7]{IdentificationCompte.jpeg}
+\caption{\label{fig:sp_comp} Diagramme de spécification des comportements}
+\end{figure}
 \pagebreak
 
 \chapter{Architecture fonctionnelle}
