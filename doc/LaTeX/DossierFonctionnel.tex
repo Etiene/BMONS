@@ -23,7 +23,7 @@ Les fonctions principale, services et contraintes du système sont regroupées d
 \end{figure}
 
 \begin{figure}[h!]
-\centering\includegraphics[scale=0.8]{pieuvre2.png}
+\centering\includegraphics[scale=0.5]{pieuvre2.png}
 \caption{\label{fig:diagpieuvre2} Légende diagramme pieuvre du système BMONS}
 \end{figure}
 
@@ -31,11 +31,12 @@ Les fonctions principale, services et contraintes du système sont regroupées d
 \chapter{Spécification fonctionnelle  3 axes}
 
 \section{Raffinement FAST}
-Le diagramme FAST regroupe les fonctions principales, techniques et contraintes globales définies dans lors de 
-l'établissement des exigences et après leur discussion avec le client. Leur raffinement en sous fonctions et les solutions techniques 
-associées a celles-ci apparaissent également. Il a évolué au cours du projet en fonction des autres documents 
-d'ingénierie système et des solutions techniques retenues. On peut voir la version finale du FAST sur la figure \ref{fig:fast}
 
+Le diagramme FAST regroupe les fonctions principales, techniques et contraintes globales définies dans lors de 
+l'établissement des exigences et après leur discussion avec le client. Ainsi, certaines exigences que nous avons préalablement établit ont été acceptée mais d'autres ont écartée comme l'analyse des odeurs dans la ruche jugée finalement trop compliquée à mettre en place et difficile à exploiter. D'autres exigences ont vu le jours après les échanges avec l'apiculteur ce qui est venus enrichir et compléter notre tableau des exigences. Le raffinement des trois types de fonctions en sous fonctions et les solutions techniques 
+associées a celles-ci apparaissent également. Il a évolué au cours du projet en fonction des autres documents 
+d'ingénierie système et des solutions techniques retenues. 
+On peut voir la version finale du FAST sur la figure \ref{fig:fast}
 
 \begin{figure}[h!]
 \centering\includegraphics[scale=0.8]{FAST_BMONS.pdf}
@@ -44,20 +45,47 @@ d'ingénierie système et des solutions techniques retenues. On peut voir la ver
 
 \clearpage
 
-
 \section{Spécification des données}
+
 La spécification des données permet de mettre à jour les différentes grandeurs 
 et unités intervenant dans notre système. Grâce à cela, nous savons exactement 
-quel type donnée traiter et envoyer à l'apiculteur et/ou au serveur en fonction des évènements. Cette étude a aussi permis d'établir les alertes qu'il va falloir prévoir afin d'avertir le propriétaire de l'état de son rucher. 
+quel type de donnée traiter et comment convertir les données numériques de sortie des capteurs en grandeurs physiques facilement compréhensible pour l'apiculteur. Il faudra ensuite envoyer ces données traitées au serveur qui les stockera dans une base de données. Cette étude a aussi permis d'établir les alertes qu'il va falloir prévoir afin d'avertir le propriétaire de l'état de son rucher. Ces dernières seront aussi stockées sur le serveur qui viendront compléter l'historique de la ruche. Il est possible qu'une alerte soit envoyée après avoir effectué un recoupement d'informations Par exemple, pour alerter l'apiculteur d'un essaimage en cours, il est nécessaire de détecter une agitation dans la ruche (chant de la reine) grâce au microphone et une chute importante de la masse grâce à la balance. 
 
-!!!  image de spécification des données  !!!
+Il existera deux types d'alertes: les alertes actives qui préconiserons l'apiculteur à agir directement sur la ruche (par exemple lorsque le développement de la grappe est excentrée par rapport aux cadres) et des alertes passives qui encourageront le client à se rendre sur le serveur pour consulter les derniers relevés.   
+
+L'axe Data comportant la spécification des messages, des évènements et des alarmes est fourni en annexe.
+Le diagramme des données est décris dans la figure \ref{fig:donnees} 
+
+
+
+\begin{figure}[h!]
+\centering\includegraphics[scale=0.3]{diagFluxDonnees.jpg}
+\caption{\label{fig:donnees} Diagramme d'activité du flux de données}
+\end{figure}
+
+\clearpage
+
+\section{Modèle de Donnés}
+
+Le modèle de donnés est une façon abstraite de représenter les donnés du système et de modéliser les informations contenus dans une base de donnés. Le modèle constitue des ensembles possèdent d'un nom et des attributs nommés. La  des relations est fait via des clés primaires (id, dans notre cas) et des clés étrangères.  
+
+\ref{fig:UML} 
+
+
+
+\begin{figure}[h!]
+\centering\includegraphics[scale=0.55]{UML.png}
+\caption{\label{fig:UML} Modèle de donnés pour le système BMONS}
+\end{figure}
+
+\clearpage
 
 \section{Spécification des comportements}
 
 Nous allons ici décrire le fonctionnement de notre système. Il est résumé dans la figure \ref{fig:sp_comp}.
 
 \begin{figure}[h!]
-\centering\includegraphics[scale=0.7]{specif_comp.pdf}
+\centering\includegraphics[scale=0.5]{specif_comp.pdf}
 \caption{\label{fig:sp_comp} Diagramme de spécification des comportements}
 \end{figure}
 
@@ -91,11 +119,11 @@ La spécification du comportement ce fait également grace aux diagrammes de sé
 \chapter{Architecture fonctionnelle}
 
 L'étude de la spécification fonctionnelle trois axes a permis d'établir l'architecture fonctionnelle du système qui est représentée sur la figure \ref{fig:anaFonc}.
-Ce schéma résume les interactions entre chaque partie: Bee Monitor qui regroupe l'ensemble des capteurs, la carte Arduino ainsi que la carte SSD pour l'enregistrement local des données, le module de transmission et le système d'alimentation rendant notre projet autonome en énergie. Chaque acteur interagissant avec le système y sont également représentés. 
+Ce schéma résume les interactions entre chaque partie: Bee Monitor qui regroupe l'ensemble des capteurs, la carte Arduino ainsi que la carte SSD pour l'enregistrement local des données, le module de transmission et le système d'alimentation rendant notre projet autonome en énergie et le serveur. Chaque acteur interagissant avec le système y sont également représentés: Les abeilles/ruche, l'apiculteur et l'environnement.   
   
 
 \begin{figure}[h]
-\centering\includegraphics[scale=0.7]{analyseFonctionelle.pdf}
+\centering\includegraphics[scale=0.5]{analyseFonctionelle1.pdf}
 \caption{\label{fig:anaFonc} Architecture fonctionnelle}
 \end{figure}    
 
