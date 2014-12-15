@@ -1,6 +1,7 @@
 BMONS
 =====
-Task manager
+Task manager:
+
 [![HuBoard badge](http://img.shields.io/badge/Hu-Board-7965cc.svg)](https://huboard.com/Etiene/BMONS/)
 
 BeeHive Monitoring System is a project made by a group of students from the second year of ENSTA Bretagne.
