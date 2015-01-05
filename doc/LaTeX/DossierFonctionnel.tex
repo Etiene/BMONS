@@ -1,6 +1,6 @@
 \chapter{Ingénierie des exigences}
 \section{Approche Top-Down}
-
+\vspace{1.5cm}
 Dans cette partie nous allons analyser notre système avec une approche Top-Down. Cela signifie que nous adopterons une démarche de conception descendante. Pour cela nous avons tracé le diagramme "bête à cornes", que l'on peut voir sur la figure \ref{fig:beteacorne}. Il permet de représenter graphiquement l'expression du besoin. Comme on peut le voir sur le diagramme, le système BMONS rend service aux apiculteurs en agissant sur une ou plusieurs ruches. Il a pour but d'aider la surveillance d'un rucher et d'avertir l'apiculteur en cas de problème.
 
 
@@ -18,7 +18,7 @@ Le diagramme pieuvre, \ref{fig:diagpieuvre1} et \ref{fig:diagpieuvre2}, nous per
 \end{figure}
 
 \begin{figure}[h!]
-\centering\includegraphics[scale=0.6]{pieuvre2.png}
+\centering\includegraphics[trim = 1cm 0.5cm 13cm 1cm,scale=0.6]{pieuvre2.png}
 \caption{\label{fig:diagpieuvre2} Légende diagramme pieuvre du système BMONS}
 \end{figure}
 
@@ -26,6 +26,7 @@ Le diagramme pieuvre, \ref{fig:diagpieuvre1} et \ref{fig:diagpieuvre2}, nous per
 
 \section{Approche Bottom-Up}
 
+\vspace{1.5cm}
 Nous allons maintenant adopter la démarche inverse, mais néanmoins complémentaire, de l'approche Top-Down. Il s'agit de l'approche Bottom-Up. C'est une démarche de conception ascendante qui va nous permettre d'avoir une vision plus globale du système. On peut voir sur \ref{fig:exi1} et \ref{fig:exi2} les exigences issues de cette analyse.
 
  
@@ -43,13 +44,13 @@ Nous allons maintenant adopter la démarche inverse, mais néanmoins complément
 \clearpage
 
 \section{Fonctions métiers du système}
-
+\vspace{1.5cm}
 
 
 \chapter{Spécification fonctionnelle  3 axes}
 
 \section{Raffinement FAST}
-
+\vspace{1.5cm}
 Le diagramme FAST regroupe les fonctions principales, techniques et contraintes globales définies dans lors de 
 l'établissement des exigences et après leur discussion avec le client. Ainsi, certaines exigences que nous avons préalablement établit ont été acceptée mais d'autres ont écartée comme l'analyse des odeurs dans la ruche jugée finalement trop compliquée à mettre en place et difficile à exploiter. D'autres exigences ont vu le jours après les échanges avec l'apiculteur ce qui est venus enrichir et compléter notre tableau des exigences. Le raffinement des trois types de fonctions en sous fonctions et les solutions techniques 
 associées a celles-ci apparaissent également. Il a évolué au cours du projet en fonction des autres documents 
@@ -64,7 +65,7 @@ On peut voir la version finale du FAST sur la figure \ref{fig:fast}
 \clearpage
 
 \section{Spécification des données}
-
+\vspace{1.5cm}
 La spécification des données permet de mettre à jour les différentes grandeurs 
 et unités intervenant dans notre système. Grâce à cela, nous savons exactement 
 quel type de donnée traiter et comment convertir les données numériques de sortie des capteurs en grandeurs physiques facilement compréhensible pour l'apiculteur. Il faudra ensuite envoyer ces données traitées au serveur qui les stockera dans une base de données. Cette étude a aussi permis d'établir les alertes qu'il va falloir prévoir afin d'avertir le propriétaire de l'état de son rucher. Ces dernières seront aussi stockées sur le serveur qui viendront compléter l'historique de la ruche. Il est possible qu'une alerte soit envoyée après avoir effectué un recoupement d'informations Par exemple, pour alerter l'apiculteur d'un essaimage en cours, il est nécessaire de détecter une agitation dans la ruche (chant de la reine) grâce au microphone et une chute importante de la masse grâce à la balance. 
@@ -84,7 +85,7 @@ Le diagramme des données est décris dans la figure \ref{fig:donnees}
 \clearpage
 
 \section{Modèle de Données}
-
+\vspace{1.5cm}
 Le modèle de données est une façon abstraite de représenter les données du système et de modéliser les informations contenus dans une base de données. Le modèle constitue des ensembles possédant un nom et des attributs nommés. La  des relations est fait via des clés primaires (id, dans notre cas) et des clés étrangères.  
 
 \ref{fig:UML} 
@@ -99,7 +100,7 @@ Le modèle de données est une façon abstraite de représenter les données du 
 \clearpage
 
 \section{Spécification des comportements}
-
+\vspace{1.5cm}
 Nous allons ici décrire le fonctionnement de notre système. Il est résumé dans la figure \ref{fig:sp_comp}.
 
 \begin{figure}[h!]
