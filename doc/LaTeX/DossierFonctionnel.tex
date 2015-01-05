@@ -9,23 +9,41 @@ Dans cette partie nous allons analyser notre système avec une approche Top-Down
 \caption{\label{fig:beteacorne} Diagramme "bête à cornes" du système BMONS}
 \end{figure}
 
-\clearpage
+Le diagramme pieuvre, \ref{fig:diagpieuvre1} et \ref{fig:diagpieuvre2}, nous permet ensuite de faire apparaître les fonctions principales du système. On peut aussi y retrouver les fonctions de services et de contraintes.
 
-\section{Approche Bottom-Up}
-
-\section{Fonctions principales du système}
-
-Les fonctions principale, services et contraintes du système sont regroupées dans ce diagramme pieuvre, figures \ref{fig:diagpieuvre1} et \ref{fig:diagpieuvre2} . Les buts et les contraintes imposées au système y sont également représentés. 
  
 \begin{figure}[h!]
-\centering\includegraphics[scale=0.5]{pieuvre1.png}
+\centering\includegraphics[scale=0.6]{pieuvre1.png}
 \caption{\label{fig:diagpieuvre1} Diagramme pieuvre du système BMONS}
 \end{figure}
 
 \begin{figure}[h!]
-\centering\includegraphics[scale=0.5]{pieuvre2.png}
+\centering\includegraphics[scale=0.6]{pieuvre2.png}
 \caption{\label{fig:diagpieuvre2} Légende diagramme pieuvre du système BMONS}
 \end{figure}
+
+\clearpage
+
+\section{Approche Bottom-Up}
+
+Nous allons maintenant adopter la démarche inverse, mais néanmoins complémentaire, de l'approche Top-Down. Il s'agit de l'approche Bottom-Up. C'est une démarche de conception ascendante qui va nous permettre d'avoir une vision plus globale du système. On peut voir sur \ref{fig:exi1} et \ref{fig:exi2} les exigences issues de cette analyse.
+
+ 
+\begin{figure}[h!]
+\centering\includegraphics[trim = 1cm 8.7cm 1cm 1cm,scale=0.8]{Exigences_du_Projet_1.pdf}
+\caption{\label{fig:exi1} Exigences issues de l'approche Bottom-Up (1/2)}
+\end{figure}
+
+ 
+\begin{figure}[h!]
+\centering\includegraphics[trim = 1cm 2cm 1cm 1cm,scale=0.8]{Exigences_du_Projet_2.pdf}
+\caption{\label{fig:exi2} Exigences issues de l'approche Bottom-Up (2/2)}
+\end{figure}
+
+\clearpage
+
+\section{Fonctions métiers du système}
+
 
 
 \chapter{Spécification fonctionnelle  3 axes}
@@ -65,9 +83,9 @@ Le diagramme des données est décris dans la figure \ref{fig:donnees}
 
 \clearpage
 
-\section{Modèle de Donnés}
+\section{Modèle de Données}
 
-Le modèle de donnés est une façon abstraite de représenter les donnés du système et de modéliser les informations contenus dans une base de donnés. Le modèle constitue des ensembles possèdent d'un nom et des attributs nommés. La  des relations est fait via des clés primaires (id, dans notre cas) et des clés étrangères.  
+Le modèle de données est une façon abstraite de représenter les données du système et de modéliser les informations contenus dans une base de données. Le modèle constitue des ensembles possédant un nom et des attributs nommés. La  des relations est fait via des clés primaires (id, dans notre cas) et des clés étrangères.  
 
 \ref{fig:UML} 
 
@@ -75,7 +93,7 @@ Le modèle de donnés est une façon abstraite de représenter les donnés du sy
 
 \begin{figure}[h!]
 \centering\includegraphics[scale=0.55]{UML.png}
-\caption{\label{fig:UML} Modèle de donnés pour le système BMONS}
+\caption{\label{fig:UML} Modèle de données pour le système BMONS}
 \end{figure}
 
 \clearpage
