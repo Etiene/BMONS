@@ -27,12 +27,12 @@ Ensuite un kit de capteurs à installer permet de mesurer la température, l'hum
 
 Nous n'avons pas détaillé ici tous les projets que nous avons trouvés du fait de leur grand nombre. Cependant nous nous sommes intéressés à ceux qui présentaient un intérêt pour le système que nous voulons développer. 
 
-Concernant le traitement sonore, le site internet Beesource comporte une description complète du système Apidictor \cite{apidictor}. Ce système permet de filtrer le son émit par une ruche pour prévoir un essaimage. Un schéma du montage électrique ainsi qu'un texte expliquant quelles fréquences sont surveillées et quelles méthodes ont été utilisées pour vérifier le bon fonctionnement de ce système sont également présents. Nous ne réutiliserons pas le montage proposé, car le traitement du signal sonore se fera de manière informatisée, en revanche le travail effectué pour savoir quelles fréquences sont à surveiller nous sera utile.
+Concernant le traitement sonore, le site internet Beesource comporte une description complète du système Apidictor \cite{apidictor}. Ce système permet de filtrer le son émit par une ruche pour prévoir un essaimage. Un schéma du montage électrique ainsi qu'un texte expliquant quelles fréquences sont surveillées et quelles méthodes ont été utilisées pour vérifier le bon fonctionnement de ce système sont également présents. Nous ne réutiliserons pas le montage proposé, car le traitement du signal sonore se fera de manière informatisée, en revanche le travail effectué pour savoir quelles fréquences sont à surveiller nous sera utile. \\
 
 A propos de la transmission de l'information à l'apiculteur, deux moyens sont très souvent utilisés: un site internet sécurisé et une application pour smart-phone. Concernant le site internet, celui de la société Arnia nous a semblé complet et clair. Pour l'application smart-phone, l'entreprise américaine B-Ware en a mis une au point mettant bien en avant le tableau de bord, l'affichage de l'historique des paramètres de la ruche et la personnalisation des alertes en laissant même l'apiculteur définir lui même les seuils de déclenchement des avertissements comme nous pouvons le voir sur la figure \ref{fig:application}.   
 
 \begin{figure}[h]
-\centering\includegraphics[scale=0.6]{Bee_app.png}
+\centering\includegraphics[scale=0.5]{Bee_app.png}
 \caption{\label{fig:application} Capture d'écran de l'application B-Ware}
 \end{figure} 
 
@@ -40,7 +40,15 @@ La société BeeWise d'origine française a développé un système d'alimentati
 
 \begin{figure}[h]
 \centering\includegraphics[scale=0.9]{solar.png}
-\caption{\label{fig:app} Système de panneau solaire installé sur une ruche}
+\caption{\label{fig:solar} Système de panneau solaire installé sur une ruche}
 \end{figure} 
+
+Les recherches sur l'exploitation des ruchers nous a mené à comprendre que l'un des principaux risques pour les apiculteurs est le vol de ruche. Cette pratique s'est très largement répandue ces dernières années. C'est pour cela que la société Apimiel met à disposition un système GPS pour permettre à l'apiculteur de connaitre en temps réel la position de ses ruches \cite{Apimiel}. Au moindre déplacement, l'apiculteur recevra une alerte SMS. Compte tenu de sa taille, le traceur GPS devra se trouver à l'extérieur de la ruche mais il existe aussi des versions plus petites que l'on peut directement placer dans la ruche comme sur la figure \ref{fig:gps}. C'est ce que Michel BOCQUET, ingénieur agronome, propose sur son blog. Néanmoins, son objectif final est d'étudier le comportement des abeilles pour mieux comprendre celui de notre environnement et non commercialiser son projet aux apiculteurs. Le cout du matériel n'est donc pas pris en compte. 
+
+\begin{figure}[h]
+\centering\includegraphics[scale=0.5]{gps.png}
+\caption{\label{fig:gps} Système GPS placé dans la ruche}
+\end{figure} 
+     
 
    
