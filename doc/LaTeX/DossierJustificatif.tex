@@ -1,3 +1,5 @@
+
+
 \chapter{Choix et justifications}
 
 \section{Choix des capteurs}
@@ -37,7 +39,15 @@ Nous avons choisit le Capsule micro pour CI 2 V/DC sensibilité 44 dB (à 3 dB p
 \section{Choix de la carte Arduino}
 \vspace{1.5cm}
 
-Nous avons opté pour une carte Arduino Mega 2560 compte tenu du nombre d'entré dont nous aurions besoin \ref{fig:arduino}.
+Compte tenu du fait que nous avions besoin d'un nombre d'entrées assez élevé (au moins 20) ainsi que d'un temps ADC supérieur ou égal à 5kHz. Nous avons alors sélectionné quatre cartes, que nous avons ensuite comparées. Ces résultats sont regroupés dans la Figure\ref{fig:choixardui}.
+
+\begin{figure}[h]
+\centering\includegraphics[trim=1cm 11cm 1cm 1cm,scale=0.5]{choixArduino.pdf}
+\caption{\label{fig:choixardui} Tableau comparatif des cartes Arduino et équivalents}
+\end{figure} 
+
+Nous avons opté pour une carte Arduino Mega 2560, Figure \ref{fig:arduino}, compte tenu de l'existence de nombreuses librairies, notamment pour réaliser une fft, et du prix raisonnable. La carte netduino paraissait également très intéressante, car elle ne nécessite pas de shield supplémentaire pour accéder à internet et était trois fois moins chère que les autres. Cependant, comme ce système est peu utilisé, il sera difficile de trouver de la documentation sur internet. Enfin ce système utilise beaucoup de mémoire pour son fonctionnement, limitant ainsi la capacité de stockage. Nous ne pouvions donc pas envisager cette solution et nous avons donc choisi la carte classique Arduino Mega 2560.
+
 
 \begin{figure}[h]
 \centering\includegraphics[scale=0.5]{arduino.png}
@@ -48,9 +58,22 @@ Nous avons opté pour une carte Arduino Mega 2560 compte tenu du nombre d'entré
 \vspace{1.5cm}
 
 Nous avons décidé d'opter pour une solution technique simple à déplacer et qui peut ainsi s'adapter à l'utilisateur.
-En effet,suite à nos échanges avec notre client, monsieur Singhoff, nous avons remarqué que selon la période de l'année les besoins de l'apiculteur ne sont pas les mêmes. En hivers il veut des informations sur le corps de la ruche alors qu'en été il s'intéresse plus aux hausses qu'il ajoute. Ainsi dans un soucis d'efficacité et de maniabilité, nous voulons intégrer nos capteurs à un cadre en bois que l'apiculteur placera selon ses besoins. Il disposera le cadre sous la partie de la ruche qu'il veut surveiller.
-....................................
+En effet,suite à nos échanges avec notre client, monsieur Singhoff, nous avons remarqué que selon la période de l'année les besoins de l'apiculteur ne sont pas les mêmes. En hivers il veut des informations sur le corps de la ruche alors qu'en été il s'intéresse plus aux hausses qu'il ajoute. Ainsi dans un soucis d'efficacité et de maniabilité, nous voulons intégrer nos capteurs à un cadre en bois que l'apiculteur placera selon ses besoins. Il disposera le cadre sous la partie de la ruche qu'il veut surveiller. Ainsi en hiver, le cadre de mesure sera normalement placé sous la ruche, Figure \ref{fig:rucheBas}, pour vérifier l'activité et les réserves disponibles pour les abeilles. En été, le cadre de mesure sera placé sous une des hausses,Figure \ref{fig:rucheHaut}, logiquement la dernière pour suivre la miellée.
+\begin{figure}[h]
 
+\begin{minipage}[c]{.46\linewidth}
+     \begin{center}
+             \includegraphics[scale=0.4]{cadreBas.jpg}
+             \caption{\label{fig:rucheBas} Position standard du cadre de mesure en hiver}
+         \end{center}
+   \end{minipage} \hfill
+   \begin{minipage}[c]{.46\linewidth}
+    \begin{center}
+            \includegraphics[scale=0.4]{cadreHaut.jpg}
+            \caption{\label{fig:rucheBas} Position standard du cadre de mesure en été}
+        \end{center}
+ \end{minipage}
+ \end{figure}
 
 \chapter{Résultats et analyses}
 
