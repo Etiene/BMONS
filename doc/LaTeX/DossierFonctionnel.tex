@@ -118,14 +118,17 @@ Nous allons ici décrire le fonctionnement de notre système. Il est résumé da
 
 Les capteurs mesurent plusieurs paramètres internes à la ruche : l'humidité, la température et le poids de la ruche. Les données sont ensuite transmises au système embarqué. Dès que le système embarqué les reçoit, il traite les données, sélectionne celles qui sont valides et les envoi au serveur soit par le réseau sans fil (2G ou 3G), soit par le réseau téléphone si besoin. Une fois que le serveur reçoit les données, elles sont traitées et stockées dans une base de données sécurisée. Une représentation sous forme de graphiques permet une vision pratique et exploitable des informations par l'apiculteur.
 
-Quand les mesures effectuées dépassent certain critères, par exemple, si la température est plus élevée que la température maximum pour la ruche, le serveur va générer un alerte qui sera envoyée à l'utilisateur, c'est-à-dire l'apiculteur, par SMS ou par e-mail. Par ailleurs, les apiculteurs peuvent consulter l’état de la ruche à distance afin de bien gérer la productivité de la ruche ou de limiter les situations problématiques. 
+Quand les mesures effectuées dépassent certain critères, par exemple, si la température est plus élevée que la température maximum pour la ruche, le serveur va générer un alerte qui sera envoyée à l'utilisateur, c'est-à-dire l'apiculteur, par SMS ou par e-mail. Par ailleurs, les apiculteurs peuvent consulter l’état de la ruche à distance afin de bien gérer la productivité de la ruche ou de limiter les situations problématiques. \\
 
-\\La spécification du comportement ce fait également grâce aux diagrammes de séquence. Ces diagrammes expliquent précisément comment les différent parties du système interagissent dans le but d'exécuter une action. Ils détail l'ordre des actions ainsi que leur nature et leur durée d'exécution. Les 5 diagrammes de séquence ont été réalisé concernent l'action de récupération de la mémoire flash voir la figure\ref{fig:seq1}, l'analyse des information par le serveur voir la figure \ref{fig:seq2}, le service permettant à l'apiculteur d'avertir le serveur d'une intervention sur une ruche voir la figure\ref{fig:seq3}, la fonction permettant la configuration des alertes voir la figure\ref{fig:seq4} et l'action de connexion d'un apiculteur à son compte voir la figure\ref{fig:seq5}.
+
+La spécification du comportement se fait également grâce aux diagrammes de séquence. Ces diagrammes expliquent précisément comment les différent parties du système interagissent dans le but d'exécuter une action. Ils détail l'ordre des actions ainsi que leur nature et leur durée d'exécution. Les 5 diagrammes de séquence ont été réalisé concernent l'action de récupération de la mémoire flash voir la figure\ref{fig:seq1}, l'analyse des information par le serveur voir la figure \ref{fig:seq2}, le service permettant à l'apiculteur d'avertir le serveur d'une intervention sur une ruche voir la figure\ref{fig:seq3}, la fonction permettant la configuration des alertes voir la figure\ref{fig:seq4} et l'action de connexion d'un apiculteur à son compte voir la figure\ref{fig:seq5}.
 \begin{figure}[h!]
 \centering\includegraphics[scale=0.7]{recupererMemoireFlash.jpg}
 \caption{\label{fig:seq1} Diagramme de récupération de la mémoire flash}
-\end{figure}
-\\La figure \ref{fig:seq1} ce lit de la façon suivante les quatre blocs en haut représentent les acteurs de la action recupererMemoireFlash. Ces acteurs interagisent par l'intermediaire de requete ou d'appel de fonction représentés par les flêches. Le tout se deroule selon un axe temporel symbolisé par les lignes verticales sous les acteurs.
+\end{figure}\\
+
+
+La figure \ref{fig:seq1} se lit de la façon suivante les quatre blocs en haut représentent les acteurs de la action recupererMemoireFlash. Ces acteurs interagisent par l'intermediaire de requete ou d'appel de fonction représentés par les flêches. Le tout se deroule selon un axe temporel symbolisé par les lignes verticales sous les acteurs.
 \begin{figure}[h!]
 \centering\includegraphics[scale=0.4]{analyserInformation.jpg}
 \caption{\label{fig:seq2} Diagramme d'analyse de l'information}
