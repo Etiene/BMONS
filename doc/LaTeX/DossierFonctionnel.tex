@@ -1,4 +1,4 @@
-\chapter{Ingénierie des exigences}
+﻿\chapter{Ingénierie des exigences}
 \section{Approche Top-Down}
 \vspace{1.5cm}
 Dans cette partie nous allons analyser notre système avec une approche Top-Down. Cela signifie que nous adopterons une démarche de conception descendante. Pour cela nous avons tracé le diagramme "bête à cornes", que l'on peut voir sur la figure \ref{fig:beteacorne}. Il permet de représenter graphiquement l'expression du besoin. Comme on peut le voir sur le diagramme, le système BMONS rend service aux apiculteurs en agissant sur une ou plusieurs ruches. Il a pour but d'aider la surveillance d'un rucher et d'avertir l'apiculteur en cas de problème.
@@ -46,7 +46,7 @@ Nous allons maintenant adopter la démarche inverse, mais néanmoins complément
 \section{Fonctions métiers du système}
 \vspace{1.5cm}
 
-Après avoir réalisé une approche du point de vue "concepteur" du système, nous allons maintenant nous intéresser à la formulation des fonctions qu'un apiculteur souhaiterai avoir pour pouvoir suivre l'évolution de son rucher. Ces fonctions métiers ont été discutées avec notre "client", M. SINGHOFF. Elles sont présentent sur la figure \ref{fig:exi1}.
+Après avoir réalisé une approche du point de vue "concepteur" du système, nous allons maintenant nous intéresser à la formulation des fonctions qu'un apiculteur souhaiterai avoir pour pouvoir suivre l'évolution de son rucher. Ces fonctions métiers ont été discutées avec notre client, monsieur Singhoff. Elles sont représentées sur la figure \ref{fig:exi1}.
 
 
 \begin{figure}[h!]
@@ -55,14 +55,11 @@ Après avoir réalisé une approche du point de vue "concepteur" du système, no
 \end{figure}
 
 
-\chapter{Spécification fonctionnelle  3 axes}
+\chapter{Spécification fonctionnelle 3 axes}
 
 \section{Raffinement FAST}
 \vspace{1.5cm}
-Le diagramme FAST regroupe les fonctions principales, techniques et contraintes globales définies dans lors de 
-l'établissement des exigences et après leur discussion avec le client. Ainsi, certaines exigences que nous avons préalablement établit ont été acceptée mais d'autres ont écartée comme l'analyse des odeurs dans la ruche jugée finalement trop compliquée à mettre en place et difficile à exploiter. D'autres exigences ont vu le jours après les échanges avec l'apiculteur ce qui est venus enrichir et compléter notre tableau des exigences. Le raffinement des trois types de fonctions en sous fonctions et les solutions techniques 
-associées a celles-ci apparaissent également. Il a évolué au cours du projet en fonction des autres documents 
-d'ingénierie système et des solutions techniques retenues. 
+Le diagramme FAST regroupe les fonctions principales, techniques et contraintes globales définies lors de l'établissement des exigences et après leurs discussion avec le client. Ainsi, certaines exigences que nous avons préalablement établies ont été acceptées mais d'autres ont écartées comme l'analyse des odeurs dans la ruche, jugée finalement trop compliquée à mettre en place et difficile à exploiter. D'autres exigences ont vu le jour après les échanges avec l'apiculteur, ce qui est venu enrichir et compléter notre tableau des exigences. Le raffinement des trois types de fonction en sous-fonction et les solutions techniques associées à celles-ci apparaissent également. Le diagramme FAST a évolué au cours du projet en fonction des autres documents d'ingénierie système et des solutions techniques retenues. 
 On peut voir la version finale du FAST sur la figure \ref{fig:fast}
 
 \begin{figure}[h!]
@@ -74,14 +71,12 @@ On peut voir la version finale du FAST sur la figure \ref{fig:fast}
 
 \section{Spécification des données}
 \vspace{1.5cm}
-La spécification des données permet de mettre à jour les différentes grandeurs 
-et unités intervenant dans notre système. Grâce à cela, nous savons exactement 
-quel type de donnée traiter et comment convertir les données numériques de sortie des capteurs en grandeurs physiques facilement compréhensible pour l'apiculteur. Il faudra ensuite envoyer ces données traitées au serveur qui les stockera dans une base de données. Cette étude a aussi permis d'établir les alertes qu'il va falloir prévoir afin d'avertir le propriétaire de l'état de son rucher. Ces dernières seront aussi stockées sur le serveur qui viendront compléter l'historique de la ruche. Il est possible qu'une alerte soit envoyée après avoir effectué un recoupement d'informations Par exemple, pour alerter l'apiculteur d'un essaimage en cours, il est nécessaire de détecter une agitation dans la ruche (chant de la reine) grâce au microphone et une chute importante de la masse grâce à la balance. 
+La spécification des données permet de mettre à jour les différentes grandeurs et unités intervenant dans notre système. Grâce à cela, nous savons exactement quel type de données traiter et comment convertir les données numériques de sortie des capteurs en grandeurs physiques facilement compréhensible pour l'apiculteur. Il faudra ensuite envoyer ces données traitées au serveur qui les stockera dans une base de données. Cette étude a aussi permis d'établir les alertes qu'il va falloir prévoir afin d'avertir le propriétaire de l'état de son rucher. Ces dernières seront aussi stockées sur le serveur et viendront compléter l'historique de la ruche. Il est possible qu'une alerte soit envoyée après avoir effectué un recoupement d'informations. Par exemple, pour alerter l'apiculteur d'un essaimage en cours, il est nécessaire de détecter une agitation dans la ruche (chant de la reine) grâce au microphone et une chute importante de la masse grâce aux détecteurs de pression. 
 
-Il existera deux types d'alertes: les alertes actives qui préconiserons l'apiculteur à agir directement sur la ruche (par exemple lorsque le développement de la grappe est excentrée par rapport aux cadres) et des alertes passives qui encourageront le client à se rendre sur le serveur pour consulter les derniers relevés.   
+Il existera deux types d'alertes: les alertes actives qui préconiserons à l'apiculteur d'agir directement sur la ruche (par exemple lorsque le développement de la grappe est excentrée par rapport aux cadres) et des alertes passives qui encourageront le client à se rendre sur le serveur pour consulter les derniers relevés.   
 
-L'axe Data comportant la spécification des messages, des évènements et des alarmes est fourni en annexe.
-Le diagramme des données est décris dans la figure \ref{fig:donnees} 
+L'axe Data comportant la spécification des messages, des événements et des alarmes est fourni en annexe.
+Le diagramme des données est décrit dans la figure \ref{fig:donnees} 
 
 
 
@@ -92,9 +87,9 @@ Le diagramme des données est décris dans la figure \ref{fig:donnees}
 
 \clearpage
 
-\section{Modèle de Données}
+\section{Modèle de données}
 \vspace{1.5cm}
-Le modèle de données est une façon abstraite de représenter les données du système et de modéliser les informations contenus dans une base de données. Le modèle constitue des ensembles possédant un nom et des attributs nommés. La  des relations est fait via des clés primaires (id, dans notre cas) et des clés étrangères.  
+Le modèle de données est une façon abstraite de représenter les données du système et de modéliser les informations contenues dans une base de données. Le modèle constitue des ensembles possédant un nom et des attributs nommés. Les relations sont faites via des clés primaires (id, dans notre cas) et des clés étrangères.  
 
 \ref{fig:UML} 
 
@@ -121,7 +116,7 @@ Les capteurs mesurent plusieurs paramètres internes à la ruche : l'humidité, 
 Quand les mesures effectuées dépassent certain critères, par exemple, si la température est plus élevée que la température maximum pour la ruche, le serveur va générer un alerte qui sera envoyée à l'utilisateur, c'est-à-dire l'apiculteur, par SMS ou par e-mail. Par ailleurs, les apiculteurs peuvent consulter l’état de la ruche à distance afin de bien gérer la productivité de la ruche ou de limiter les situations problématiques. \\
 
 
-La spécification du comportement se fait également grâce aux diagrammes de séquence. Ces diagrammes expliquent précisément comment les différent parties du système interagissent dans le but d'exécuter une action. Ils détail l'ordre des actions ainsi que leur nature et leur durée d'exécution. Les 5 diagrammes de séquence ont été réalisé concernent l'action de récupération de la mémoire flash voir la figure\ref{fig:seq1}, l'analyse des information par le serveur voir la figure \ref{fig:seq2}, le service permettant à l'apiculteur d'avertir le serveur d'une intervention sur une ruche voir la figure\ref{fig:seq3}, la fonction permettant la configuration des alertes voir la figure\ref{fig:seq4} et l'action de connexion d'un apiculteur à son compte voir la figure\ref{fig:seq5}.
+La spécification des comportements se fait également grâce aux diagrammes de séquence. Ces diagrammes expliquent précisément comment les différentes parties du système interagissent dans le but d'exécuter une action. Ils détaillent l'ordre des actions ainsi que leur nature et leur durée d'exécution. Les 5 diagrammes de séquence qui ont été réalisés concernent l'action de récupération de la mémoire flash, figure\ref{fig:seq1}, l'analyse des information par le serveur, figure \ref{fig:seq2}, le service permettant à l'apiculteur d'avertir le serveur d'une intervention sur une ruche, figure\ref{fig:seq3}, la fonction permettant la configuration des alertes, figure\ref{fig:seq4} et l'action de connexion d'un apiculteur à son compte, figure\ref{fig:seq5}.
 \begin{figure}[h!]
 \centering\includegraphics[scale=0.7]{recupererMemoireFlash.jpg}
 \caption{\label{fig:seq1} Diagramme de récupération de la mémoire flash}
@@ -129,7 +124,7 @@ La spécification du comportement se fait également grâce aux diagrammes de s�
 
 \newpage
 
-La figure \ref{fig:seq1} se lit de la façon suivante les quatre blocs en haut représentent les acteurs de la action recupererMemoireFlash. Ces acteurs interagisent par l'intermediaire de requete ou d'appel de fonction représentés par les flêches. Le tout se deroule selon un axe temporel symbolisé par les lignes verticales sous les acteurs.
+La figure \ref{fig:seq1} se lit de la façon suivante les quatre blocs en haut représentent les acteurs de l'action recupererMemoireFlash. Ces acteurs interagissent par l'intermédiaire de requête ou d'appel de fonction représentés par les flèches. Le tout se déroule selon un axe temporel symbolisé par les lignes verticales sous les acteurs.
 \begin{figure}[h!]
 \centering\includegraphics[scale=0.4]{analyserInformation.jpg}
 \caption{\label{fig:seq2} Diagramme d'analyse de l'information}
@@ -151,7 +146,7 @@ La figure \ref{fig:seq1} se lit de la façon suivante les quatre blocs en haut r
 \chapter{Architecture fonctionnelle}
 
 L'étude de la spécification fonctionnelle trois axes a permis d'établir l'architecture fonctionnelle du système qui est représentée sur la figure \ref{fig:anaFonc}.
-Ce schéma résume les interactions entre chaque partie: Bee Monitor qui regroupe l'ensemble des capteurs, la carte Arduino ainsi que la carte SSD pour l'enregistrement local des données, le module de transmission et le système d'alimentation rendant notre projet autonome en énergie et le serveur. Chaque acteur interagissant avec le système y sont également représentés: Les abeilles/ruche, l'apiculteur et l'environnement.   
+Ce schéma résume les interactions entre chaque partie: Bee Monitor qui regroupe l'ensemble des capteurs, la carte Arduino ainsi que la carte SSD pour l'enregistrement local des données, le module de transmission et le système d'alimentation rendant notre projet autonome en énergie et le serveur. Chaque acteur interagissant avec le système est également représenté: Les abeilles/ruche, l'apiculteur et l'environnement.   
   
 
 \begin{figure}[h]
