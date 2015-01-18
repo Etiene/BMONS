@@ -26,7 +26,7 @@ La solution technique que nous avons choisie se présente sous la forme d'un cad
 \section{Architecture physique logicielle}
 
 \vspace{1.5cm}
-Dans cette partie nous allons analyser l'architecture logicielle côté logiciel. Elle est divisée en deux parties: Serveur et Arduino. La partie serveur comprend tout qu'est lié au développement du site et les scripts qui contrôlent les logiciels, les backups et l'obtention de données. La partie arduino comprend tous les capteurs et modules, l'énergie et les scripts de contrôle des capteurs et manipulation des données. Ceci est résumé dans le diagramme \ref{SDP}. 
+Dans cette partie nous allons analyser l'architecture logicielle côté logiciel. Elle est divisée en deux parties: Serveur et Arduino. La partie serveur comprend tout qu'est lié au développement du site et les scripts qui contrôlent les logiciels, les backups et l'obtention de données. La partie arduino comprend tous les capteurs et modules, l'énergie et les scripts de contrôle des capteurs et manipulation des données. Ceci est résumé dans le diagramme ci-dessous. 
 
 
 \begin{figure}[h!]
@@ -38,7 +38,7 @@ Dans cette partie nous allons analyser l'architecture logicielle côté logiciel
 
 \subsection{Carte Arduino et transmission des données}
 
-Au niveau de la carte Arduino, nous avons commencé à prendre en main les capteurs dès que nous les avions reçus notamment les capteurs de température et de pression. Nous avons commencé à coder un programme qui permettrai de récupérer la température en degrés.(voir figure \ref{code}). Pour la pression, nous récupérons une certaine valeur de résistance. A partir de cela, nous comptons effectuer un étalonnage afin d'en tirer une information sur la masse de la ruche ou des hausses selon la saison et l'envie de l'apiculteur. Cette étalonnage se fera en fonction des informations présentes sur la documentation constructeur du capteur de pression. \\
+Au niveau de la carte Arduino, nous avons commencé à prendre en main les capteurs dès que nous les avions reçus notamment les capteurs de température et de pression. Nous avons commencé à coder un programme qui permettrai de récupérer la température en degrés. Pour la pression, nous récupérons une certaine valeur de résistance. A partir de cela, nous comptons effectuer un étalonnage afin d'en tirer une information sur la masse de la ruche ou des hausses selon la saison et l'envie de l'apiculteur. Cette étalonnage se fera en fonction des informations présentes sur la documentation constructeur du capteur de pression. \\
 
 \begin{figure}[h!]
 \centering\includegraphics[scale=0.45]{codeArduino.png}
