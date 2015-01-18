@@ -46,12 +46,12 @@ Nous allons maintenant adopter la démarche inverse, mais néanmoins complément
 \section{Fonctions métiers du système}
 \vspace{1.5cm}
 
-Après avoir réalisé une approche du point de vue "concepteur" du système, nous allons maintenant nous intéresser à la formulation des fonctions qu'un apiculteur souhaiterai avoir pour pouvoir suivre l'évolution de son rucher. Ces fonctions métiers ont été discutées avec notre client, monsieur Singhoff. Elles sont représentées sur la figure \ref{fig:exi1}.
+Après avoir réalisé une approche du point de vue "concepteur" du système, nous allons maintenant nous intéresser à la formulation des fonctions qu'un apiculteur souhaiterai avoir pour pouvoir suivre l'évolution de son rucher. Ces fonctions métiers ont été discutées avec notre client, monsieur Singhoff. Elles sont représentées sur les figures \ref{fig:exi1,exi2,exi3,exi4} en annexe dont la figure \ref{fig:exi1text} est un extrait.
 
 
 \begin{figure}[h!]
 \centering\includegraphics[trim = 1cm 2cm 1cm 1cm,scale=0.65]{Exigences1.pdf}
-\caption{\label{fig:exi1} Fonctions métiers du système (1/4)}
+\caption{\label{fig:exi1text} Fonctions métiers du système (1/4)}
 \end{figure}
 
 
@@ -76,13 +76,13 @@ La spécification des données permet de mettre à jour les différentes grandeu
 Il existera deux types d'alertes: les alertes actives qui préconiserons à l'apiculteur d'agir directement sur la ruche (par exemple lorsque le développement de la grappe est excentrée par rapport aux cadres) et des alertes passives qui encourageront le client à se rendre sur le serveur pour consulter les derniers relevés.   
 
 L'axe Data comportant la spécification des messages, des événements et des alarmes est fourni en annexe.
-Le diagramme des données est décrit dans la figure \ref{fig:donnees} 
+Le diagramme des données est décrit dans la figure \ref{fig:Fluxdonnees} 
 
 
 
 \begin{figure}[h!]
 \centering\includegraphics[scale=0.35]{diagFluxDonnees.jpg}
-\caption{\label{fig:donnees} Diagramme d'activité du flux de données}
+\caption{\label{fig:Fluxdonnees} Diagramme d'activité du flux de données}
 \end{figure}
 
 \clearpage
@@ -90,8 +90,7 @@ Le diagramme des données est décrit dans la figure \ref{fig:donnees}
 \section{Modèle de données}
 \vspace{1.5cm}
 Le modèle de données est une façon abstraite de représenter les données du système et de modéliser les informations contenues dans une base de données. Le modèle constitue des ensembles possédant un nom et des attributs nommés. Les relations sont faites via des clés primaires (id, dans notre cas) et des clés étrangères.  
-
-\ref{fig:UML} 
+La figure \ref{fig:UML} représente le modèle de données pour notre système. 
 
 
 
@@ -116,7 +115,7 @@ Les capteurs mesurent plusieurs paramètres internes à la ruche : l'humidité, 
 Quand les mesures effectuées dépassent certain critères, par exemple, si la température est plus élevée que la température maximum pour la ruche, le serveur va générer un alerte qui sera envoyée à l'utilisateur, c'est-à-dire l'apiculteur, par SMS ou par e-mail. Par ailleurs, les apiculteurs peuvent consulter l’état de la ruche à distance afin de bien gérer la productivité de la ruche ou de limiter les situations problématiques. \\
 
 
-La spécification des comportements se fait également grâce aux diagrammes de séquence. Ces diagrammes expliquent précisément comment les différentes parties du système interagissent dans le but d'exécuter une action. Ils détaillent l'ordre des actions ainsi que leur nature et leur durée d'exécution. Les 5 diagrammes de séquence qui ont été réalisés concernent l'action de récupération de la mémoire flash, figure\ref{fig:seq1}, l'analyse des information par le serveur, figure \ref{fig:seq2}, le service permettant à l'apiculteur d'avertir le serveur d'une intervention sur une ruche, figure\ref{fig:seq3}, la fonction permettant la configuration des alertes, figure\ref{fig:seq4} et l'action de connexion d'un apiculteur à son compte, figure\ref{fig:seq5}.
+La spécification des comportements se fait également grâce aux diagrammes de séquence. Ces diagrammes expliquent précisément comment les différentes parties du système interagissent dans le but d'exécuter une action. Ils détaillent l'ordre des actions ainsi que leur nature et leur durée d'exécution. Les 5 diagrammes de séquence qui ont été réalisés concernent l'action de récupération de la mémoire flash, figure \ref{fig:seq1}, l'analyse des information par le serveur, figure \ref{fig:seq2}, le service permettant à l'apiculteur d'avertir le serveur d'une intervention sur une ruche, figure \ref{fig:seq3}, la fonction permettant la configuration des alertes, figure \ref{fig:seq4} et l'action de connexion d'un apiculteur à son compte, figure \ref{fig:seq5}.
 \begin{figure}[h!]
 \centering\includegraphics[scale=0.7]{recupererMemoireFlash.jpg}
 \caption{\label{fig:seq1} Diagramme de récupération de la mémoire flash}
