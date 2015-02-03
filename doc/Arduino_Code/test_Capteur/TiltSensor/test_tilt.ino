@@ -34,6 +34,7 @@ const int ledPin = O0;
 int tiltState = 0;
 // variable for reading the tilt Sensor status
 void setup() {
+   Serial.begin(9600);
 // initialize the LED pin as an output:
   pinMode(ledPin,OUTPUT);
 // initialize the tilt Sensor pin as an input:
@@ -41,8 +42,9 @@ void setup() {
 }
 void loop(){
 // read the state of the tilt Sensor value:
+   Serial.println("OK");
   tiltState =digitalRead(tiltPin);
-  Serial.print(tiltState);
+  Serial.println(tiltState); 
 // check if the tilt Sensor is tilted.
 // if it is, the buttonState is HIGH:
   if(tiltState ==HIGH) {
