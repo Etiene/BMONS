@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  message: MyText
+  status: 1
+  recipient: MyString
+  datetime: 2015-02-17 16:37:15
+  alert_id: 
+
+two:
+  message: MyText
+  status: 1
+  recipient: MyString
+  datetime: 2015-02-17 16:37:15
+  alert_id: 
