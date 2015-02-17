@@ -1,0 +1,49 @@
+<%= form_for(@alert) do |f| %>
+  <% if @alert.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@alert.errors.count, "error") %> prohibited this alert from being saved:</h2>
+
+      <ul>
+      <% @alert.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :type %><br>
+    <%= f.text_field :type %>
+  </div>
+  <div class="field">
+    <%= f.label :frequency %><br>
+    <%= f.number_field :frequency %>
+  </div>
+  <div class="field">
+    <%= f.label :message %><br>
+    <%= f.text_area :message %>
+  </div>
+  <div class="field">
+    <%= f.label :threshold %><br>
+    <%= f.number_field :threshold %>
+  </div>
+  <div class="field">
+    <%= f.label :comparison %><br>
+    <%= f.text_field :comparison %>
+  </div>
+  <div class="field">
+    <%= f.label :active %><br>
+    <%= f.check_box :active %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.text_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :sensor_id %><br>
+    <%= f.text_field :sensor_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

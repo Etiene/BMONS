@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @alert.type %>
+</p>
+
+<p>
+  <strong>Frequency:</strong>
+  <%= @alert.frequency %>
+</p>
+
+<p>
+  <strong>Message:</strong>
+  <%= @alert.message %>
+</p>
+
+<p>
+  <strong>Threshold:</strong>
+  <%= @alert.threshold %>
+</p>
+
+<p>
+  <strong>Comparison:</strong>
+  <%= @alert.comparison %>
+</p>
+
+<p>
+  <strong>Active:</strong>
+  <%= @alert.active %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @alert.user %>
+</p>
+
+<p>
+  <strong>Sensor:</strong>
+  <%= @alert.sensor %>
+</p>
+
+<%= link_to 'Edit', edit_alert_path(@alert) %> |
+<%= link_to 'Back', alerts_path %>

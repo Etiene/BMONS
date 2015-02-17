@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Message:</strong>
+  <%= @alert_log.message %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @alert_log.status %>
+</p>
+
+<p>
+  <strong>Recipient:</strong>
+  <%= @alert_log.recipient %>
+</p>
+
+<p>
+  <strong>Datetime:</strong>
+  <%= @alert_log.datetime %>
+</p>
+
+<p>
+  <strong>Alert:</strong>
+  <%= @alert_log.alert %>
+</p>
+
+<%= link_to 'Edit', edit_alert_log_path(@alert_log) %> |
+<%= link_to 'Back', alert_logs_path %>

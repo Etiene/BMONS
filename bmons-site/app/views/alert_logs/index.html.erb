@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Alert Logs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Message</th>
+      <th>Status</th>
+      <th>Recipient</th>
+      <th>Datetime</th>
+      <th>Alert</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @alert_logs.each do |alert_log| %>
+      <tr>
+        <td><%= alert_log.message %></td>
+        <td><%= alert_log.status %></td>
+        <td><%= alert_log.recipient %></td>
+        <td><%= alert_log.datetime %></td>
+        <td><%= alert_log.alert %></td>
+        <td><%= link_to 'Show', alert_log %></td>
+        <td><%= link_to 'Edit', edit_alert_log_path(alert_log) %></td>
+        <td><%= link_to 'Destroy', alert_log, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Alert log', new_alert_log_path %>

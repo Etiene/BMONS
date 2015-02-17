@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  resources :alert_logs
+
+  resources :sensors
+
+  resources :measurements
+
+  resources :alerts
+
+  resources :users
+
   get 'main/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
