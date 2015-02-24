@@ -1,0 +1,9 @@
+#how add this file as a cron job: crontab cron.txt
+#how to delete cron jobs: crontab -r
+#how to list cron jobs: crontab -l
+
+#This will execute our backup script every 3 hours
+0 */3 * * * /home/bmons/BMONS/scripts/server/db_backup.sh
+
+#(test) runs every 2 minutes
+#*/2 * * * * /home/bmons/BMONS/scripts/server/db_backup.sh
