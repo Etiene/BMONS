@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150217153733) do
+ActiveRecord::Schema.define(version: 20150303132021) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -50,6 +50,7 @@ ActiveRecord::Schema.define(version: 20150217153733) do
     t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "mode"
   end
 
   add_index "beehives", ["user_id"], name: "index_beehives_on_user_id", using: :btree
@@ -79,17 +80,15 @@ ActiveRecord::Schema.define(version: 20150217153733) do
     t.string   "name"
     t.integer  "access_level"
     t.string   "login"
-    t.string   "password"
+    t.string   "password_digest"
     t.string   "email"
     t.string   "tel"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
   add_foreign_key "alert_logs", "alerts"
   add_foreign_key "alerts", "sensors"
-  add_foreign_key "alerts", "users"
-  add_foreign_key "beehives", "users"
   add_foreign_key "measurements", "sensors"
   add_foreign_key "sensors", "beehives"
 end

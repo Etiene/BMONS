@@ -435,3 +435,1125 @@ WHERE c.contype = 'f'
   AND t3.nspname = ANY (current_schemas(false))
 ORDER BY c.conname
 
+
+
+Started GET "/" for 127.0.0.1 at 2015-02-24 15:12:27 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (30.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.0) lib/active_record/migration.rb:393:in `check_pending!'
+  activerecord (4.2.0) lib/active_record/migration.rb:374:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:18:in `middleware_call'
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /usr/local/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (2.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (121.1ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20150217160406)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (285.8ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "name" character varying, "access_level" integer, "login" character varying, "password" character varying, "email" character varying, "tel" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+PG::DuplicateTable: ERROR:  relation "users" already exists
+: CREATE TABLE "users" ("id" serial primary key, "name" character varying, "access_level" integer, "login" character varying, "password" character varying, "email" character varying, "tel" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20150217160406)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (2.8ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "name" character varying, "access_level" integer, "login" character varying, "password" character varying, "email" character varying, "tel" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+PG::DuplicateTable: ERROR:  relation "users" already exists
+: CREATE TABLE "users" ("id" serial primary key, "name" character varying, "access_level" integer, "login" character varying, "password" character varying, "email" character varying, "tel" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20150217160406)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (1.8ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "name" character varying, "access_level" integer, "login" character varying, "password" character varying, "email" character varying, "tel" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+PG::DuplicateTable: ERROR:  relation "users" already exists
+: CREATE TABLE "users" ("id" serial primary key, "name" character varying, "access_level" integer, "login" character varying, "password" character varying, "email" character varying, "tel" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (3.8ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'alert_logs'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (2.2ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'alerts'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.8ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'beehives'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (1.7ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'measurements'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.8ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'sensors'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (1.8ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+
+
+Started GET "/" for 127.0.0.1 at 2015-02-24 15:14:50 +0100
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 362ms (Views: 340.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/alert_logs-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-02-24 15:14:50 +0100
+
+
+Started GET "/assets/main-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-02-24 15:14:50 +0100
+
+
+Started GET "/assets/alerts-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-02-24 15:14:50 +0100
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-02-24 15:14:50 +0100
+
+
+Started GET "/assets/measurements-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-02-24 15:14:50 +0100
+
+
+Started GET "/assets/scaffolds-9455134baedb09c5d0fb66f910ee1232.css?body=1" for 127.0.0.1 at 2015-02-24 15:14:50 +0100
+
+
+Started GET "/assets/application-66cff8a034ec68dce58fb97d43590fec.css?body=1" for 127.0.0.1 at 2015-02-24 15:14:50 +0100
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-02-24 15:14:50 +0100
+
+
+Started GET "/assets/sensors-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-02-24 15:14:50 +0100
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-02-24 15:14:50 +0100
+
+
+Started GET "/assets/turbolinks-da8ddad9c2c5483d4c5c30c1ce325253.js?body=1" for 127.0.0.1 at 2015-02-24 15:14:50 +0100
+
+
+Started GET "/assets/alert_logs-46c9a194bd0668e67d57241f94473dc8.js?body=1" for 127.0.0.1 at 2015-02-24 15:14:50 +0100
+
+
+Started GET "/assets/alerts-46c9a194bd0668e67d57241f94473dc8.js?body=1" for 127.0.0.1 at 2015-02-24 15:14:50 +0100
+
+
+Started GET "/assets/main-46c9a194bd0668e67d57241f94473dc8.js?body=1" for 127.0.0.1 at 2015-02-24 15:14:50 +0100
+
+
+Started GET "/assets/measurements-46c9a194bd0668e67d57241f94473dc8.js?body=1" for 127.0.0.1 at 2015-02-24 15:14:50 +0100
+
+
+Started GET "/assets/sensors-46c9a194bd0668e67d57241f94473dc8.js?body=1" for 127.0.0.1 at 2015-02-24 15:14:50 +0100
+
+
+Started GET "/assets/users-46c9a194bd0668e67d57241f94473dc8.js?body=1" for 127.0.0.1 at 2015-02-24 15:14:50 +0100
+
+
+Started GET "/assets/application-dce15ab5544fd3fac600a7cfba2a4539.js?body=1" for 127.0.0.1 at 2015-02-24 15:14:50 +0100
+
+
+Started GET "/main/index" for 127.0.0.1 at 2015-02-24 15:15:25 +0100
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 95ms (Views: 94.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/create" for 127.0.0.1 at 2015-02-24 15:15:36 +0100
+
+ActionController::RoutingError (No route matches [GET] "/user/create"):
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /usr/local/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (2.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (23.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (82.0ms)
+
+
+Started GET "/users/create" for 127.0.0.1 at 2015-02-24 15:15:46 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"create"}
+  [1m[35mUser Load (22.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 0]]
+Completed 404 Not Found in 111ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=create):
+  app/controllers/users_controller.rb:70:in `set_user'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (5.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (25.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-02-24 15:15:55 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 119ms (Views: 117.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2015-02-24 15:16:26 +0100
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (74.9ms)
+  Rendered users/new.html.erb within layouts/application (77.1ms)
+Completed 200 OK in 199ms (Views: 177.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2015-02-24 15:16:47 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZyeCwezPxK8WLb4rJBYbpxtb6ZOXy/bHJtoYKfla6MwGQAt9UjUXgVDvMAVM0Rfaj2gdW4ym/UqL4pOIhHP/IQ==", "user"=>{"name"=>"test", "access_level"=>"4", "login"=>"test", "password"=>"[FILTERED]", "email"=>"a@a.com", "tel"=>"786516"}, "commit"=>"Create User"}
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("name", "access_level", "login", "password", "email", "tel", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "test"], ["access_level", 4], ["login", "test"], ["password", "12345"], ["email", "a@a.com"], ["tel", "786516"], ["created_at", "2015-02-24 14:16:47.426396"], ["updated_at", "2015-02-24 14:16:47.426396"]]
+  [1m[35m (11.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 18ms (ActiveRecord: 12.6ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2015-02-24 15:16:47 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 116ms (Views: 113.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-02-24 15:16:53 +0100
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 110ms (Views: 108.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2015-02-24 15:16:55 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 84ms (Views: 82.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2015-02-24 15:16:57 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/_form.html.erb (2.1ms)
+  Rendered users/edit.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 118ms (Views: 116.9ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/users/1" for 127.0.0.1 at 2015-02-24 15:17:01 +0100
+Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"4Wjei+SarfwARQPwAEXzNCWI8m4uq8EzIXfYw8mWx0+AD1c3WmB+0kaHjd5ogv9JsbsGpjXGyr6MT1NitL/Qog==", "id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (89.4ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 1]]
+  [1m[35m (1.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/users
+Completed 302 Found in 95ms (ActiveRecord: 91.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-02-24 15:17:01 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 96ms (Views: 93.7ms | ActiveRecord: 0.5ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddPasswordsaltToUsers (20150224141939)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (11.4ms)[0m  [1mALTER TABLE "users" ADD "password_salt" character varying[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150224141939"]]
+  [1m[36m (1.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (3.0ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'alert_logs'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.2ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'alerts'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (2.7ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'beehives'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.7ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'measurements'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (2.9ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'sensors'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.5ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+
+
+Started GET "/users/new" for 127.0.0.1 at 2015-02-24 15:22:57 +0100
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (13.4ms)
+  Rendered users/new.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 125ms (Views: 116.5ms | ActiveRecord: 2.2ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddPasswordDigestToUsers (20150224143133)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.7ms)[0m  [1mALTER TABLE "users" ADD "password_digest" character varying[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150224143133"]]
+  [1m[36m (10.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (2.7ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'alert_logs'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.0ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'alerts'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (2.8ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'beehives'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.7ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'measurements'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (2.4ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'sensors'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.5ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to RemovePasswordFromUsers (20150224143554)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20150224143554"]]
+  [1m[35m (2.8ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (2.6ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'alert_logs'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (2.0ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'alerts'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.5ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'beehives'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (2.6ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'measurements'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.3ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'sensors'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (2.3ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[36m (0.6ms)[0m  [1mDROP DATABASE IF EXISTS "bmons_development"[0m
+PG::InsufficientPrivilege: ERROR:  must be owner of database bmons_development
+: DROP DATABASE IF EXISTS "bmons_development"
+  [1m[35m (0.7ms)[0m  CREATE DATABASE "bmons_development" ENCODING = 'unicode'
+PG::DuplicateDatabase: ERROR:  database "bmons_development" already exists
+: CREATE DATABASE "bmons_development" ENCODING = 'unicode'
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (46.8ms)[0m  DROP TABLE "alert_logs" CASCADE
+  [1m[36m (45.2ms)[0m  [1mCREATE TABLE "alert_logs" ("id" serial primary key, "message" text, "status" integer, "recipient" character varying, "datetime" timestamp, "alert_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (4.0ms)[0m  CREATE  INDEX  "index_alert_logs_on_alert_id" ON "alert_logs" USING btree ("alert_id")
+  [1m[36m (4.9ms)[0m  [1mDROP TABLE "alerts" CASCADE[0m
+  [1m[35m (7.3ms)[0m  CREATE TABLE "alerts" ("id" serial primary key, "type" character varying, "frequency" integer, "message" text, "threshold" integer, "comparison" character varying, "active" boolean, "user_id" integer, "sensor_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (7.5ms)[0m  [1mCREATE  INDEX  "index_alerts_on_sensor_id" ON "alerts" USING btree ("sensor_id")[0m
+  [1m[35m (4.2ms)[0m  CREATE  INDEX  "index_alerts_on_user_id" ON "alerts" USING btree ("user_id")
+  [1m[36m (2.8ms)[0m  [1mDROP TABLE "beehives" CASCADE[0m
+  [1m[35m (14.2ms)[0m  CREATE TABLE "beehives" ("id" serial primary key, "name" character varying, "position" text, "user_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (3.5ms)[0m  [1mCREATE  INDEX  "index_beehives_on_user_id" ON "beehives" USING btree ("user_id")[0m
+  [1m[35m (2.7ms)[0m  DROP TABLE "measurements" CASCADE
+  [1m[36m (22.3ms)[0m  [1mCREATE TABLE "measurements" ("id" serial primary key, "value" integer, "datetime" timestamp, "sensor_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (3.0ms)[0m  CREATE  INDEX  "index_measurements_on_sensor_id" ON "measurements" USING btree ("sensor_id")
+  [1m[36m (3.1ms)[0m  [1mDROP TABLE "sensors" CASCADE[0m
+  [1m[35m (12.0ms)[0m  CREATE TABLE "sensors" ("id" serial primary key, "name" character varying, "type" character varying, "unity" character varying, "beehive_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (4.0ms)[0m  [1mCREATE  INDEX  "index_sensors_on_beehive_id" ON "sensors" USING btree ("beehive_id")[0m
+  [1m[35m (18.2ms)[0m  DROP TABLE "users" CASCADE
+  [1m[36m (10.1ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "name" character varying, "access_level" integer, "login" character varying, "password" character varying, "email" character varying, "tel" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "password_salt" character varying, "password_digest" character varying) [0m
+  [1m[35m (2.8ms)[0m  ALTER TABLE "alert_logs" ADD CONSTRAINT "fk_rails_a8dcafc19c"
+FOREIGN KEY ("alert_id")
+  REFERENCES "alerts" ("id")
+
+  [1m[36m (9.8ms)[0m  [1mALTER TABLE "alerts" ADD CONSTRAINT "fk_rails_b5a8eb3566"
+FOREIGN KEY ("sensor_id")
+  REFERENCES "sensors" ("id")
+[0m
+  [1m[35m (2.3ms)[0m  ALTER TABLE "alerts" ADD CONSTRAINT "fk_rails_83c90dd2d0"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+
+  [1m[36m (2.9ms)[0m  [1mALTER TABLE "beehives" ADD CONSTRAINT "fk_rails_d31c8a56ae"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (3.0ms)[0m  ALTER TABLE "measurements" ADD CONSTRAINT "fk_rails_49e38c1399"
+FOREIGN KEY ("sensor_id")
+  REFERENCES "sensors" ("id")
+
+  [1m[36m (2.6ms)[0m  [1mALTER TABLE "sensors" ADD CONSTRAINT "fk_rails_3d25fd46b6"
+FOREIGN KEY ("beehive_id")
+  REFERENCES "beehives" ("id")
+[0m
+  [1m[35m (1.4ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (2.7ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'alert_logs'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (2.3ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'alerts'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.9ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'beehives'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (1.8ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'measurements'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.9ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'sensors'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (2.1ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20150224145137)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (2.4ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+PG::DuplicateTable: ERROR:  relation "users" already exists
+: CREATE TABLE "users" ("id" serial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[35m (0.4ms)[0m  ROLLBACK
+
+
+Started GET "/users/new" for 127.0.0.1 at 2015-02-24 16:03:31 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.0) lib/active_record/migration.rb:393:in `check_pending!'
+  activerecord (4.2.0) lib/active_record/migration.rb:374:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:18:in `middleware_call'
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /usr/local/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (1.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (20.4ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20150224145137)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (12.7ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+PG::DuplicateTable: ERROR:  relation "users" already exists
+: CREATE TABLE "users" ("id" serial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20150224145137)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (2.3ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+PG::DuplicateTable: ERROR:  relation "users" already exists
+: CREATE TABLE "users" ("id" serial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (2.8ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'alert_logs'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.1ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'alerts'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (1.7ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'beehives'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.5ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'measurements'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (1.8ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'sensors'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.7ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+
+
+Started GET "/users/new" for 127.0.0.1 at 2015-02-24 16:04:34 +0100
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (7.1ms)
+  Rendered users/new.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 576ms (Views: 555.8ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/assets/user-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-02-24 16:04:34 +0100
+
+
+Started GET "/assets/user-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-02-24 16:04:34 +0100
+
+
+Started GET "/assets/application-161adc541f9856963e72d308eeeb932d.js?body=1" for 127.0.0.1 at 2015-02-24 16:04:34 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to RemovePasswordSaltFromUsers (20150224150528)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20150224150528"]]
+  [1m[35m (1.1ms)[0m  COMMIT
+Migrating to CreateUsers (20150224150650)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (2.5ms)[0m  CREATE TABLE "users" ("id" serial primary key, "name" character varying, "access_level" integer, "login" character varying, "password_digest" character varying, "email" character varying, "tel" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+PG::DuplicateTable: ERROR:  relation "users" already exists
+: CREATE TABLE "users" ("id" serial primary key, "name" character varying, "access_level" integer, "login" character varying, "password_digest" character varying, "email" character varying, "tel" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20150224150650)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (7.6ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "name" character varying, "access_level" integer, "login" character varying, "password_digest" character varying, "email" character varying, "tel" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150224150650"]]
+  [1m[36m (1.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (5.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (2.9ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'alert_logs'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.0ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'alerts'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (3.5ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'beehives'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.4ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'measurements'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (3.1ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'sensors'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.3ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+
+
+Started GET "/users/new" for 127.0.0.1 at 2015-02-24 16:08:43 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (10.2ms)
+  Rendered users/new.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 130ms (Views: 120.6ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2015-02-24 16:37:58 +0100
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (3.2ms)
+  Rendered users/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 117ms (Views: 108.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/alert_logs-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-02-24 16:37:58 +0100
+
+
+Started GET "/assets/main-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-02-24 16:37:59 +0100
+
+
+Started GET "/assets/alerts-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-02-24 16:37:59 +0100
+
+
+Started GET "/assets/user-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-02-24 16:37:59 +0100
+
+
+Started GET "/assets/scaffolds-9455134baedb09c5d0fb66f910ee1232.css?body=1" for 127.0.0.1 at 2015-02-24 16:37:59 +0100
+
+
+Started GET "/assets/sensors-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-02-24 16:37:59 +0100
+
+
+Started GET "/assets/measurements-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-02-24 16:37:59 +0100
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-02-24 16:37:59 +0100
+
+
+Started GET "/assets/application-66cff8a034ec68dce58fb97d43590fec.css?body=1" for 127.0.0.1 at 2015-02-24 16:37:59 +0100
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-02-24 16:37:59 +0100
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-02-24 16:37:59 +0100
+
+
+Started GET "/assets/turbolinks-da8ddad9c2c5483d4c5c30c1ce325253.js?body=1" for 127.0.0.1 at 2015-02-24 16:37:59 +0100
+
+
+Started GET "/assets/alert_logs-46c9a194bd0668e67d57241f94473dc8.js?body=1" for 127.0.0.1 at 2015-02-24 16:37:59 +0100
+
+
+Started GET "/assets/alerts-46c9a194bd0668e67d57241f94473dc8.js?body=1" for 127.0.0.1 at 2015-02-24 16:37:59 +0100
+
+
+Started GET "/assets/main-46c9a194bd0668e67d57241f94473dc8.js?body=1" for 127.0.0.1 at 2015-02-24 16:37:59 +0100
+
+
+Started GET "/assets/measurements-46c9a194bd0668e67d57241f94473dc8.js?body=1" for 127.0.0.1 at 2015-02-24 16:37:59 +0100
+
+
+Started GET "/assets/sensors-46c9a194bd0668e67d57241f94473dc8.js?body=1" for 127.0.0.1 at 2015-02-24 16:37:59 +0100
+
+
+Started GET "/assets/user-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-02-24 16:37:59 +0100
+
+
+Started GET "/assets/users-46c9a194bd0668e67d57241f94473dc8.js?body=1" for 127.0.0.1 at 2015-02-24 16:37:59 +0100
+
+
+Started GET "/assets/application-161adc541f9856963e72d308eeeb932d.js?body=1" for 127.0.0.1 at 2015-02-24 16:37:59 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddModeColumnToBeehives (20150303132021)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "beehives" ADD "mode" integer[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150303132021"]]
+  [1m[36m (1.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (9.7ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'alert_logs'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.0ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'alerts'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (2.7ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'beehives'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.0ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'measurements'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (2.3ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'sensors'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.4ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "users" ("name", "login", "access_level", "tel", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["name", "Example User"], ["login", "test"], ["access_level", 5], ["tel", "123456"], ["email", "user@example.com"], ["password_digest", "$2a$10$MrZnvYnTRq9ML4ObbMogm.ymJntopsNWaxvokBoGoK59IoDfmrfMu"], ["created_at", "2015-03-03 14:31:47.209373"], ["updated_at", "2015-03-03 14:31:47.209373"]]
+  [1m[36m (2.4ms)[0m  [1mCOMMIT[0m

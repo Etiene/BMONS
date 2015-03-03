@@ -1,4 +1,34 @@
 Rails.application.routes.draw do
+  get 'users/new'
+
+  get 'users/create'
+
+  get 'users/update'
+
+  get 'users/edit'
+
+  get 'users/destroy'
+
+  get 'users/index'
+
+  get 'users/show'
+
+  get 'user/new'
+
+  get 'user/create'
+
+  get 'user/update'
+
+  get 'user/edit'
+
+  get 'user/destroy'
+
+  get 'user/index'
+
+  get 'user/show'
+
+  get 'users/login'
+
   resources :alert_logs
 
   resources :sensors

@@ -4,7 +4,7 @@ one:
   name: MyString
   access_level: 1
   login: MyString
-  password: MyString
+  password_digest: MyString
   email: MyString
   tel: MyString
 
@@ -12,6 +12,6 @@ two:
   name: MyString
   access_level: 1
   login: MyString
-  password: MyString
+  password_digest: MyString
   email: MyString
   tel: MyString
