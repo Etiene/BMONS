@@ -1,0 +1,2 @@
+module BeehivesHelper
+end

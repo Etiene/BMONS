@@ -2,10 +2,12 @@
 
 one:
   name: MyString
-  position: MyText
+  position: MyString
+  mode: MyString
   user_id: 
 
 two:
   name: MyString
-  position: MyText
+  position: MyString
+  mode: MyString
   user_id: 

@@ -25,7 +25,7 @@ class SensorsController < ApplicationController
   # POST /sensors.json
   def create
     @sensor = Sensor.new(sensor_params)
-		#render @sensor.beehive_id
+		render @sensor.beehive_id
 		#render plain: params[:sensor].inspect
     respond_to do |format|
       if @sensor.save

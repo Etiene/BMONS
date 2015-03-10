@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @beehive.name %>
+</p>
+
+<p>
+  <strong>Position:</strong>
+  <%= @beehive.position %>
+</p>
+
+<p>
+  <strong>Mode:</strong>
+  <%= @beehive.mode %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @beehive.user %>
+</p>
+
+<%= link_to 'Edit', edit_beehive_path(@beehive) %> |
+<%= link_to 'Back', beehives_path %>
