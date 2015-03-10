@@ -1,3 +1,6 @@
+
+<% if  current_user.id == @user.id or current_user.access_level==5 %>
+
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -5,20 +8,12 @@
   <%= @user.name %>
 </p>
 
-<p>
+<!--<p>
   <strong>Access level:</strong>
   <%= @user.access_level %>
 </p>
-
+-->
 <p>
-  <strong>Login:</strong>
-  <%= @user.login %>
-</p>
-
-<p>
-  <strong>Password digest:</strong>
-  <%= @user.password_digest %>
-</p>
 
 <p>
   <strong>Email:</strong>
@@ -30,5 +25,6 @@
   <%= @user.tel %>
 </p>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<%= link_to 'Edit', edit_user_path(@user) %><!-- |
+<%= link_to 'Back', users_path %>-->
+<% end %>
