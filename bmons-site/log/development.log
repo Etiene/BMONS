@@ -12613,3 +12613,253 @@ Started GET "/assets/users-46c9a194bd0668e67d57241f94473dc8.js?body=1" for 127.0
 
 
 Started GET "/assets/application-161adc541f9856963e72d308eeeb932d.js?body=1" for 127.0.0.1 at 2015-03-10 11:05:19 +0100
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-03-10 11:08:49 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (2.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.4ms)
+  Rendered layouts/_user_widget.erb (0.5ms)
+Completed 200 OK in 154ms (Views: 152.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/alert_logs-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-10 11:08:49 +0100
+
+
+Started GET "/assets/alerts-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-10 11:08:49 +0100
+
+
+Started GET "/assets/user-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-10 11:08:50 +0100
+
+
+Started GET "/assets/main-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-10 11:08:50 +0100
+
+
+Started GET "/assets/scaffolds-9455134baedb09c5d0fb66f910ee1232.css?body=1" for 127.0.0.1 at 2015-03-10 11:08:50 +0100
+
+
+Started GET "/assets/measurements-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-10 11:08:50 +0100
+
+
+Started GET "/assets/sensors-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-10 11:08:50 +0100
+
+
+Started GET "/assets/custom-c8e6801ee8ea5c10b6e4a1dd74ed2215.css?body=1" for 127.0.0.1 at 2015-03-10 11:08:50 +0100
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-10 11:08:50 +0100
+
+
+Started GET "/assets/application-997285bdf5cd5e66fa308139285a16d9.css?body=1" for 127.0.0.1 at 2015-03-10 11:08:50 +0100
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-10 11:08:50 +0100
+
+
+Started GET "/assets/turbolinks-da8ddad9c2c5483d4c5c30c1ce325253.js?body=1" for 127.0.0.1 at 2015-03-10 11:08:50 +0100
+
+
+Started GET "/assets/alert_logs-46c9a194bd0668e67d57241f94473dc8.js?body=1" for 127.0.0.1 at 2015-03-10 11:08:50 +0100
+
+
+Started GET "/assets/main-46c9a194bd0668e67d57241f94473dc8.js?body=1" for 127.0.0.1 at 2015-03-10 11:08:50 +0100
+
+
+Started GET "/assets/alerts-46c9a194bd0668e67d57241f94473dc8.js?body=1" for 127.0.0.1 at 2015-03-10 11:08:50 +0100
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-10 11:08:50 +0100
+
+
+Started GET "/assets/sensors-46c9a194bd0668e67d57241f94473dc8.js?body=1" for 127.0.0.1 at 2015-03-10 11:08:50 +0100
+
+
+Started GET "/assets/measurements-46c9a194bd0668e67d57241f94473dc8.js?body=1" for 127.0.0.1 at 2015-03-10 11:08:50 +0100
+
+
+Started GET "/assets/user-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-10 11:08:50 +0100
+
+
+Started GET "/assets/users-46c9a194bd0668e67d57241f94473dc8.js?body=1" for 127.0.0.1 at 2015-03-10 11:08:50 +0100
+
+
+Started GET "/assets/application-161adc541f9856963e72d308eeeb932d.js?body=1" for 127.0.0.1 at 2015-03-10 11:08:50 +0100
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-10 11:08:51 +0100
+Processing by MainController#index as HTML
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-03-10 11:08:51 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (4.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (9.8ms)
+  Rendered layouts/_user_widget.erb (0.3ms)
+Completed 200 OK in 160ms (Views: 158.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-10 11:08:51 +0100
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-10 11:08:51 +0100
+
+
+Started GET "/assets/alert_logs-46c9a194bd0668e67d57241f94473dc8.js?body=1" for 127.0.0.1 at 2015-03-10 11:08:51 +0100
+
+
+Started GET "/assets/turbolinks-da8ddad9c2c5483d4c5c30c1ce325253.js?body=1" for 127.0.0.1 at 2015-03-10 11:08:51 +0100
+
+
+Started GET "/assets/alerts-46c9a194bd0668e67d57241f94473dc8.js?body=1" for 127.0.0.1 at 2015-03-10 11:08:51 +0100
+
+
+Started GET "/assets/main-46c9a194bd0668e67d57241f94473dc8.js?body=1" for 127.0.0.1 at 2015-03-10 11:08:51 +0100
+
+
+Started GET "/assets/measurements-46c9a194bd0668e67d57241f94473dc8.js?body=1" for 127.0.0.1 at 2015-03-10 11:08:51 +0100
+
+
+Started GET "/assets/sensors-46c9a194bd0668e67d57241f94473dc8.js?body=1" for 127.0.0.1 at 2015-03-10 11:08:51 +0100
+
+
+Started GET "/assets/user-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-10 11:08:51 +0100
+
+
+Started GET "/assets/users-46c9a194bd0668e67d57241f94473dc8.js?body=1" for 127.0.0.1 at 2015-03-10 11:08:51 +0100
+
+
+Started GET "/assets/application-161adc541f9856963e72d308eeeb932d.js?body=1" for 127.0.0.1 at 2015-03-10 11:08:51 +0100
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-10 11:08:53 +0100
+Processing by MainController#index as HTML
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-03-10 11:08:53 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (4.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (10.6ms)
+  Rendered layouts/_user_widget.erb (0.4ms)
+Completed 200 OK in 150ms (Views: 148.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-10 11:08:53 +0100
+
+
+Started GET "/assets/turbolinks-da8ddad9c2c5483d4c5c30c1ce325253.js?body=1" for 127.0.0.1 at 2015-03-10 11:08:53 +0100
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-10 11:08:53 +0100
+
+
+Started GET "/assets/alert_logs-46c9a194bd0668e67d57241f94473dc8.js?body=1" for 127.0.0.1 at 2015-03-10 11:08:53 +0100
+
+
+Started GET "/assets/alerts-46c9a194bd0668e67d57241f94473dc8.js?body=1" for 127.0.0.1 at 2015-03-10 11:08:53 +0100
+
+
+Started GET "/assets/main-46c9a194bd0668e67d57241f94473dc8.js?body=1" for 127.0.0.1 at 2015-03-10 11:08:53 +0100
+
+
+Started GET "/assets/application-161adc541f9856963e72d308eeeb932d.js?body=1" for 127.0.0.1 at 2015-03-10 11:08:53 +0100
+
+
+Started GET "/assets/users-46c9a194bd0668e67d57241f94473dc8.js?body=1" for 127.0.0.1 at 2015-03-10 11:08:53 +0100
+
+
+Started GET "/assets/measurements-46c9a194bd0668e67d57241f94473dc8.js?body=1" for 127.0.0.1 at 2015-03-10 11:08:53 +0100
+
+
+Started GET "/assets/user-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-10 11:08:53 +0100
+
+
+Started GET "/assets/sensors-46c9a194bd0668e67d57241f94473dc8.js?body=1" for 127.0.0.1 at 2015-03-10 11:08:53 +0100
+
+
+Started GET "/users/password/new" for 127.0.0.1 at 2015-03-10 11:08:54 +0100
+Processing by Devise::PasswordsController#new as HTML
+  Rendered devise/shared/_links.html.erb (4.6ms)
+  Rendered devise/passwords/new.html.erb within layouts/application (9.2ms)
+  Rendered layouts/_user_widget.erb (0.1ms)
+Completed 200 OK in 169ms (Views: 168.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-10 11:08:54 +0100
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-10 11:08:55 +0100
+
+
+Started GET "/assets/turbolinks-da8ddad9c2c5483d4c5c30c1ce325253.js?body=1" for 127.0.0.1 at 2015-03-10 11:08:55 +0100
+
+
+Started GET "/assets/alert_logs-46c9a194bd0668e67d57241f94473dc8.js?body=1" for 127.0.0.1 at 2015-03-10 11:08:55 +0100
+
+
+Started GET "/assets/alerts-46c9a194bd0668e67d57241f94473dc8.js?body=1" for 127.0.0.1 at 2015-03-10 11:08:55 +0100
+
+
+Started GET "/assets/main-46c9a194bd0668e67d57241f94473dc8.js?body=1" for 127.0.0.1 at 2015-03-10 11:08:55 +0100
+
+
+Started GET "/assets/measurements-46c9a194bd0668e67d57241f94473dc8.js?body=1" for 127.0.0.1 at 2015-03-10 11:08:55 +0100
+
+
+Started GET "/assets/sensors-46c9a194bd0668e67d57241f94473dc8.js?body=1" for 127.0.0.1 at 2015-03-10 11:08:55 +0100
+
+
+Started GET "/assets/user-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-10 11:08:55 +0100
+
+
+Started GET "/assets/users-46c9a194bd0668e67d57241f94473dc8.js?body=1" for 127.0.0.1 at 2015-03-10 11:08:55 +0100
+
+
+Started GET "/assets/application-161adc541f9856963e72d308eeeb932d.js?body=1" for 127.0.0.1 at 2015-03-10 11:08:55 +0100
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-10 11:08:56 +0100
+Processing by MainController#index as HTML
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-03-10 11:08:56 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (4.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (9.2ms)
+  Rendered layouts/_user_widget.erb (0.3ms)
+Completed 200 OK in 145ms (Views: 143.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-10 11:08:56 +0100
+
+
+Started GET "/assets/alert_logs-46c9a194bd0668e67d57241f94473dc8.js?body=1" for 127.0.0.1 at 2015-03-10 11:08:56 +0100
+
+
+Started GET "/assets/turbolinks-da8ddad9c2c5483d4c5c30c1ce325253.js?body=1" for 127.0.0.1 at 2015-03-10 11:08:56 +0100
+
+
+Started GET "/assets/alerts-46c9a194bd0668e67d57241f94473dc8.js?body=1" for 127.0.0.1 at 2015-03-10 11:08:56 +0100
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-10 11:08:56 +0100
+
+
+Started GET "/assets/main-46c9a194bd0668e67d57241f94473dc8.js?body=1" for 127.0.0.1 at 2015-03-10 11:08:56 +0100
+
+
+Started GET "/assets/measurements-46c9a194bd0668e67d57241f94473dc8.js?body=1" for 127.0.0.1 at 2015-03-10 11:08:56 +0100
+
+
+Started GET "/assets/sensors-46c9a194bd0668e67d57241f94473dc8.js?body=1" for 127.0.0.1 at 2015-03-10 11:08:56 +0100
+
+
+Started GET "/assets/user-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-10 11:08:56 +0100
+
+
+Started GET "/assets/application-161adc541f9856963e72d308eeeb932d.js?body=1" for 127.0.0.1 at 2015-03-10 11:08:56 +0100
+
+
+Started GET "/assets/users-46c9a194bd0668e67d57241f94473dc8.js?body=1" for 127.0.0.1 at 2015-03-10 11:08:56 +0100
