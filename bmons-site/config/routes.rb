@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :beehives
+
   devise_for :users
   get 'users/new'
 
