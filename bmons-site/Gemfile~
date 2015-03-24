@@ -48,3 +48,7 @@ group :development, :test do
   gem 'bootstrap-sass',       '3.2.0.0'
 end
 
+group :test do
+  gem 'minitest-reporters', '1.0.5'
+end
+
