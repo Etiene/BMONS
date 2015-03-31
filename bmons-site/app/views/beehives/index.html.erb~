@@ -1,33 +1,46 @@
-<p id="notice"><%= notice %></p>
+<div class="container-fluid">
+  <div class="row">
+    <%= render 'main/sidebar' %>
+    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+      <p id="notice"><%= notice %></p>
+      <h1 class="page-header">Beehives</h1>
 
-<h1>Listing Beehives</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Position</th>
-      <th>Mode</th>
-      <th>User</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Position</th>
+            <th>Mode</th>
+            <th>User</th>
+            <th colspan="3"></th>
+          </tr>
+        </thead>
 
-  <tbody>
-    <% @beehives.each do |beehive| %>
-      <tr>
-        <td><%= beehive.name %></td>
-        <td><%= beehive.position %></td>
-        <td><%= beehive.mode %></td>
-        <td><%= beehive.user %></td>
-        <td><%= link_to 'Show', beehive %></td>
-        <td><%= link_to 'Edit', edit_beehive_path(beehive) %></td>
-        <td><%= link_to 'Destroy', beehive, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+        <tbody>
+          <% @beehives.each do |beehive| %>
+            <tr>
+              <td><%= beehive.name %></td>
+              <td><%= beehive.position %></td>
+              <td><%= beehive.mode %></td>
+              <td><%= beehive.user %></td>
+              <td><%= link_to 'Show', beehive %></td>
+              <td><%= link_to 'Edit', edit_beehive_path(beehive) %></td>
+              <td><%= link_to 'Destroy', beehive, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
 
-<br>
+      <br>
 
-<%= link_to 'New Beehive', new_beehive_path %>
+      <%= link_to 'New Beehive', new_beehive_path, class: "btn btn-warning" %> 
+    </div>
+  </div>
+</div>
+<script>
+  $(document).ready(function () {
+    $(".nav li").removeClass("active");
+    $('#beehives').addClass('active');
+  });
+</script>
