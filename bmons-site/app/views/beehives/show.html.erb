@@ -20,13 +20,42 @@
   <%= @beehive.mode %>
 </p>
 
-<p>
-  <strong>User:</strong>
-  <%= @beehive.user %>
-</p>
+<%= link_to 'Edit', edit_beehive_path(@beehive), class:"btn btn-default btn-xs" %> 
+<%= link_to 'Add Sensor', new_sensor_path(:beehive_id => @beehive.id) , class: "btn btn-default btn-xs" %> 
+<br/>
+<br/>
 
-<%= link_to 'Edit', edit_beehive_path(@beehive) %> |
-<%= link_to 'Back', beehives_path %>
+<h4>Sensors</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Unity</th>
+      <th>Beehive</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @beehive.sensors.each do |sensor| %>
+      <tr>
+        <td><%= sensor.name %></td>
+        <td><%= sensor.type %></td>
+        <td><%= sensor.unity %></td>
+        <td><%= sensor.beehive.name %></td>
+        <td><%= link_to 'Show', sensor, class:"btn btn-default btn-xs"  %></td>
+        <td><%= link_to 'Edit', edit_sensor_path(sensor), class:"btn btn-default btn-xs"  %></td>
+        <td><%= link_to 'Destroy', sensor, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-default btn-xs"  %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br/>
+<br/>
+<%= link_to 'Back', beehives_path, class:"btn btn-default btn-xs" %>
     </div>
   </div>
 </div>

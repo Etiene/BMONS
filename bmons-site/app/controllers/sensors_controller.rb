@@ -15,6 +15,7 @@ class SensorsController < ApplicationController
   # GET /sensors/new
   def new
     @sensor = Sensor.new
+    @sensor.beehive_id = params[:beehive_id]
   end
 
   # GET /sensors/1/edit

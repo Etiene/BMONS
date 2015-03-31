@@ -21,13 +21,12 @@
   </div>
   <div class="field">
     <%= f.label :mode %><br>
-    <%= f.text_field :mode %>
-  </div>
-  <div class="field">
-    <%= f.label :user_id %><br>
-    <%= f.text_field :user_id %>
+    <select name="beehive[mode]">
+      <option value="1" selected="selected">Summer</option>
+      <option value="2">Winter</option>
+    </select>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Save Beehive", class: "btn btn-warning"  %>
   </div>
 <% end %>

@@ -10,6 +10,7 @@ class BeehivesController < ApplicationController
   # GET /beehives/1
   # GET /beehives/1.json
   def show
+
   end
 
   # GET /beehives/new
@@ -25,7 +26,7 @@ class BeehivesController < ApplicationController
   # POST /beehives.json
   def create
     @beehive = Beehive.new(beehive_params)
-
+    @beehive.user_id = current_user.id
     respond_to do |format|
       if @beehive.save
         format.html { redirect_to @beehive, notice: 'Beehive was successfully created.' }
