@@ -1,10 +1,12 @@
+<div class="bmons-box">
+	
+	<% if  current_user.id == @user.id or current_user.access_level==5 %>
+		<h2 class="form-signin-heading">Edit Profile</h2>
 
-<% if  current_user.id == @user.id or current_user.access_level==5 %>
-	<h1>Editing User</h1>
+		<%= render 'form' %>
 
-	<%= render 'form' %>
+		<%= link_to 'Back', @user, class: "btn btn-default"  %><!-- |
+		<%= link_to 'Back', users_path %>-->
 
-	<%= link_to 'Show', @user %><!-- |
-	<%= link_to 'Back', users_path %>-->
-
-<% end %>
+    <% end %> 
+</div>

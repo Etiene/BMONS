@@ -1,30 +1,32 @@
+<div class="bmons-box">
+	<h2 class="form-signin-heading">View Profile</h2>
+	<% if  current_user.id == @user.id or current_user.access_level==5 %>
 
-<% if  current_user.id == @user.id or current_user.access_level==5 %>
+	<p id="notice"><%= notice %></p>
 
-<p id="notice"><%= notice %></p>
+	<p>
+	  <strong>Name:</strong>
+	  <%= @user.name %>
+	</p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @user.name %>
-</p>
+	<!--<p>
+	  <strong>Access level:</strong>
+	  <%= @user.access_level %>
+	</p>
+	-->
+	<p>
 
-<!--<p>
-  <strong>Access level:</strong>
-  <%= @user.access_level %>
-</p>
--->
-<p>
+	<p>
+	  <strong>Email:</strong>
+	  <%= @user.email %>
+	</p>
 
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
+	<p>
+	  <strong>Tel:</strong>
+	  <%= @user.tel %>
+	</p>
 
-<p>
-  <strong>Tel:</strong>
-  <%= @user.tel %>
-</p>
-
-<%= link_to 'Edit', edit_user_path(@user) %><!-- |
-<%= link_to 'Back', users_path %>-->
-<% end %>
+	<%= link_to 'Edit', edit_user_path(@user), class: "btn btn-warning"  %><!-- |
+	<%= link_to 'Back', users_path %>-->
+	<% end %>
+</div>
