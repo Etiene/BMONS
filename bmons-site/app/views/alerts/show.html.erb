@@ -1,4 +1,9 @@
-<p id="notice"><%= notice %></p>
+<div class="container-fluid">
+  <div class="row">
+    <%= render 'main/sidebar' %>
+    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+      <p id="notice"><%= notice %></p>
+
 
 <p>
   <strong>Type:</strong>
@@ -42,3 +47,12 @@
 
 <%= link_to 'Edit', edit_alert_path(@alert) %> |
 <%= link_to 'Back', alerts_path %>
+    </div>
+  </div>
+</div>
+<script>
+  $(document).ready(function () {
+    $(".nav li").removeClass("active");
+    $('#alerts').addClass('active');
+  });
+</script>

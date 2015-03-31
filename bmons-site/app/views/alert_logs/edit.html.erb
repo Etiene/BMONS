@@ -1,6 +1,20 @@
-<h1>Editing Alert Log</h1>
+<div class="container-fluid">
+  <div class="row">
+    <%= render 'main/sidebar' %>
+    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+      <p id="notice"><%= notice %></p>
+      <h1 class="page-header">Editing Alert Log</h1>
 
-<%= render 'form' %>
+	<%= render 'form' %>
 
-<%= link_to 'Show', @alert_log %> |
-<%= link_to 'Back', alert_logs_path %>
+	<%= link_to 'Show', @alert_log %> |
+	<%= link_to 'Back', alert_logs_path %>
+  	</div>
+  </div>
+</div>
+<script>
+  $(document).ready(function () {
+    $(".nav li").removeClass("active");
+    $('#alertlogs').addClass('active');
+  });
+</script>
