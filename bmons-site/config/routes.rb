@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   resources :beehives
 
   devise_for :users
+
   get 'users/new'
 
   get 'users/create'
@@ -15,20 +16,6 @@ Rails.application.routes.draw do
   get 'users/index'
 
   get 'users/show'
-
-  get 'user/new'
-
-  get 'user/create'
-
-  get 'user/update'
-
-  get 'user/edit'
-
-  get 'user/destroy'
-
-  get 'user/index'
-
-  get 'user/show'
 
   get 'users/login'
 
