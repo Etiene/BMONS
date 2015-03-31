@@ -1,11 +1,11 @@
 <div class="container-fluid">
   <div class="row">
-    <%= render 'user_main_page/sidebar' %>
+    <%= render 'main/sidebar' %>
     <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
       <p id="notice"><%= notice %></p>
       <h1 class="page-header">Sensors</h1>
 
-<table class="table">
+<table>
   <thead>
     <tr>
       <th>Name</th>
@@ -22,10 +22,10 @@
         <td><%= sensor.name %></td>
         <td><%= sensor.type %></td>
         <td><%= sensor.unity %></td>
-        <td><%= sensor.beehive.name %></td>
-        <td><%= link_to 'Show', sensor, class:"btn btn-default btn-xs"  %></td>
-        <td><%= link_to 'Edit', edit_sensor_path(sensor), class:"btn btn-default btn-xs"  %></td>
-        <td><%= link_to 'Destroy', sensor, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-default btn-xs"  %></td>
+        <td><%= sensor.beehive %></td>
+        <td><%= link_to 'Show', sensor %></td>
+        <td><%= link_to 'Edit', edit_sensor_path(sensor) %></td>
+        <td><%= link_to 'Destroy', sensor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -33,7 +33,7 @@
 
 <br>
 
-<!--<%= link_to 'New Sensor', new_sensor_path , class: "btn btn-warning" %> -->
+<%= link_to 'New Sensor', new_sensor_path , class: "btn btn-warning" %> 
     </div>
   </div>
 </div>
