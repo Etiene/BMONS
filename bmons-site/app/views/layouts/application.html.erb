@@ -14,7 +14,7 @@
     <![endif]-->
   </head>
   <body>
-    
+    <%= render 'layouts/header' %>
     <div class="container">
       	
   		<div class="starter-template">
@@ -22,7 +22,7 @@
   			<p class="notice"><%= notice %></p>
    			<%= render 'layouts/user_widget' %>
 	  		<%= yield %>
-
+				<%= render 'layouts/footer' %>
 	  	</div>
     </div>
    
