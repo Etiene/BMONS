@@ -4,7 +4,7 @@ class BeehivesController < ApplicationController
   # GET /beehives
   # GET /beehives.json
   def index
-    @beehives = Beehive.all
+    @beehives = Beehive.where(user_id: current_user.id)
   end
 
   # GET /beehives/1
