@@ -5,10 +5,9 @@
       <p id="notice"><%= notice %></p>
 
 
-<p>
-  <strong>Name:</strong>
+<h3>Beehive: 
   <%= @beehive.name %>
-</p>
+</h3>
 
 <p>
   <strong>Position:</strong>
@@ -17,7 +16,7 @@
 
 <p>
   <strong>Mode:</strong>
-  <%= @beehive.mode %>
+  <%= @beehive.modeString[@beehive.mode] %>
 </p>
 
 <%= link_to 'Edit', edit_beehive_path(@beehive), class:"btn btn-default btn-xs" %> 

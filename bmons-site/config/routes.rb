@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'user_main_page/index'
+  get 'main/index'
 
   resources :beehives
 
@@ -31,11 +31,11 @@ Rails.application.routes.draw do
 
   resources :users
 
-  get 'user_main_page/index'
+  get 'main/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-  root to: 'user_main_page#index'
+  root to: 'main#index'
   # You can have the root of your site routed with "root"
   #root 'main#index'
 
