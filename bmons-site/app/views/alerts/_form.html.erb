@@ -12,8 +12,8 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :type %><br>
-    <%= f.text_field :type %>
+    <%= f.label :alert_type %><br>
+    <%= f.text_field :alert_type %>
   </div>
   <div class="field">
     <%= f.label :frequency %><br>
@@ -35,14 +35,7 @@
     <%= f.label :active %><br>
     <%= f.check_box :active %>
   </div>
-  <div class="field">
-    <%= f.label :user_id %><br>
-    <%= f.text_field :user_id %>
-  </div>
-  <div class="field">
-    <%= f.label :sensor_id %><br>
-    <%= f.text_field :sensor_id %>
-  </div>
+  <%= f.hidden_field :sensor_id %>
   <div class="actions">
     <%= f.submit %>
   </div>

@@ -15,6 +15,7 @@ class AlertsController < ApplicationController
   # GET /alerts/new
   def new
     @alert = Alert.new
+    #@alert.sensor_id = params[:sensor_id]
   end
 
   # GET /alerts/1/edit
@@ -26,6 +27,7 @@ class AlertsController < ApplicationController
   def create
     @alert = Alert.new(alert_params)
 
+    #@alert.user_id = current_user.id
     respond_to do |format|
       if @alert.save
         format.html { redirect_to @alert, notice: 'Alert was successfully created.' }
@@ -69,6 +71,6 @@ class AlertsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def alert_params
-      params.require(:alert).permit(:type, :frequency, :message, :threshold, :comparison, :active, :user_id, :sensor_id)
+      params.require(:alert).permit(:alert_type, :frequency, :message, :threshold, :comparison, :active, :user_id, :sensor_id)
     end
 end

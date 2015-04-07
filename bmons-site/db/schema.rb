@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150310143351) do
+ActiveRecord::Schema.define(version: 20150407144215) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 20150310143351) do
   add_index "alert_logs", ["alert_id"], name: "index_alert_logs_on_alert_id", using: :btree
 
   create_table "alerts", force: :cascade do |t|
-    t.string   "type"
+    t.string   "alert_type"
     t.integer  "frequency"
     t.text     "message"
     t.integer  "threshold"
