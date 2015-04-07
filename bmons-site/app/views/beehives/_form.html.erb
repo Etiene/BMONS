@@ -20,11 +20,9 @@
     <%= f.text_field :position %>
   </div>
   <div class="field">
+  
     <%= f.label :mode %><br>
-    <select name="beehive[mode]">
-      <option value="1" selected="selected">Summer</option>
-      <option value="2">Winter</option>
-    </select>
+    <%= f.select(:mode, [['Summer', 1], ['Winter', 2]]) %>
   </div>
   <div class="actions">
     <%= f.submit "Save Beehive", class: "btn btn-warning"  %>
