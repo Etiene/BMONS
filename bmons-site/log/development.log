@@ -17812,3 +17812,180 @@ Started GET "/assets/users-46c9a194bd0668e67d57241f94473dc8.js?body=1" for 127.0
 
 
 Started GET "/assets/application-a75723bd8387837e201327402c05e99c.js?body=1" for 127.0.0.1 at 2015-03-24 15:16:21 +0100
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-07 14:07:52 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MainController#index as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  Rendered main/_sidebar.html.erb (0.4ms)
+  Rendered main/index.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_header.html.erb (5.9ms)
+  Rendered layouts/_user_widget.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 3680ms (Views: 3645.8ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-07 14:07:56 +0200
+Processing by MainController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  Rendered main/_sidebar.html.erb (0.2ms)
+  Rendered main/index.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_user_widget.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 220ms (Views: 217.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/alert_logs-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-07 14:07:56 +0200
+
+
+Started GET "/assets/custom-f402922336e269c78e4ef530cba19e36.css?body=1" for 127.0.0.1 at 2015-04-07 14:07:56 +0200
+
+
+Started GET "/assets/alerts-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-07 14:07:56 +0200
+
+
+Started GET "/assets/beehives-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-07 14:07:57 +0200
+
+
+Started GET "/assets/main-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-07 14:07:57 +0200
+
+
+Started GET "/assets/scaffolds-9b24c9d6f17a451207d5ba8d21f95215.css?body=1" for 127.0.0.1 at 2015-04-07 14:07:57 +0200
+
+
+Started GET "/assets/measurements-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-07 14:07:57 +0200
+
+
+Started GET "/assets/sensors-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-07 14:07:57 +0200
+
+
+Started GET "/assets/user-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-07 14:07:57 +0200
+
+
+Started GET "/assets/application-6f3d672ee7164109d4947fb97bea1275.css?body=1" for 127.0.0.1 at 2015-04-07 14:07:57 +0200
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-07 14:07:57 +0200
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-07 14:07:57 +0200
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-07 14:07:57 +0200
+
+
+Started GET "/assets/beehives-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-07 14:07:57 +0200
+
+
+Started GET "/assets/main-46c9a194bd0668e67d57241f94473dc8.js?body=1" for 127.0.0.1 at 2015-04-07 14:07:57 +0200
+
+
+Started GET "/assets/turbolinks-da8ddad9c2c5483d4c5c30c1ce325253.js?body=1" for 127.0.0.1 at 2015-04-07 14:07:57 +0200
+
+
+Started GET "/assets/alert_logs-46c9a194bd0668e67d57241f94473dc8.js?body=1" for 127.0.0.1 at 2015-04-07 14:07:57 +0200
+
+
+Started GET "/assets/alerts-46c9a194bd0668e67d57241f94473dc8.js?body=1" for 127.0.0.1 at 2015-04-07 14:07:57 +0200
+
+
+Started GET "/assets/measurements-46c9a194bd0668e67d57241f94473dc8.js?body=1" for 127.0.0.1 at 2015-04-07 14:07:57 +0200
+
+
+Started GET "/assets/sensors-46c9a194bd0668e67d57241f94473dc8.js?body=1" for 127.0.0.1 at 2015-04-07 14:07:57 +0200
+
+
+Started GET "/assets/user-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-07 14:07:57 +0200
+
+
+Started GET "/assets/users-46c9a194bd0668e67d57241f94473dc8.js?body=1" for 127.0.0.1 at 2015-04-07 14:07:57 +0200
+
+
+Started GET "/assets/Bumble_bee-8ba657b70f73eeb95783b1f475cc594d.png" for 127.0.0.1 at 2015-04-07 14:07:57 +0200
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2015-04-07 14:07:58 +0200
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"M/PyMR3Ecsa119PMvIi8cMG6f6tcglHb1JbB/6O6Ph4+uyedzquQEo17hJTEOXBb74QUbiSID9KaDWrfRzWFNQ=="}
+  [1m[35mUser Load (1.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 16ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-07 14:07:58 +0200
+Processing by MainController#index as HTML
+Completed 401 Unauthorized in 3ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-04-07 14:07:58 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (9.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (27.5ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_user_widget.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 233ms (Views: 230.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/alert_logs-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-07 14:07:59 +0200
+
+
+Started GET "/assets/measurements-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-07 14:07:59 +0200
+
+
+Started GET "/assets/main-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-07 14:07:59 +0200
+
+
+Started GET "/assets/sensors-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-07 14:07:59 +0200
+
+
+Started GET "/assets/beehives-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-07 14:07:59 +0200
+
+
+Started GET "/assets/alerts-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-07 14:07:59 +0200
+
+
+Started GET "/assets/user-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-07 14:07:59 +0200
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-07 14:07:59 +0200
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-07 14:07:59 +0200
+
+
+Started GET "/assets/alerts-46c9a194bd0668e67d57241f94473dc8.js?body=1" for 127.0.0.1 at 2015-04-07 14:07:59 +0200
+
+
+Started GET "/assets/measurements-46c9a194bd0668e67d57241f94473dc8.js?body=1" for 127.0.0.1 at 2015-04-07 14:07:59 +0200
+
+
+Started GET "/assets/turbolinks-da8ddad9c2c5483d4c5c30c1ce325253.js?body=1" for 127.0.0.1 at 2015-04-07 14:07:59 +0200
+
+
+Started GET "/assets/alert_logs-46c9a194bd0668e67d57241f94473dc8.js?body=1" for 127.0.0.1 at 2015-04-07 14:07:59 +0200
+
+
+Started GET "/assets/beehives-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-07 14:07:59 +0200
+
+
+Started GET "/assets/main-46c9a194bd0668e67d57241f94473dc8.js?body=1" for 127.0.0.1 at 2015-04-07 14:07:59 +0200
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-07 14:07:59 +0200
+
+
+Started GET "/assets/sensors-46c9a194bd0668e67d57241f94473dc8.js?body=1" for 127.0.0.1 at 2015-04-07 14:07:59 +0200
+
+
+Started GET "/assets/user-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-07 14:07:59 +0200
+
+
+Started GET "/assets/users-46c9a194bd0668e67d57241f94473dc8.js?body=1" for 127.0.0.1 at 2015-04-07 14:07:59 +0200
+
+
+Started GET "/assets/Bumble_bee-8ba657b70f73eeb95783b1f475cc594d.png" for 127.0.0.1 at 2015-04-07 14:07:59 +0200
