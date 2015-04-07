@@ -3,25 +3,25 @@
     <%= render 'main/sidebar' %>
     <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
       <p id="notice"><%= notice %></p>
-
-
-<p>
-  <strong>Value:</strong>
-  <%= @measurement.value %>
-</p>
+<h3>
+  <strong>Beehive:</strong>
+  <%= @measurement.sensor.beehive.name %>
+</h3>
 
 <p>
   <strong>Datetime:</strong>
   <%= @measurement.datetime %>
 </p>
-
 <p>
-  <strong>Sensor:</strong>
-  <%= @measurement.sensor %>
+  <strong>Value:</strong>
+  <%= @measurement.value %>
 </p>
 
-<%= link_to 'Edit', edit_measurement_path(@measurement) %> |
-<%= link_to 'Back', measurements_path %>
+
+
+
+<%= link_to 'Edit', edit_measurement_path(@measurement), class:"btn btn-default btn-xs" %> |
+<%= link_to 'Back', @measurement.sensor.beehive, class:"btn btn-default btn-xs" %>
     </div>
   </div>
 </div>

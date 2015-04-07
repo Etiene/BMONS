@@ -15,6 +15,7 @@ class MeasurementsController < ApplicationController
   # GET /measurements/new
   def new
     @measurement = Measurement.new
+    @measurement.sensor_id = params[:sensor_id]
   end
 
   # GET /measurements/1/edit

@@ -5,9 +5,14 @@
       <p id="notice"><%= notice %></p>
 
 
-<p>
-  <strong>Name:</strong>
+<h3>
+  <strong>Sensor:</strong>
   <%= @sensor.name %>
+</h3>
+
+<p>
+  <strong>Beehive:</strong>
+  <%= @sensor.beehive.name %>
 </p>
 
 <p>
@@ -20,13 +25,42 @@
   <%= @sensor.unity %>
 </p>
 
-<p>
-  <strong>Beehive:</strong>
-  <%= @sensor.beehive.name %>
-</p>
 
-<%= link_to 'Edit', edit_sensor_path(@sensor) %> |
-<%= link_to 'Back', sensors_path %>
+<br/>
+<br/>
+
+
+<h4>Measurements</h4>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Value</th>
+       <th>Unity</th>
+      <th>Date</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+      <% @sensor.measurements.each do |measurement| %>
+      <tr>
+        <td><%= measurement.value %></td>
+        <td><%= @sensor.unity %></td>
+        <td><%= measurement.datetime %></td>
+        <td><%= link_to 'Show', measurement, class:"btn btn-default btn-xs"  %></td>
+        <td><%= link_to 'Edit', edit_measurement_path(measurement), class:"btn btn-default btn-xs"  %></td>
+        <td><%= link_to 'Destroy', measurement, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-default btn-xs"  %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= link_to 'Edit', edit_sensor_path(@sensor), class:"btn btn-default btn-xs"  %> |
+<%= link_to 'Back', @sensor.beehive, class:"btn btn-default btn-xs"  %>
+<% if current_user.access_level == 99 %>
+    <%= link_to '(ADMIN) Add Measure', new_measurement_path(:sensor_id => @sensor.id) , class: "btn btn-default btn-xs" %> 
+<% end %>
+
     </div>
   </div>
 </div>

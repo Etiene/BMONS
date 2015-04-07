@@ -19,11 +19,8 @@
     <%= f.label :datetime %><br>
     <%= f.datetime_select :datetime %>
   </div>
-  <div class="field">
-    <%= f.label :sensor_id %><br>
-    <%= f.text_field :sensor_id %>
-  </div>
+  <%= f.hidden_field :sensor_id %>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Save Measurenent", class: "btn btn-warning"  %>
   </div>
 <% end %>

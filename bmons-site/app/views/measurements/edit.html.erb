@@ -7,8 +7,8 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @measurement %> |
-<%= link_to 'Back', measurements_path %>
+<%= link_to 'Show', @measurement, class:"btn btn-default btn-xs"  %> |
+<%= link_to 'Back', @measurement.sensor.beehive, class:"btn btn-default btn-xs"  %>
   	</div>
   </div>
 </div>
