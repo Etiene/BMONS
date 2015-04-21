@@ -1,0 +1,104 @@
+Liste des réglages APN des différents opérateurs
+http://www.galaxynote.fr/liste-des-reglages-apn-des-differents-operateurs-t1819.html
+FRANCE METROPOLITAINE
+
+FREE:
+
+Internet:
+Nom: Free
+APN: free
+MCC: 208
+MNC: 15
+Type: Internet
+
+MMS:
+Nom: Free MMS
+APN: mmsfree
+MMSC: http://mms.free.fr
+MCC: 208
+MNC: 15
+Type: MMS
+
+* Les téléphones qui n'ont pas la norme EIM-SIM pré-installer MobileConfig de Free
+
+ORANGE:
+
+Internet:
+APN : orange ou orange.fr
+Username : orange
+Password : orange
+MCC : 208
+MNC : 01
+APN Type : default
+
+MMS:
+APN : orange.acte
+Username : orange
+Password : orange
+MMSC : http://mms.orange.fr
+MMS Proxy : 192.168.010.200
+MMS Port : 8080
+MCC : 208
+MNC : 01
+APN Type : mms
+SMSC: +33689004000
+
+SFR:
+
+Chez SFR, 2 possibilités de configuration en fonction de votre forfait: wapsfr et sl2sfr.
+Pour utiliser sl2sfr, vous devez avoir un forfait ou Option Full Internet.
+
+Internet:
+APN: sl2sfr
+MCC: 208
+MNC: 10
+APN Type : default
+
+ou
+
+APN: wapsfr
+Proxy: 195.115.25.129
+port: 8080
+MCC: 208
+MNC: 10
+APN Type : default
+
+MMS: Si vous avez un forfait Full Internet, il est conseillé de regler l'APN des MMS sur sl2sfr, cela évitera la déconnexion pour re-connexion sur l'APN mmssfr...
+
+APN : mmssfr ou sl2sfr (si vous y avez accès)
+MMSC : http://mms1
+Proxy MMS : 10.151.0.1
+Port MMS : 8080
+MCC : 208
+MNC : 10
+APN Type : mms
+
+SMSC: +33609001390
+
+BOUYGUES:
+
+Internet + MMS:
+APN: mmsbouygtel.com
+MMSC: http://mms.bouyguestelecom.fr/mms/wapenc
+Proxy MMS: 62.201.129.226
+Port MMS: 8080
+MCC: 208
+MNC: 20
+Type authentification (Android 2.x): Normal (PAP)
+Type D'APN: Default,mms ou internet+mms (Android 2.x)
+
+SMSC: +33660003000
+
+B&You
+
+Internet + MMS:
+APN: mmsbouygtel.com
+MMSC: http://mms.bouyguestelecom.fr/mms/wapenc
+Proxy MMS: 62.201.129.226
+Port MMS: 8080
+MCC: 208
+MNC: 20
+Type authentification (Android 2.x): Normal (PAP)
+Type D'APN: Default,mms ou internet+mms (Android 2.x)
+
+SMSC: +33660003000
