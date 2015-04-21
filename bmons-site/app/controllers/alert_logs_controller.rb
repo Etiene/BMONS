@@ -4,7 +4,12 @@ class AlertLogsController < ApplicationController
   # GET /alert_logs
   # GET /alert_logs.json
   def index
-    @alert_logs = AlertLog.all
+    #getting logs only that belong to current user account
+    alerts = Alert.where(user_id: current_user.id)
+    @alert_logs = Array.new
+    alerts.each do |alert|
+      (@alert_logs << alert.alert_logs).flatten!
+    end
   end
 
   # GET /alert_logs/1

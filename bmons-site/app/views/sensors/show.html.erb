@@ -62,11 +62,9 @@
 <table class = "table">
   <thead>
     <tr>
-      <th>Message</th>
-      <th>Comparison</th>
-      <th>Threshold</th>
-      <th>Frequency</th>
       <th>Type</th>
+      <th>Comparison</th>
+      <th>Frequency</th>
       <th>Active</th>
       <th colspan="3"></th>
     </tr>
@@ -75,11 +73,9 @@
   <tbody>
     <% @sensor.alerts.each do |alert| %>
       <tr>
-        <td><%= alert.message %></td>
-        <td><%= alert.comparison %></td>
-        <td><%= alert.threshold %></td>
-        <td><%= alert.frequency %></td>
-        <td><%= alert.alert_type %></td>
+        <td><%= alert.messageTypeArray[(alert.alert_type).to_i] %></td>
+        <td><%= alert.comparisonArray[(alert.comparison).to_i] %> <%= alert.threshold %> <%= alert.sensor.unity %></td>
+        <td><%= alert.frequency %> min.</td>
         <td><%= alert.active %></td>
         <td><%= link_to 'Show', alert, class:"btn btn-default btn-xs" %></td>
         <td><%= link_to 'Edit', edit_alert_path(alert), class:"btn btn-default btn-xs" %></td>
@@ -92,7 +88,7 @@
 <br/>
 
 <%= link_to 'Edit', edit_sensor_path(@sensor), class:"btn btn-default btn-xs"  %> |
- <%= link_to 'Configure Alert', new_alert_path(:sensor_id => @sensor.id) , class: "btn btn-default btn-xs" %> |
+ <%= link_to 'Configure Alert', new_alert_path(:sensor_id => @sensor.id) , class: "btn btn-warning btn-xs" %> |
 <%= link_to 'Back', @sensor.beehive, class:"btn btn-default btn-xs"  %>
 <% if current_user.access_level == 99 %>
   <br/>

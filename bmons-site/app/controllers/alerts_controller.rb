@@ -4,7 +4,7 @@ class AlertsController < ApplicationController
   # GET /alerts
   # GET /alerts.json
   def index
-    @alerts = Alert.all
+    @alerts = Alert.where(user_id: current_user.id)
   end
 
   # GET /alerts/1
@@ -15,7 +15,9 @@ class AlertsController < ApplicationController
   # GET /alerts/new
   def new
     @alert = Alert.new
-    #@alert.sensor_id = params[:sensor_id]
+    if params[:sensor_id]
+      @alert.sensor_id = params[:sensor_id]
+    end
   end
 
   # GET /alerts/1/edit
@@ -26,7 +28,7 @@ class AlertsController < ApplicationController
   # POST /alerts.json
   def create
     @alert = Alert.new(alert_params)
-
+    @alert.user_id = current_user.id
     #@alert.user_id = current_user.id
     respond_to do |format|
       if @alert.save
