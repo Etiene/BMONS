@@ -4,15 +4,17 @@
     <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
       <p id="notice"><%= notice %></p>
 
-
+<h3>Alert for  
+  <%= @alert.sensor.type %>, beehive <%= @alert.sensor.beehive.name %>
+</h3>
 <p>
   <strong>Type:</strong>
-  <%= @alert.alert_type %>
+  <%= @alert.messageTypeArray[(@alert.alert_type).to_i] %>
 </p>
 
 <p>
   <strong>Frequency:</strong>
-  <%= @alert.frequency %>
+  Every <%= @alert.frequency %> minutes
 </p>
 
 <p>
@@ -21,13 +23,8 @@
 </p>
 
 <p>
-  <strong>Threshold:</strong>
-  <%= @alert.threshold %>
-</p>
-
-<p>
-  <strong>Comparison:</strong>
-  <%= @alert.comparison %>
+  <strong>When:</strong>
+  <%= @alert.comparisonArray[(@alert.comparison).to_i] %> <%= @alert.threshold %> <%= @alert.sensor.unity %>
 </p>
 
 <p>
@@ -35,18 +32,8 @@
   <%= @alert.active %>
 </p>
 
-<p>
-  <strong>User:</strong>
-  <%= @alert.user %>
-</p>
-
-<p>
-  <strong>Sensor:</strong>
-  <%= @alert.sensor %>
-</p>
-
-<%= link_to 'Edit', edit_alert_path(@alert) %> |
-<%= link_to 'Back', alerts_path %>
+<%= link_to 'Edit', edit_alert_path(@alert), class:"btn btn-default btn-xs" %> |
+<%= link_to 'Back', @alert.sensor, class:"btn btn-default btn-xs" %>
     </div>
   </div>
 </div>
