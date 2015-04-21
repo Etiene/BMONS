@@ -4,7 +4,14 @@ class MeasurementsController < ApplicationController
   # GET /measurements
   # GET /measurements.json
   def index
-    @measurements = Measurement.all
+    #getting measurements only that belong to current user account
+    beehives = Beehive.where(user_id: current_user.id)
+    @measurements = Array.new
+    beehives.each do |beehive|
+      beehive.sensors.each do |sensor|
+      (@measurements << sensor.measurements).flatten!
+      end
+    end
   end
 
   # GET /measurements/1

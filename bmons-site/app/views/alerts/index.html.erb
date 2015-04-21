@@ -5,17 +5,14 @@
       <p id="notice"><%= notice %></p>
       <h1 class="page-header">Alerts</h1>
 
-<table>
+<table class = "table">
   <thead>
     <tr>
+      <th>For</th>
       <th>Type</th>
-      <th>Frequency</th>
-      <th>Message</th>
-      <th>Threshold</th>
       <th>Comparison</th>
+      <th>Frequency</th>
       <th>Active</th>
-      <th>User</th>
-      <th>Sensor</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -23,25 +20,24 @@
   <tbody>
     <% @alerts.each do |alert| %>
       <tr>
-        <td><%= alert.alert_type %></td>
-        <td><%= alert.frequency %></td>
-        <td><%= alert.message %></td>
-        <td><%= alert.threshold %></td>
-        <td><%= alert.comparison %></td>
+        <td><%= alert.sensor.beehive.name %>, <%= alert.sensor.type %></td>
+        <td><%= alert.messageTypeArray[(alert.alert_type).to_i] %></td>
+        <td><%= alert.comparisonArray[(alert.comparison).to_i] %> <%= alert.threshold %> <%= alert.sensor.unity %></td>
+        <td><%= alert.frequency %> min.</td>
         <td><%= alert.active %></td>
-        <td><%= alert.user %></td>
-        <td><%= alert.sensor %></td>
-        <td><%= link_to 'Show', alert %></td>
-        <td><%= link_to 'Edit', edit_alert_path(alert) %></td>
-        <td><%= link_to 'Destroy', alert, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', alert, class:"btn btn-default btn-xs" %></td>
+        <td><%= link_to 'Edit', edit_alert_path(alert), class:"btn btn-default btn-xs" %></td>
+        <td><%= link_to 'Destroy', alert, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-default btn-xs" %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
+<br/>
+<br/>
 
 <br>
 
-<%= link_to 'New Alert', new_alert_path, class: "btn btn-warning" %> 
+<%= link_to 'New Alert', sensors_path, class: "btn btn-warning" %> 
     </div>
   </div>
 </div>
