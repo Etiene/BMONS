@@ -88,7 +88,11 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
 
-  namespace :api do
+
+    
+
+
+  scope "/api" do
     resources :measurements, :defaults => { :format => 'json' }
   end
 

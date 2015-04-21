@@ -41,7 +41,7 @@ class MeasurementsController < ApplicationController
     respond_to do |format|
       if @measurement.save
         format.html { redirect_to @measurement, notice: 'Measurement was successfully created.' }
-        format.json { render :show, status: :created, location: @measurement }
+        format.json { render json: @measurement.sensor.beehive, status: :created }
       else
         format.html { render :new }
         format.json { render json: @measurement.errors, status: :unprocessable_entity }
