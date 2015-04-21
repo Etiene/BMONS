@@ -1,5 +1,8 @@
 class MeasurementsController < ApplicationController
+  skip_before_filter :authenticate_user! # we do not need devise authentication here
+  http_basic_authenticate_with name: "test", password: "test", except: [:index, :show, :destroy, :edit]
   before_action :set_measurement, only: [:show, :edit, :update, :destroy]
+  skip_before_action :verify_authenticity_token
 
   # GET /measurements
   # GET /measurements.json
@@ -32,6 +35,7 @@ class MeasurementsController < ApplicationController
   # POST /measurements
   # POST /measurements.json
   def create
+
     @measurement = Measurement.new(measurement_params)
 
     respond_to do |format|
