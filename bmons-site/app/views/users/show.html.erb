@@ -1,32 +1,40 @@
-<div class="bmons-box">
-	<h2 class="form-signin-heading">View Profile</h2>
-	<% if  current_user.id == @user.id or current_user.access_level==5 %>
+<div class="container-fluid">
+  <div class="row">
+    <% if current_user.access_level==99 %>
+      <%= render 'main/sidebarAdmin' %>
+    <% end %>
 
-	<p id="notice"><%= notice %></p>
+    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+		<h2 class="form-signin-heading">View Profile</h2>
+		<% if  current_user.id == @user.id or current_user.access_level==99 %>
 
-	<p>
-	  <strong>Name:</strong>
-	  <%= @user.name %>
-	</p>
+			<p id="notice"><%= notice %></p>
 
-	<!--<p>
-	  <strong>Access level:</strong>
-	  <%= @user.access_level %>
-	</p>
-	-->
-	<p>
+			<p>
+			  <strong>Name:</strong>
+			  <%= @user.name %>
+			</p>
 
-	<p>
-	  <strong>Email:</strong>
-	  <%= @user.email %>
-	</p>
+			<!--<p>
+			  <strong>Access level:</strong>
+			  <%= @user.access_level %>
+			</p>
+			-->
+			<p>
 
-	<p>
-	  <strong>Tel:</strong>
-	  <%= @user.tel %>
-	</p>
+			<p>
+			  <strong>Email:</strong>
+			  <%= @user.email %>
+			</p>
 
-	<%= link_to 'Edit', edit_user_path(@user), class: "btn btn-warning"  %><!-- |
-	<%= link_to 'Back', users_path %>-->
-	<% end %>
+			<p>
+			  <strong>Tel:</strong>
+			  <%= @user.tel %>
+			</p>
+
+			<%= link_to 'Edit', edit_user_path(@user), class: "btn btn-warning"  %><!-- |
+			<%= link_to 'Back', users_path %>-->
+		<% end %>
+    </div>
+  </div>
 </div>

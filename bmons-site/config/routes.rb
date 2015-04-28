@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   get 'main/index'
 
+  get 'main/admin'
+
+  get 'main/adminBecomeUser'
+
   resources :beehives
 
   devise_for :users

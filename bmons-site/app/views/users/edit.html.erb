@@ -1,12 +1,19 @@
-<div class="bmons-box">
-	
-	<% if  current_user.id == @user.id or current_user.access_level==5 %>
-		<h2 class="form-signin-heading">Edit Profile</h2>
+<div class="container-fluid">
+  <div class="row">
+    <% if current_user.access_level==99 %>
+      <%= render 'main/sidebarAdmin' %>
+    <% end %>
 
-		<%= render 'form' %>
+    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+		<% if  current_user.id == @user.id or current_user.access_level==99 %>
+			<h2 class="form-signin-heading">Edit Profile</h2>
 
-		<%= link_to 'Back', @user, class: "btn btn-default"  %><!-- |
-		<%= link_to 'Back', users_path %>-->
+			<%= render 'form' %>
 
-    <% end %> 
+			<%= link_to 'Back', @user, class: "btn btn-default"  %><!-- |
+			<%= link_to 'Back', users_path %>-->
+
+		<% end %>
+    </div>
+  </div>
 </div>

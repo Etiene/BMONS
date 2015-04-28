@@ -86,15 +86,12 @@
 </table>
 <br/>
 <br/>
-
+ <%= link_to 'Configure Alert', new_alert_path(:sensor_id => @sensor.id) , class: "btn btn-warning btn-xs" %> 
+<br/>
+<br/>
 <%= link_to 'Edit', edit_sensor_path(@sensor), class:"btn btn-default btn-xs"  %> |
- <%= link_to 'Configure Alert', new_alert_path(:sensor_id => @sensor.id) , class: "btn btn-warning btn-xs" %> |
 <%= link_to 'Back', @sensor.beehive, class:"btn btn-default btn-xs"  %>
-<% if current_user.access_level == 99 %>
-  <br/>
-  <br/>
-    <%= link_to '(ADMIN) Add Measure', new_measurement_path(:sensor_id => @sensor.id) , class: "btn btn-default btn-xs" %> 
-<% end %>
+
 
     </div>
   </div>
