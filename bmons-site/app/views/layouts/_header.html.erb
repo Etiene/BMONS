@@ -21,8 +21,10 @@
           <% if user_signed_in? %>
 	          <ul class="nav navbar-nav navbar-right">
 	            <li><a href="/">Dashboard</a></li>
-	            <li><a href="#">Settings</a></li>
 	            <li><a href="/users/<%= current_user.id %>">Profile</a></li>
+              <% if current_user.access_level == 99 %>
+                 <li><a href="/main/admin/">(ADMIN)</a></li>
+              <% end %>
 	            <!--<li><a href="#">Help</a></li>-->
 	            <li> <%= link_to 'Log Out', destroy_user_session_path, :method => :delete %></li>
 	          </ul>

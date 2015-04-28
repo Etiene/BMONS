@@ -12,7 +12,7 @@
       <th>Datetime</th>
       <th>Value</th>
       <th>Unity</th>
-      <th colspan="3"></th>
+      <th colspan="2"></th>
     </tr>
   </thead>
 
@@ -24,7 +24,6 @@
         <td><%= measurement.value %></td>
         <td><%= measurement.sensor.unity %></td>
         <td><%= link_to 'Show', measurement, class:"btn btn-default btn-xs" %></td>
-        <td><%= link_to 'Edit', edit_measurement_path(measurement), class:"btn btn-default btn-xs" %></td>
         <td><%= link_to 'Destroy', measurement, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-default btn-xs" %></td>
       </tr>
     <% end %>

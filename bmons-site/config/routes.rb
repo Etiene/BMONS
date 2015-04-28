@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   get 'main/index'
 
+  get 'main/admin'
+
+  get 'main/adminBecomeUser'
+
   resources :beehives
 
   devise_for :users
@@ -87,4 +91,13 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+
+    
+
+
+  scope "/api" do
+    resources :measurements, :defaults => { :format => 'json' }
+  end
+
 end

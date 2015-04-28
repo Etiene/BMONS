@@ -1,35 +1,40 @@
-<% if current_user.access_level==5 %>
-<p id="notice"><%= notice %></p>
+<div class="container-fluid">
+  <div class="row">
+    <%= render 'main/sidebarAdmin' %>
+    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+      <% if current_user.access_level==99 %>
+        <p id="notice"><%= notice %></p>
 
-<h1>Listing Users</h1>
+        <h1>Listing Users</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Access level</th>
-      <th>Email</th>
-      <th>Tel</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Access level</th>
+              <th>Email</th>
+              <th>Tel</th>
+              <th colspan="4"></th>
+            </tr>
+          </thead>
 
-  <tbody>
-    <% @users.each do |user| %>
-      <tr>
-        <td><%= user.name %></td>
-        <td><%= user.access_level %></td>
-        <td><%= user.email %></td>
-        <td><%= user.tel %></td>
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New User', new_user_path %>
-<% end %>
+          <tbody>
+            <% @users.each do |user| %>
+              <tr>
+                <td><%= user.name %></td>
+                <td><%= user.access_level %></td>
+                <td><%= user.email %></td>
+                <td><%= user.tel %></td>
+                <td><%= link_to 'Show', user %></td>
+                <td><%= link_to 'Edit', edit_user_path(user) %></td>
+                <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                <td><%= link_to "Login as", controller: "main", action: "adminBecomeUser", id: user %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+        <!--<%= link_to 'New User', new_user_path %>-->
+        <% end %>
+    </div>
+  </div>
+</div>
