@@ -23,6 +23,15 @@ class UsersController < ApplicationController
   def edit
   end
 
+  # GET /users/1/turnIntoAdmin
+  def turnIntoAdmin
+    return unless current_user.access_level == 99
+    user = User.find(params[:id])
+    user.access_level = 99
+    user.save
+    redirect_to users_url 
+  end
+
   # POST /users
   # POST /users.json
   def create

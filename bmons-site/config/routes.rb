@@ -25,6 +25,8 @@ Rails.application.routes.draw do
 
   get 'users/login'
 
+  get 'users/turnIntoAdmin'
+
   resources :alert_logs
 
   resources :sensors

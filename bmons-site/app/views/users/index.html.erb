@@ -14,7 +14,7 @@
               <th>Access level</th>
               <th>Email</th>
               <th>Tel</th>
-              <th colspan="4"></th>
+              <th colspan="5"></th>
             </tr>
           </thead>
 
@@ -29,6 +29,7 @@
                 <td><%= link_to 'Edit', edit_user_path(user) %></td>
                 <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
                 <td><%= link_to "Login as", controller: "main", action: "adminBecomeUser", id: user %></td>
+                <td><%= link_to "Make admin", controller: "users", action: "turnIntoAdmin", id: user %></td>
               </tr>
             <% end %>
           </tbody>
