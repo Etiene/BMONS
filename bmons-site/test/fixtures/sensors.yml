@@ -2,12 +2,12 @@
 
 one:
   name: MyString
-  type: 
+  type: 1
   unity: MyString
-  beehive_id: 
+  beehive_id: 1
 
 two:
   name: MyString
-  type: 
+  type: 1
   unity: MyString
-  beehive_id: 
+  beehive_id: 1

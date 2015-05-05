@@ -4,10 +4,10 @@ one:
   name: MyString
   position: MyString
   mode: MyString
-  user_id: 
+  user_id: 1
 
 two:
   name: MyString
   position: MyString
   mode: MyString
-  user_id: 
+  user_id: 1

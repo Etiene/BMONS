@@ -3,9 +3,9 @@
 one:
   value: 1
   datetime: 2015-02-17 17:05:09
-  sensor_id: 
+  sensor_id: 1
 
 two:
   value: 1
   datetime: 2015-02-17 17:05:09
-  sensor_id: 
+  sensor_id: 1

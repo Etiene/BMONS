@@ -4,7 +4,12 @@ require 'rails/test_help'
 
 class ActiveSupport::TestCase
   # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
-  fixtures :all
+  fixtures :users
+  fixtures :beehives
+  fixtures :sensors
+  fixtures :alerts
+  fixtures :alert_logs
+  fixtures :measurements
 
   # Add more helper methods to be used by all tests here...
 end

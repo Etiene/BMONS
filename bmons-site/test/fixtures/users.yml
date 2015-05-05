@@ -13,3 +13,11 @@
 one: 
  email: user1@test.eu
  encrypted_password: abcdef1
+ access_level: 99
+
+two: 
+ email: user2@test.eu
+ encrypted_password: abcdef2
+ access_level: 0
+ tel: 33645454545
+ name: joao

@@ -5,11 +5,11 @@ one:
   status: 1
   recipient: MyString
   datetime: 2015-02-17 17:05:56
-  alert_id: 
+  alert_id: 1
 
 two:
   message: MyText
   status: 1
   recipient: MyString
   datetime: 2015-02-17 17:05:56
-  alert_id: 
+  alert_id: 1
