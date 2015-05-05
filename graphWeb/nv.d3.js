@@ -4745,6 +4745,7 @@ nv.models.lineChart = function() {
         , state = nv.utils.state()
         , defaultState = null
         , noData = 'No Data Available.'
+        , average = function(d) { return d.average }
         , dispatch = d3.dispatch('tooltipShow', 'tooltipHide', 'stateChange', 'changeState', 'renderEnd')
         , duration = 250
         ;
@@ -4921,6 +4922,52 @@ nv.models.lineChart = function() {
                 .datum(data.filter(function(d) { return !d.disabled }));
 
             linesWrap.call(lines);
+            
+            //Store a series index number in the data array.
+            data.forEach(function(d,i) {
+                d.seriesIndex = i;
+            });
+
+            var avgLineData = data.filter(function(d) {
+                return !d.disabled && !!average(d);
+            });
+
+            var avgLines = g.select(".nv-avgLinesWrap").selectAll("line")
+                .data(avgLineData, function(d) { return d.key; });
+
+            var getAvgLineY = function(d) {
+                //If average lines go off the svg element, clamp them to the svg bounds.
+                var yVal = y(average(d));
+                if (yVal < 0) return 0;
+                if (yVal > availableHeight) return availableHeight;
+                return yVal;
+            };
+
+            avgLines.enter()
+                .append('line')
+                .style('stroke-width',2)
+                .style('stroke-dasharray','10,10')
+                .style('stroke',function (d,i) {
+                    return lines.color()(d,d.seriesIndex);
+                })
+                .attr('x1',0)
+                .attr('x2',availableWidth)
+                .attr('y1', getAvgLineY)
+                .attr('y2', getAvgLineY);
+
+            avgLines
+                .style('stroke-opacity',function(d){
+                    //If average lines go offscreen, make them transparent
+                    var yVal = y(average(d));
+                    if (yVal < 0 || yVal > availableHeight) return 0;
+                    return 1;
+                })
+                .attr('x1',0)
+                .attr('x2',availableWidth)
+                .attr('y1', getAvgLineY)
+                .attr('y2', getAvgLineY);
+
+            avgLines.exit().remove();
 
             // Setup Axes
             if (showXAxis) {
@@ -5099,6 +5146,7 @@ nv.models.lineChart = function() {
         showXAxis:      {get: function(){return showXAxis;}, set: function(_){showXAxis=_;}},
         showYAxis:    {get: function(){return showYAxis;}, set: function(_){showYAxis=_;}},
         tooltips:    {get: function(){return tooltips;}, set: function(_){tooltips=_;}},
+        average: {get: function(){return average;}, set: function(_){average=_;}},
         tooltipContent:    {get: function(){return tooltip;}, set: function(_){tooltip=_;}},
         defaultState:    {get: function(){return defaultState;}, set: function(_){defaultState=_;}},
         noData:    {get: function(){return noData;}, set: function(_){noData=_;}},
@@ -5134,6 +5182,8 @@ nv.models.lineChart = function() {
             }
         }}
     });
+
+ 
 
     nv.utils.inheritOptions(chart, lines);
     nv.utils.initOptions(chart);
