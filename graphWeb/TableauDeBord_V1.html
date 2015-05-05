@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+		<meta charset="utf-8">
+		<link href="nv.d3.css" rel="stylesheet" type="text/css">
+		<script src="d3.min.js" charset="utf-8"></script>
+		<script src="nv.d3.js"></script>
+
+	  <style>
+			text {font: 12px sans-serif;}
+			svg {display: block;}
+			
+			html, body, #chart1, svg {
+				margin: 50px;
+				padding: -20px;
+				width: 90%;
+				height: 90%;
+			}
+		</style>
+	</head>
+	<body class='with-3d-shadow with-transitions'>
+
+	<div id="chart1"></div>
+	 <button onclick="resetAlerte()">miel recolte, reset alerte</button>
+	 <button onclick="desactiveAlerte()">active / desactive alerte miel</button>
+<script>
+    // Wrapping in nv.addGraph allows for '0 timeout render', stores rendered charts in nv.graphs, and may do more in the future... it's NOT required
+    var chart;
+    nv.addGraph(function() {
+        chart = nv.models.lineChart()
+                .useInteractiveGuideline(true)
+            	.average(function(d) { return d.mean/100; })
+            	
+				;
+		
+        // chart sub-models (ie. xAxis, yAxis, etc) when accessed directly, return themselves, not the parent chart, so need to chain separately
+        chart.xAxis
+			.axisLabel("Date")
+            .tickFormat(d3.format(',.1f'))
+            .staggerLabels(true)
+            
+        ;
+		chart.xAxis.tickFormat(function(d) {
+            return d3.time.format('%d/%m/%y')(new Date(d*100000))
+        });
+        chart.forceY([0])
+        chart.yAxis
+            .tickFormat(d3.format(',.2f'))
+            
+			
+        ;
+        d3.select('#chart1').append('svg')
+            .datum(cumulativeTestData())
+            .call(chart);
+        nv.utils.windowResize(chart.update);
+		 
+		 
+		 
+        return chart;
+    });
+	
+	function resetAlerte(){
+	// on passe prevenu a false et on change la date de debut de surveillance
+	prevenu=false;
+	debut_surveille=Date();
+	}
+	
+	function desactiveAlerte(){
+	// on passe alerte status a son oppose	
+	alerte_status=false;
+	}
+	
+    function cumulativeTestData() {
+		var maxi_miel=30;
+		var prevenu=false;
+		var debut_surveille=14278680;
+		var alerte_status=true;
+		
+        var T = [{x:14278680,y:30},{x:14279544,y:32},{x:14280408,y:31},{x:14281272,y:30},{x:14282136,y:28},{x:14282820,y:30},{x:14283684,y:32},{x:14284548,y:31},{x:14285412,y:30},{x:14286276,y:28}],
+            hum = [{x:14278680,y:80},{x:14279544,y:82},{x:14280408,y:81},{x:14281272,y:85},{x:14282136,y:82},{x:14282820,y:80},{x:14283684,y:82},{x:14284548,y:81},{x:14285412,y:80},{x:14286276,y:78}],
+            son = [{x:14278680,y:20},{x:14279544,y:20},{x:14280408,y:21},{x:14281272,y:23},{x:14282136,y:25},{x:14282820,y:20},{x:14283684,y:22},{x:14284548,y:21},{x:14285412,y:20},{x:14286276,y:28}],
+            poids = [{x:14278680,y:30},{x:14279544,y:32},{x:14280408,y:34},{x:14281272,y:35},{x:14282136,y:38},{x:14282820,y:40},{x:14283684,y:25},{x:14284548,y:25},{x:14285412,y:26},{x:14286276,y:28}];
+            
+            //alerte pour recolte du miel (limite definie par l'apiculteur)
+            if (alerte_status){
+				for (var i = 0; i < poids.length; i++) {
+				    if(poids[i].x>debut_surveille && poids[i].y>maxi_miel && !prevenu){
+						alert("il est temps de recolter le miel !");
+						prevenu=true;
+				    }
+        		};
+        	}
+		     
+		     
+        
+	return [
+		{
+			key: "Temprature (C)",
+			values:T,
+			color: "#C60800",
+			mean : 3000
+		},
+		{
+			key: "Poids de la ruche (Kg)",
+			values:poids,
+			area: true,
+			color :"#FCD21C",//"#DFAF2C",
+			mean : 20
+		},
+		{
+			key: "Humidite (%)",
+			values:hum,
+			color: "#2222ff"
+		},
+		{
+			key: "Intensite du son (dB)",
+			values:son,
+			color: "#16B84E"
+		}
+	];
+}
+</script>
+</body>
+
