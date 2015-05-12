@@ -1,11 +1,606 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
+#TEMPERATURE RUCHE 1
 one:
-  value: 1
+  value: 15
   datetime: 2015-02-17 17:05:09
   sensor_id: 1
 
 two:
-  value: 1
-  datetime: 2015-02-17 17:05:09
+  value: 15.1
+  datetime: 2015-02-17 17:15:09
   sensor_id: 1
+
+three:
+  value: 15.2
+  datetime: 2015-02-17 17:25:09
+  sensor_id: 1
+
+four:
+  value: 15.3
+  datetime: 2015-02-17 17:35:09
+  sensor_id: 1
+
+five:
+  value: 16
+  datetime: 2015-02-17 17:45:09
+  sensor_id: 1
+
+six:
+  value: 15.3
+  datetime: 2015-02-17 17:55:09
+  sensor_id: 1
+
+seven:
+  value: 15
+  datetime: 2015-02-17 18:05:09
+  sensor_id: 1
+
+eight:
+  value: 15.1
+  datetime: 2015-02-17 18:15:09
+  sensor_id: 1
+
+nine:
+  value: 15
+  datetime: 2015-02-17 18:25:09
+  sensor_id: 1
+
+ten:
+  value: 14.8
+  datetime: 2015-02-17 18:35:09
+  sensor_id: 1
+
+one2:
+  value: 14.6
+  datetime: 2015-02-17 18:45:09
+  sensor_id: 1
+
+two2:
+  value: 14.4
+  datetime: 2015-02-17 18:55:09
+  sensor_id: 1
+
+three2:
+  value: 14.2
+  datetime: 2015-02-17 19:05:09
+  sensor_id: 1
+
+four2:
+  value: 14
+  datetime: 2015-02-17 19:15:09
+  sensor_id: 1
+
+five2:
+  value: 13.8
+  datetime: 2015-02-17 19:25:09
+  sensor_id: 1
+
+six2:
+  value: 13.6
+  datetime: 2015-02-17 19:35:09
+  sensor_id: 1
+
+seven2:
+  value: 13.4
+  datetime: 2015-02-17 19:45:09
+  sensor_id: 1
+
+eight2:
+  value: 13.2
+  datetime: 2015-02-17 19:55:09
+  sensor_id: 1
+
+nine2:
+  value: 13
+  datetime: 2015-02-17 20:05:09
+  sensor_id: 1
+
+ten2:
+  value: 13
+  datetime: 2015-02-17 20:15:09
+  sensor_id: 1
+
+one3:
+  value: 13.5
+  datetime: 2015-02-17 20:25:09
+  sensor_id: 1
+
+two3:
+  value: 13.6
+  datetime: 2015-02-17 20:35:09
+  sensor_id: 1
+
+three3:
+  value: 13.6
+  datetime: 2015-02-17 20:45:09
+  sensor_id: 1
+
+four3:
+  value: 13.6
+  datetime: 2015-02-17 20:55:09
+  sensor_id: 1
+
+five3:
+  value: 13.3
+  datetime: 2015-02-17 21:05:09
+  sensor_id: 1
+
+six3:
+  value: 13.2
+  datetime: 2015-02-17 21:15:09
+  sensor_id: 1
+
+seven3:
+  value: 13.1
+  datetime: 2015-02-17 21:25:09
+  sensor_id: 1
+
+eight3:
+  value: 13.2
+  datetime: 2015-02-17 21:35:09
+  sensor_id: 1
+
+nine3:
+  value: 13.2
+  datetime: 2015-02-17 21:45:09
+  sensor_id: 1
+
+ten3:
+  value: 13.1
+  datetime: 2015-02-17 21:55:09
+  sensor_id: 1
+
+one4:
+  value: 12.9
+  datetime: 2015-02-17 22:05:09
+  sensor_id: 1
+
+two4:
+  value: 12.7
+  datetime: 2015-02-17 22:15:09
+  sensor_id: 1
+
+three4:
+  value: 12.5
+  datetime: 2015-02-17 22:25:09
+  sensor_id: 1
+
+four4:
+  value: 12.4
+  datetime: 2015-02-17 22:35:09
+  sensor_id: 1
+
+five4:
+  value: 12.2
+  datetime: 2015-02-17 22:45:09
+  sensor_id: 1
+
+six4:
+  value: 12.1
+  datetime: 2015-02-17 22:55:09
+  sensor_id: 1
+
+seven4:
+  value: 11.9
+  datetime: 2015-02-17 23:05:09
+  sensor_id: 1
+
+eight4:
+  value: 11.9
+  datetime: 2015-02-17 23:15:09
+  sensor_id: 1
+
+nine4:
+  value: 11.7
+  datetime: 2015-02-17 23:25:09
+  sensor_id: 1
+
+ten4:
+  value: 11.6
+  datetime: 2015-02-17 23:35:09
+  sensor_id: 1
+
+
+#TEMPERATURE RUCHE 2
+one5:
+  value: 25
+  datetime: 2015-02-17 17:05:09
+  sensor_id: 3
+
+two5:
+  value: 25.1
+  datetime: 2015-02-17 17:15:09
+  sensor_id: 3
+
+three5:
+  value: 25.2
+  datetime: 2015-02-17 17:25:09
+  sensor_id: 3
+
+four5:
+  value: 25.3
+  datetime: 2015-02-17 17:35:09
+  sensor_id: 3
+
+five5:
+  value: 26
+  datetime: 2015-02-17 17:45:09
+  sensor_id: 3
+
+six5:
+  value: 25.3
+  datetime: 2015-02-17 17:55:09
+  sensor_id: 3
+
+seven5:
+  value: 25
+  datetime: 2015-02-17 18:05:09
+  sensor_id: 3
+
+eight5:
+  value: 25.1
+  datetime: 2015-02-17 18:15:09
+  sensor_id: 3
+
+nine5:
+  value: 25
+  datetime: 2015-02-17 18:25:09
+  sensor_id: 3
+
+ten5:
+  value: 24.8
+  datetime: 2015-02-17 18:35:09
+  sensor_id: 3
+
+one6:
+  value: 24.6
+  datetime: 2015-02-17 18:45:09
+  sensor_id: 3
+
+two6:
+  value: 24.4
+  datetime: 2015-02-17 18:55:09
+  sensor_id: 3
+
+three6:
+  value: 24.2
+  datetime: 2015-02-17 19:05:09
+  sensor_id: 3
+
+four6:
+  value: 24
+  datetime: 2015-02-17 19:15:09
+  sensor_id: 3
+
+five6:
+  value: 23.8
+  datetime: 2015-02-17 19:25:09
+  sensor_id: 3
+
+six6:
+  value: 23.6
+  datetime: 2015-02-17 19:35:09
+  sensor_id: 3
+
+seven6:
+  value: 23.4
+  datetime: 2015-02-17 19:45:09
+  sensor_id: 3
+
+eight6:
+  value: 23.2
+  datetime: 2015-02-17 19:55:09
+  sensor_id: 3
+
+nine6:
+  value: 23
+  datetime: 2015-02-17 20:05:09
+  sensor_id: 3
+
+ten6:
+  value: 23
+  datetime: 2015-02-17 20:15:09
+  sensor_id: 3
+
+one7:
+  value: 23.5
+  datetime: 2015-02-17 20:25:09
+  sensor_id: 3
+
+two7:
+  value: 23.6
+  datetime: 2015-02-17 20:35:09
+  sensor_id: 3
+
+three7:
+  value: 23.6
+  datetime: 2015-02-17 20:45:09
+  sensor_id: 3
+
+four7:
+  value: 23.6
+  datetime: 2015-02-17 20:55:09
+  sensor_id: 3
+
+five7:
+  value: 23.3
+  datetime: 2015-02-17 21:05:09
+  sensor_id: 3
+
+six7:
+  value: 23.2
+  datetime: 2015-02-17 21:15:09
+  sensor_id: 3
+
+seven7:
+  value: 23.1
+  datetime: 2015-02-17 21:25:09
+  sensor_id: 3
+
+eight7:
+  value: 23.2
+  datetime: 2015-02-17 21:35:09
+  sensor_id: 3
+
+nine7:
+  value: 23.2
+  datetime: 2015-02-17 21:45:09
+  sensor_id: 3
+
+ten7:
+  value: 23.1
+  datetime: 2015-02-17 21:55:09
+  sensor_id: 3
+
+one8:
+  value: 22.9
+  datetime: 2015-02-17 22:05:09
+  sensor_id: 3
+
+two8:
+  value: 22.7
+  datetime: 2015-02-17 22:15:09
+  sensor_id: 3
+
+three8:
+  value: 22.5
+  datetime: 2015-02-17 22:25:09
+  sensor_id: 3
+
+four8:
+  value: 22.4
+  datetime: 2015-02-17 22:35:09
+  sensor_id: 3
+
+five8:
+  value: 22.2
+  datetime: 2015-02-17 22:45:09
+  sensor_id: 3
+
+six8:
+  value: 22.1
+  datetime: 2015-02-17 22:55:09
+  sensor_id: 3
+
+seven8:
+  value: 21.9
+  datetime: 2015-02-17 23:05:09
+  sensor_id: 3
+
+eight8:
+  value: 21.9
+  datetime: 2015-02-17 23:15:09
+  sensor_id: 3
+
+nine8:
+  value: 21.7
+  datetime: 2015-02-17 23:25:09
+  sensor_id: 3
+
+ten8:
+  value: 21.6
+  datetime: 2015-02-17 23:35:09
+  sensor_id: 3
+
+
+#WEIGHT RUCHE 1
+one9:
+  value: 4
+  datetime: 2015-02-17 17:05:09
+  sensor_id: 2
+
+two9:
+  value: 4.1
+  datetime: 2015-02-17 17:15:09
+  sensor_id: 2
+
+three9:
+  value: 4.2
+  datetime: 2015-02-17 17:25:09
+  sensor_id: 2
+
+four9:
+  value: 4.3
+  datetime: 2015-02-17 17:35:09
+  sensor_id: 2
+
+five9:
+  value: 4.4
+  datetime: 2015-02-17 17:45:09
+  sensor_id: 2
+
+six9:
+  value: 4.5
+  datetime: 2015-02-17 17:55:09
+  sensor_id: 2
+
+seven9:
+  value: 4.6
+  datetime: 2015-02-17 18:05:09
+  sensor_id: 2
+
+eight9:
+  value: 4.9
+  datetime: 2015-02-17 18:15:09
+  sensor_id: 2
+
+nine9:
+  value: 5
+  datetime: 2015-02-17 18:25:09
+  sensor_id: 2
+
+ten9:
+  value: 4.8
+  datetime: 2015-02-17 18:35:09
+  sensor_id: 2
+
+one1:
+  value: 5.2
+  datetime: 2015-02-17 18:45:09
+  sensor_id: 2
+
+two1:
+  value: 5.7
+  datetime: 2015-02-17 18:55:09
+  sensor_id: 2
+
+three1:
+  value: 6
+  datetime: 2015-02-17 19:05:09
+  sensor_id: 2
+
+four1:
+  value: 6.1
+  datetime: 2015-02-17 19:15:09
+  sensor_id: 2
+
+five1:
+  value: 6.2
+  datetime: 2015-02-17 19:25:09
+  sensor_id: 2
+
+six1:
+  value: 6.3
+  datetime: 2015-02-17 19:35:09
+  sensor_id: 2
+
+seven1:
+  value: 6.5
+  datetime: 2015-02-17 19:45:09
+  sensor_id: 2
+
+eight1:
+  value: 6.8
+  datetime: 2015-02-17 19:55:09
+  sensor_id: 2
+
+nine1:
+  value: 7
+  datetime: 2015-02-17 20:05:09
+  sensor_id: 2
+
+ten1:
+  value: 7.5
+  datetime: 2015-02-17 20:15:09
+  sensor_id: 2
+
+one11:
+  value: 0.5
+  datetime: 2015-02-17 20:25:09
+  sensor_id: 2
+
+two11:
+  value: 0.5
+  datetime: 2015-02-17 20:35:09
+  sensor_id: 2
+
+three11:
+  value: 0.5
+  datetime: 2015-02-17 20:45:09
+  sensor_id: 2
+
+four11:
+  value: 0.6
+  datetime: 2015-02-17 20:55:09
+  sensor_id: 2
+
+five11:
+  value: 0.6
+  datetime: 2015-02-17 21:05:09
+  sensor_id: 2
+
+six11:
+  value: 0.7
+  datetime: 2015-02-17 21:15:09
+  sensor_id: 2
+
+seven11:
+  value: 0.8
+  datetime: 2015-02-17 21:25:09
+  sensor_id: 2
+
+eight11:
+  value: 0.9
+  datetime: 2015-02-17 21:35:09
+  sensor_id: 2
+
+nine11:
+  value: 1
+  datetime: 2015-02-17 21:45:09
+  sensor_id: 2
+
+ten11:
+  value: 1
+  datetime: 2015-02-17 21:55:09
+  sensor_id: 2
+
+one12:
+  value: 1
+  datetime: 2015-02-17 22:05:09
+  sensor_id: 2
+
+two12:
+  value: 1
+  datetime: 2015-02-17 22:15:09
+  sensor_id: 2
+
+three12:
+  value: 1.1
+  datetime: 2015-02-17 22:25:09
+  sensor_id: 2
+
+four12:
+  value: 1.1
+  datetime: 2015-02-17 22:35:09
+  sensor_id: 2
+
+five12:
+  value: 1.1
+  datetime: 2015-02-17 22:45:09
+  sensor_id: 2
+
+six12:
+  value: 1.2
+  datetime: 2015-02-17 22:55:09
+  sensor_id: 2
+
+seven12:
+  value: 1.2
+  datetime: 2015-02-17 23:05:09
+  sensor_id: 2
+
+eight12:
+  value: 1.3
+  datetime: 2015-02-17 23:15:09
+  sensor_id: 2
+
+nine12:
+  value: 1.3
+  datetime: 2015-02-17 23:25:09
+  sensor_id: 2
+
+ten12:
+  value: 1.4
+  datetime: 2015-02-17 23:35:09
+  sensor_id: 2
