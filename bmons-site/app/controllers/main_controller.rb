@@ -3,17 +3,21 @@ class MainController < ApplicationController
 
 
   def index
+    colors = ["#C60800","#FCD21C","#2222ff","#16B84E","#DFAF2C"]
+
     beehives = Beehive.where(user_id: current_user.id)
     @data = Array.new()
     beehives.each do |beehive| 
       str = ""
+      c = 0
       beehive.sensors.each do |sensor| 
 
-        str = str + "{ key: \"#{sensor.name} (#{sensor.unity})\", color: \"#C60800\", values: [ "
+        str = str + "{ key: \"#{sensor.name} (#{sensor.unity})\", color: \"#{colors[c]}\", values: [ "
         sensor.measurements.each do |measurement| 
           str = str + "{x:#{(measurement.datetime).to_time.to_i},y:#{measurement.value}}, "
           
         end 
+        c = c + 1
       str = str + ' ]},'
       end 
     @data << str
