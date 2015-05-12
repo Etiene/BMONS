@@ -1,4 +1,4 @@
-﻿PROJECT=RapportFinalUV44BMONS
+PROJECT=RapportFinalUV44BMONS
 TEX=pdflatex
 BIBTEX=bibtex
 MKINDEX=makeindex
