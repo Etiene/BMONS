@@ -1,13 +1,22 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
+  id: 1
+  name: Temperature
   type: 1
-  unity: MyString
+  unity: C
   beehive_id: 1
 
 two:
-  name: MyString
+  id: 2
+  name: Weight
   type: 1
-  unity: MyString
+  unity: Kg
   beehive_id: 1
+
+three:
+  id: 3
+  name: Temperature
+  type: 1
+  unity: C
+  beehive_id: 2

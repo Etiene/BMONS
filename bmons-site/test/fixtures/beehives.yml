@@ -1,13 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
+  id: 1
+  name: Ruche 1
   position: MyString
   mode: MyString
   user_id: 1
 
 two:
-  name: MyString
+  id: 2
+  name: Ruche 2
   position: MyString
   mode: MyString
   user_id: 1

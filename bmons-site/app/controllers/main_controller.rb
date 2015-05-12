@@ -1,6 +1,27 @@
 class MainController < ApplicationController
+
+
+
   def index
+    beehives = Beehive.where(user_id: current_user.id)
+    @data = Array.new()
+    beehives.each do |beehive| 
+      str = ""
+      beehive.sensors.each do |sensor| 
+
+        str = str + "{ key: \"#{sensor.name} (#{sensor.unity})\", color: \"#C60800\", values: [ "
+        sensor.measurements.each do |measurement| 
+          str = str + "{x:#{(measurement.datetime).to_time.to_i},y:#{measurement.value}}, "
+          
+        end 
+      str = str + ' ]},'
+      end 
+    @data << str
+    end
   end
+
+
+
   def admin
   	if current_user.access_level != 99
   		render :text => 'Access denied.', :status => '303'
