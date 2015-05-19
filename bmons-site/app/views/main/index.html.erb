@@ -52,7 +52,7 @@
                 
             ;
         chart.xAxis.tickFormat(function(d) {
-                return d3.time.format('%d/%m/%y')(new Date(d*1000))
+                return d3.time.format('%d/%m/%y %H:%M')(new Date(d*1000))
             });
             chart.forceY([0])
             chart.yAxis
