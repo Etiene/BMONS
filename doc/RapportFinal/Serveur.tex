@@ -1,5 +1,33 @@
-\chapter{L'interface Web}
+\chapter{Serveur}
+\section{Machine Virtuel}
 
-\section{Base de données}
+During the development of the BMONS systems, we opted for the utilization of a Virtual Machine. A virtual machine is a way to emulate a particular computer system from another system. Considering that most of the development would take place during class and inside the school's labs, we are faced with one issue: not having full administrator powers and full control of the software we are allowed to install. Having a complete virtual machine also allows a full portability of our development environment since it's common that the actual physical machines used for development vary between classes. Other advantage include reducing the stress of deployment and developing in a safe environment. Once the project is done, it is possible to just copy the virtual machine to its final destination instead of doing a full reinstall of the system. Should any problems occur during the development, like corruption of the essential packages, for example, it will not affect the main system from which the virtual machine loaded. Multiple virtual machines can co-exist in a hard drive, each one having its own full environment, using different softwares installed and eliminating possible conflits. Even though a virtual is somewhat "closed", it is possible to share files between the main system (host) and a virtual machine (guest) using specific partitions. 
 
-\section{Interaction avec l'utilisateur}
+By using the software called Oracle VM VirtualBox, we were able to create a full development environment in a virtual machine with the Ubuntu operational system version 14.04. Ubuntu was our choice of operational system because it combines the power and possibilities of a Unix system, useful packages installed out of the box and a friendly Graphical User Interface. All that while still being completely free to use, since Ubuntu is an open source software. 
+
+Once the operational system is installed on the virtual machine, it might be necessary to configure a network proxy so it is possible to access the internet from within. That is the case when using computers from the school's labs. Using Ubuntu, however, this is not such a difficult task. A proxy can be added by accessing System's Settings > Network > Proxy. 
+
+\section{Basic packages and installation}
+
+To install BMONS on the virtual machine, it is firstly necessary either to download BMONS from the github repository (https://github.com/Etiene/sailor/archive/master.zip)
+or to download at least a file called install.sh, located at the directory /scripts/server
+
+Even though a virtual machine allows a portable environment, eliminating the need to install all software needed everytime a developer changes computers, sometimes errors might occur and a fresh install of the system might be necessary. This is why BMONS is provided with a install script for the server side. A bash script, extension .sh, runs multiple commands that normally would be necessary to be ran in the command line terminal and is very useful for automating tasks or a repeated sequence of commands. The install.sh file provided with BMONS will, then, automatically install most of the required software to run the BMONS server and modify it. Please note that this script should be run by the root user or using the privileges of the root user by using sudo.
+
+cd <location of BMONS at the filesystem>/scripts/server
+sudo ./install.sh
+
+Among the essential packages installed by this script you will find: Git, the version control software used to keep track of BMONS; Ruby, the server-side programming language used on BMONS's website; Rails - the framework over which BMONS's website is developed; PostgreSQL - the database used to store BMONS's data; and pgAdmin III - a GUI (Graphical User Interface) software to administrate PostgreSQL.
+
+An IDE (Integrated Development Environment) is not provided with the install script. Not only some IDEs are needlessly heavy, we believe that each developer has the right to choose their preferred way to write their code. The choice of our team was to use regular text editors, like gedit or Sublime Text (recommended).
+
+\section{Database and backup}
+
+
+
+\section{Webserver}
+
+\section{L'interface Web}
+
+\section{The API and receipt of data from external source}
+
