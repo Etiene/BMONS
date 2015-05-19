@@ -30,7 +30,7 @@ byte mac[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED };
 // if you don't want to use DNS (and reduce your sketch size)
 // use the numeric IP instead of the name for the server:
 //IPAddress server(74,125,232,128);  // numeric IP for Google (no DNS)
-char server[] = "moodle.ensta-bretagne.fr";    // name address for Google (using DNS)
+char server[] = "172.20.10.207";    // name address for Google (using DNS)
 
 // Set the static IP address to use if the DHCP fails to assign
 //IPAddress ip(192,168,0,177);
@@ -59,18 +59,57 @@ void setup() {
   Serial.println("connecting...");
 
   // if you get a connection, report back via serial:
-  if (client.connect(server, 80)) {
+  
+  if (client.connect(server, 8080)) {
     Serial.println("connected");
+    char * Data1="{\"email\":\"nicolas3lee@gmail.com\",\"password\=\"zt3931221\"}";
+    char * Data = "email=nicolas3lee@gmail.com&password=zt3931221";
+    String PostData=URLEncode(Data1);
+    
+    //String PostData="someDatatoPost";
     // Make a HTTP request:
-    client.println("GET / HTTP/1.1");
-    client.println("Host: moodle.ensta-bretagne.fr");
-    client.println("Connection: close");
+    client.println("POST /login HTTP/1.1");
+    client.println("Host: 172.20.10.207");
+    
+    //client.println("Connection: close");
+    //String PostData="{\"user\":{\"name\":\"abcdefg\",\"email\":\"leilei.zheng@gmail.com\",\"password\":\"zt3931221\",\"passwrd_confirmation\":\"zt3931221\"}}";
+    //String PostData="{ name : \"abcdefg\", email : \"leilei.zheng@gmail.com\", password : \"zt3931221\", passwrd_confirmation : \"zt3931221\"}";
+   
+    //Serial.println(PostData.length());
+    
+    //client.println("Content-Type: application/x-www-form-urlencoded;");
+    client.println("Content-Type: application/json;");
+   // client.print("Content-Length: ");
+    //client.println(PostData.length());  
+    
     client.println();
+    client.println(PostData);
+    //client.println();
   }
   else {
     // kf you didn't get a connection to the server:
     Serial.println("connection failed");
   }
+}
+
+String URLEncode(const char* msg)
+{
+    const char *hex = "0123456789abcdef";
+    String encodedMsg = "";
+
+    while (*msg!='\0'){
+        if( ('a' <= *msg && *msg <= 'z')
+                || ('A' <= *msg && *msg <= 'Z')
+                || ('0' <= *msg && *msg <= '9') ) {
+            encodedMsg += *msg;
+        } else {
+            encodedMsg += '%';
+            encodedMsg += hex[*msg >> 4];
+            encodedMsg += hex[*msg & 15];
+        }
+        msg++;
+    }
+    return encodedMsg;
 }
 
 void loop()
