@@ -1,0 +1,35 @@
+<% 
+
+    alerts = Alert.all
+    alerts.each do |alert| 
+      last_log = AlertLog.where(alert_id: alert.id).last
+      produceAlert = false
+      if last_log
+        %>
+TO DO : Compare dates
+     <%
+      else
+      	produceAlert = true
+         %>
+		
+     <%
+      end
+	      if produceAlert
+	      last_measurement = Measurement.where(sensor_id: alert.sensor_id).last
+	 %>
+	<%= last_measurement.value %> <%= alert.comparison %> <%= alert.threshold %> 
+	     <%
+	      if last_measurement and ((alert.comparison.to_i == 0 and last_measurement.value < alert.threshold) or (last_measurement and alert.comparison.to_i == 1 and last_measurement.value == alert.threshold) or (last_measurement and alert.comparison.to_i == 2 and last_measurement.value > alert.threshold))
+	 %>
+	error
+	     
+	     <%
+	 	  else
+	 %>
+	NO ALERT
+	     <% 	  	
+	      end
+	   end
+    end
+
+ %>
