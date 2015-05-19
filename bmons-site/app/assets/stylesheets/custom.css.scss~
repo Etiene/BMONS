@@ -5,7 +5,7 @@
 /*sessions new*/
 .bmons-welcome{
     width: 1000px;
-		font-size: 4em;
+		font-size: 2em;
     /*display: block;*/
    /* margin-left: 10px;*/
 		
@@ -53,8 +53,9 @@ footer {
 	position:absolute;
 	top:20px;*/
 
-	margin-top: 360px;
-  padding-top: 5px;
+	/*margin-top: 360px;*/
+  padding-top: 480px;
+	padding-left: 200px;
   border-top: 1px solid #eaeaea;
 	color: #777;
 }
