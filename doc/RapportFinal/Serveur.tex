@@ -21,11 +21,53 @@ Among the essential packages installed by this script you will find: Git, the ve
 
 An IDE (Integrated Development Environment) is not provided with the install script. Not only some IDEs are needlessly heavy, we believe that each developer has the right to choose their preferred way to write their code. The choice of our team was to use regular text editors, like gedit or Sublime Text (recommended).
 
-\section{Database and backup}
-
-
-
 \section{Webserver}
+
+BMONS's website's server files are located under the directory bmons-site of our files. 
+
+Before the first use of BMONS, it is necessary to navigate to this directory and run 'bundle install' and 'rake db:schema:load' at the command line. Please note that this step is not necessary if you are running BMONS from a previously configured virtual machine. This is required only if it is a fresh install of BMONS and only before the first time of running the webserver.
+
+cd <location of BMONS at the filesystem>/bmons-site
+bundle install
+rake db:schema:load
+
+BMON's website uses some third-party softwares that made the development phase more productive, such as Devise, for example. Devise is a full-featured authentication solution which handles all of the controller logic and form views. This was used to implement the login system for BMONS. Running 'bundle install' will install all the necessary gems (plugins for the Ruby language) required to run Rails and the other gems that we chose to use during development. 
+
+When installing the server for the first time, the database will be empty. It will not contain the tables that store our data. This is why the command 'rake db:schema:load' is necessary. It will load the schema of the entities used by the website and generate the queries that will create those tables.
+
+To start the server, it is necessary to run the command 'rails server'.
+
+cd <location of BMONS at the filesystem>/bmons-site
+rails server
+
+Once that is done, the website will be accessible via the url configured.
+
+\section{Database and Backup}
+
+The choice of database our team made for BMONS was PostgreSQL. Many options were possible but there are some advantages to using this specific one. While NoSQL databases are interesting and can be very fast in terms of performance, they are not very easy to deal in terms of development. Also, NoSQL is usually very fast for accessing and reading data but not so fast for writing and inserting data. Normally, BMONS should insert data way more frequently than reading. That is because one single user that is not connected to the website the whole time can have multiple beehives that will be sending data to the server on a regular basis, making us to reject this option right away. In addition to this, the archirecture of BMONS's data is already compatible with a regular SQL relational data.
+
+There are many possible options of SQL databases, however, among those, PostgreSQL was favored because our team already had some knowledge of it and because it is a very good, reliable and stable open source software that is capable of dealing with very high volumes of data if necessary.
+
+It is recommended to do database backups regularly. In case data is corrupted, it will be possible to restore the original data from recent a backup. BMONS is provided with a script that will automatically dump the database data into a dated file in the filesystem regularly (every 3 hours). It is recommended that that these generated files are copied to a safe location, such as another computer or an external hard drive from time to time.
+
+Cron is an automatic scheduler for Unix systems that will run command line commands in specific times or time intervals according to the following pattern:
+  #comment
+  * * * * *  command to execute
+  │ │ │ │ │
+  │ │ │ │ │
+  │ │ │ │ └───── day of week (0 - 6)
+  │ │ │ └────────── month (1 - 12)
+  │ │ └─────────────── day of month (1 - 31)
+  │ └──────────────────── hour (0 - 23)
+  └───────────────────────── min (0 - 59)
+
+To active the automatic backups, it is necessary to navigate to the directory /scripts/server of BMONS files. Under this directory is located a file called cron.txt. When making a fresh install of BMONS, it might be necessary to edit the line 6 of this file and correct the path to the backup bash script. It is also possible to change the frequency of the backups if desired. 
+ 
+0 */3 * * * /home/bmons/BMONS/scripts/server/db_backup.sh
+
+Then you can run the following command to incorporate this cron job into the schedule:
+
+crontab cron.txt
 
 \section{L'interface Web}
 
