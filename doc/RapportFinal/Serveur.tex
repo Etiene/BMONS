@@ -7,15 +7,18 @@ By using the software called Oracle VM VirtualBox, we were able to create a full
 
 Once the operational system is installed on the virtual machine, it might be necessary to configure a network proxy so it is possible to access the internet from within. That is the case when using computers from the school's labs. Using Ubuntu, however, this is not such a difficult task. A proxy can be added by accessing System's Settings > Network > Proxy. 
 
+\clearpage
 \begin{figure}[h]
-\centering\includegraphics[scale=1]{virtualbox.png}
+\centering\includegraphics[scale=0.5]{virtualbox.png}
 \caption{\label{fig:virtualbox} Oracle VM VirtualBox Software}
 \end{figure}
 
 \begin{figure}[h]
-\centering\includegraphics[scale=1]{ubuntu.png}
+\centering\includegraphics[scale=0.5]{ubuntu.png}
 \caption{\label{fig:ubuntu} Ubuntu 14.04 loaded from Oracle VM Virtual Box}
 \end{figure}
+
+\clearpage
 
 \section{Basic packages and installation}
 
@@ -23,22 +26,23 @@ To install BMONS on the virtual machine, it is firstly necessary either to downl
 
 Even though a virtual machine allows a portable environment, eliminating the need to install all software needed everytime a developer changes computers, sometimes errors might occur and a fresh install of the system might be necessary. This is why BMONS is provided with a install script for the server side. A bash script, extension .sh, runs multiple commands that normally would be necessary to be ran in the command line terminal and is very useful for automating tasks or a repeated sequence of commands. The install.sh file provided with BMONS will, then, automatically install most of the required software to run the BMONS server and modify it. Please note that this script should be run by the root user or using the privileges of the root user by using sudo.
 
-cd <location of BMONS at the filesystem>/scripts/server
-sudo ./install.sh
+\indent cd <location of BMONS at the filesystem>/scripts/server
+\indent sudo ./install.sh
 
 Among the essential packages installed by this script you will find: Git, the version control software used to keep track of BMONS; Ruby, the server-side programming language used on BMONS's website; Rails - the framework over which BMONS's website is developed; PostgreSQL - the database used to store BMONS's data; and pgAdmin III - a GUI (Graphical User Interface) software to administrate PostgreSQL.
 
 An IDE (Integrated Development Environment) is not provided with the install script. Not only some IDEs are needlessly heavy, we believe that each developer has the right to choose their preferred way to write their code. The choice of our team was to use regular text editors, like gedit or Sublime Text (recommended).
 
+\clearpage
 \section{Webserver}
 
 BMONS's website's server files are located under the directory bmons-site of our files. 
 
 Before the first use of BMONS, it is necessary to navigate to this directory and run 'bundle install' and 'rake db:schema:load' at the command line. Please note that this step is not necessary if you are running BMONS from a previously configured virtual machine. This is required only if it is a fresh install of BMONS and only before the first time of running the webserver.
 
-cd <location of BMONS at the filesystem>/bmons-site
-bundle install
-rake db:schema:load
+\indent cd <location of BMONS at the filesystem>/bmons-site
+\indent bundle install
+\indent rake db:schema:load
 
 BMON's website uses some third-party softwares that made the development phase more productive, such as Devise, for example. Devise is a full-featured authentication solution which handles all of the controller logic and form views. This was used to implement the login system for BMONS. Running 'bundle install' will install all the necessary gems (plugins for the Ruby language) required to run Rails and the other gems that we chose to use during development. 
 
@@ -46,11 +50,12 @@ When installing the server for the first time, the database will be empty. It wi
 
 To start the server, it is necessary to run the command 'rails server'.
 
-cd <location of BMONS at the filesystem>/bmons-site
-rails server
+\indent cd <location of BMONS at the filesystem>/bmons-site
+\indent rails server
 
 Once that is done, the website will be accessible via the url configured.
 
+\clearpage
 \section{Database and Backup}
 
 The choice of database our team made for BMONS was PostgreSQL. Many options were possible but there are some advantages to using this specific one. While NoSQL databases are interesting and can be very fast in terms of performance, they are not very easy to deal in terms of development. Also, NoSQL is usually very fast for accessing and reading data but not so fast for writing and inserting data. Normally, BMONS should insert data way more frequently than reading. That is because one single user that is not connected to the website the whole time can have multiple beehives that will be sending data to the server on a regular basis, making us to reject this option right away. In addition to this, the archirecture of BMONS's data is already compatible with a regular SQL relational data.
@@ -76,8 +81,9 @@ To activate the automatic backups, it is necessary to navigate to the directory 
 
 Then you can run the following command to incorporate this cron job into the schedule:
 
-crontab cron.txt
+\indent crontab cron.txt
 
+\clearpage
 \section{The web interface}
 
 The web interface of BMONS was built using Ruby on Rails. Rails is an open source web application development framework written in the Ruby language. It's used specially for developing database-driven websites and allows the creation of applications using pre defined structures. Rails is a Model-View-Controller (MVC) framework. MVC is a software design pattern for implementing user interfaces. It divides the software into three interconnected parts. 
@@ -103,27 +109,28 @@ and dark gray theme on a light background because it's aesthetically beautiful, 
 
 Bootstrap, however, is not enough for displaying our data. The dashboard requires the data to be easily grasped and even though tables are really useful, they are not sufficient to provide a quick visual analysis. Our team's choice of optimal display was a graphical one. The development of the graphical dashboard was made with NVD3, a JavaScript library that extends another library called D3 that allows you to bind arbitrary data to a Document Object Model (DOM), and then apply data-driven transformations to the document. The advantage of using NVD3 over D3 is that it is an easier to use library with a reduced collection of components that satisfies our needs without taking away the power of D3. The data is then passed from the controller backend in ruby to the frontend view in a JavaScript piece of code that is then used and manipulated by the NVD3 library, producing beautiful results. The graphic allows for the visualization of measures from sensors in time of each individual beehive, allowing to switch between hives without refreshing the page. 
 
+\clearpage
 \begin{figure}[h]
-\centering\includegraphics[scale=1]{login.png}
+\centering\includegraphics[scale=0.5]{login.png}
 \caption{\label{fig:login} Initial page of BMONS web page. User authentication is necessary. }
 \end{figure}
 
 \begin{figure}[h]
-\centering\includegraphics[scale=1]{dashboard.png}
+\centering\includegraphics[scale=0.5]{dashboard.png}
 \caption{\label{fig:dashboard} The initial page once the user is logged in shows the dashboard. }
 \end{figure}
 
 \begin{figure}[h]
-\centering\includegraphics[scale=1]{sensor.png}
+\centering\includegraphics[scale=0.5]{sensor.png}
 \caption{\label{fig:sensor} Page that shows a sensor information }
 \end{figure}
 
 \begin{figure}[h]
-\centering\includegraphics[scale=1]{alert.png}
+\centering\includegraphics[scale=0.5]{alert.png}
 \caption{\label{fig:alert} Page to create a new alert. }
 \end{figure}
 
-
+\clearpage
 
 \section{The API and receipt of data from external source}
 

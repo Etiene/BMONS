@@ -30,3 +30,11 @@ Dans les deux cas, nous avons aussi envisagé un filtre physique placé à la so
 
 Pour l'alimentation, il peut être intéressant de développer un système informant l'apiculteur de l'état des piles/batteries présents dans le boitier avec la carte Arduino. \\
 Il pourra aussi être intéressant de développer un système plus écologique comme par exemple une éolienne ou des panneaux solaires que nous disposerons au milieux du rucher et où les différents cadres viendront s'alimenter. Coupler cette solution avec une communication Wifi permettra à l'apiculteur d'utiliser le système de cadre de mesure pour un coup minimal. 
+
+\section{Server}
+
+For the moment, for each new measurement a POST request needs to be made. In the case there are many users with many beehives, there will be many requests being made and that could cause a strain on the server, having an impact on scalability. In the future, it should be possible to send new measurements in batches, one single POST request would send a JSON object containing the values for all sensors to that Arduino. It would also be interesting to create a queue. If there is a connectivity problem, the data will wait and then be sent in a single request once connectivity is restored, causing the data not to have "holes" in its timeline.
+
+Another possible improvement is, when creating a new beehive at the web application, it would already create a set of basic sensors that are most commonly used. This would allow a quicker configuration for a new beekeeper's account. 
+
+It would also be optional if the web application generated a text file that could be incorporated into the Arduino, and the Arduino would read from that file and understand which physical sensor corresponds to which unique database entry, automating a configuration that is, for the moment, manual. 
