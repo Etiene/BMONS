@@ -1,5 +1,5 @@
-\chapter{Serveur}
-\section{Machine Virtuel}
+\chapter{Server}
+\section{Virtual Machine}
 
 During the development of the BMONS systems, we opted for the utilization of a Virtual Machine. A virtual machine is a way to emulate a particular computer system from another system. Considering that most of the development would take place during class and inside the school's labs, we are faced with one issue: not having full administrator powers and full control of the software we are allowed to install. Having a complete virtual machine also allows a full portability of our development environment since it's common that the actual physical machines used for development vary between classes. Other advantage include reducing the stress of deployment and developing in a safe environment. Once the project is done, it is possible to just copy the virtual machine to its final destination instead of doing a full reinstall of the system. Should any problems occur during the development, like corruption of the essential packages, for example, it will not affect the main system from which the virtual machine loaded. Multiple virtual machines can co-exist in a hard drive, each one having its own full environment, using different softwares installed and eliminating possible conflits. Even though a virtual is somewhat "closed", it is possible to share files between the main system (host) and a virtual machine (guest) using specific partitions. 
 
@@ -61,7 +61,7 @@ Cron is an automatic scheduler for Unix systems that will run command line comma
   │ └──────────────────── hour (0 - 23)
   └───────────────────────── min (0 - 59)
 
-To active the automatic backups, it is necessary to navigate to the directory /scripts/server of BMONS files. Under this directory is located a file called cron.txt. When making a fresh install of BMONS, it might be necessary to edit the line 6 of this file and correct the path to the backup bash script. It is also possible to change the frequency of the backups if desired. 
+To activate the automatic backups, it is necessary to navigate to the directory /scripts/server of BMONS files. Under this directory is located a file called cron.txt. When making a fresh install of BMONS, it might be necessary to edit the line 6 of this file and correct the path to the backup bash script. It is also possible to change the frequency of the backups if desired. 
  
 0 */3 * * * /home/bmons/BMONS/scripts/server/db_backup.sh
 
@@ -69,7 +69,31 @@ Then you can run the following command to incorporate this cron job into the sch
 
 crontab cron.txt
 
-\section{L'interface Web}
+\section{The web interface}
+
+The web interface of BMONS was built using Ruby on Rails. Rails is an open source web application development framework written in the Ruby language. It's used specially for developing database-driven websites and allows the creation of applications using pre defined structures. Rails is a Model-View-Controller (MVC) framework. MVC is a software design pattern for implementing user interfaces. It divides the software into three interconnected parts. 
+Models: They store the data of the application, its business rules and methods. It's often regarded as a "mirror" of the database.
+Views: They're the output of a model data representation, such as a table or a diagram, for the user.
+Controllers: They make the mediation between the models and the views, sending commands to update models' states and sending commands to the view to alter the presentation of the models.
+
+The Rails philosophy includes two major guiding principles:
+
+"Don't Repeat Yourself: DRY is a principle of software development which states that "Every piece of knowledge must have a single, unambiguous, authoritative representation within a system." By not writing the same information over and over again, our code is more maintainable, more extensible, and less buggy.
+Convention Over Configuration: Rails has opinions about the best way to do many things in a web application, and defaults to this set of conventions, rather than require that you specify every minutiae through endless configuration files."
+(http://guides.rubyonrails.org/getting_started.html)
+
+Rails philosophy and features allowed our team to develop an interesting application in a feasible time. This web application allows a beekeeper to register, login, change password, see a dashboard with visual data from their hives and manage hives and alerts. The application will also receive content from the Arduino located at the hive and update its data.
+
+The authentication system was developed with the use of Devise, which is a plugin that fully handles the authentication through the MVC pattern. The pages to manage beehives, sensors, measurements, alerts and alert logs were firstly created with the use of scaffolding. A scaffold in Rails is a full set of model, database migration for that model, controller to manipulate it, views to view and manipulate the data, and a test suite for each of the above. This scaffold can be created through the command line in a very easy manner.
+
+rails generate scaffold Beehive name:string user:references position:string mode:string
+
+However, scaffolding alone is not enough and after the creation it is necessary to rearrange and modify the code to make it suit our needs. One example is modifying the beehive scaffold for showing only the beehives that belong to the user currently logged in.
+
+One important aspect of the BMONS's website is the design. The design was developed with the help of Bootstrap. Bootstrap is a free and open source front-end framework that uses HTML, CSS, and JavaScript to provide re-usable components and other interface elements. It allows the development of responsive and mobile first projects on the web. With some customization Bootstrap, we were able to obtain pages that display our system's contents beautifully.
+
+Bootstrap, however, is not enough for displaying our data. The dashboard requires the data to be easily grasped and even though tables are really useful, they are not sufficient to provide a quick visual analysis. Our team's choice of optimal display was a graphical one. The development of the graphical dashboard was made with NVD3, a JavaScript library that extends another library called D3 that allows you to bind arbitrary data to a Document Object Model (DOM), and then apply data-driven transformations to the document. The advantage of using NVD3 over D3 is that it is an easier to use library with a reduced collection of components that satisfies our needs without taking away the power of D3. The data is then passed from the controller backend in ruby to the frontend view in a JavaScript piece of code that is then used and manipulated by the NVD3 library, producing beautiful results. The graphic allows for the visualization of measures from sensors in time of each individual beehive, allowing to switch between hives without refreshing the page. 
 
 \section{The API and receipt of data from external source}
 
+BMONS contains an API for receiving the captured data by the Arduino and storing it on a database for later displaying to the beekeeper. By default a Ruby on Rails CRUD (create, read, update and delete actions for an entity) is already a REST (Representational State Transfer) API that will perform the necessary actions using the right HTTP protocol request method and with full JSON capability. A PATCH or PUT will access the update action, a GET will obtain the data in a JSON object as a response, a DELETE will access the delete action and destroy the desired data and, finally, a POST will receive a JSON object and store new data. For BMONS needs, it was necessary to use the POST request to receive new measurements periodically from an external source, the Arduino, instead of from a form in a view used by an authenticated user. To make sure the data coming in is still safe, for the measurement create action, instead of a user authentication, a Basic HTTP Authentication is used. That means that the POST request sent by the Arduino must also send an authentication token on its header and the data will only be stored if the details are correct. In addition to the authentication, the Arduino must also sent, of course, the data. The content-type of this request should be application/JSON and a JSON object containing the necessary information for creating a new measurement should be included in the body of the request. To test BMONS's RESTful API, a browser extension named Postman was used as a client. 
