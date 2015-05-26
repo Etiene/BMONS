@@ -60,31 +60,25 @@ void setup() {
 
   // if you get a connection, report back via serial:
   
-  if (client.connect(server, 8080)) {
+  if (client.connect(server, 3000)) {
     Serial.println("connected");
-    char * Data1="{\"email\":\"nicolas3lee@gmail.com\",\"password\=\"zt3931221\"}";
-    char * Data = "email=nicolas3lee@gmail.com&password=zt3931221";
-    String PostData=URLEncode(Data1);
+    char * Data="{\"value\":\"1005\"}";
+
+    //String PostData=URLEncode(Data);
+    String PostData=Data;
     
-    //String PostData="someDatatoPost";
     // Make a HTTP request:
-    client.println("POST /login HTTP/1.1");
+    client.println("POST /measurements HTTP/1.1");
     client.println("Host: 172.20.10.207");
     
-    //client.println("Connection: close");
-    //String PostData="{\"user\":{\"name\":\"abcdefg\",\"email\":\"leilei.zheng@gmail.com\",\"password\":\"zt3931221\",\"passwrd_confirmation\":\"zt3931221\"}}";
-    //String PostData="{ name : \"abcdefg\", email : \"leilei.zheng@gmail.com\", password : \"zt3931221\", passwrd_confirmation : \"zt3931221\"}";
-   
-    //Serial.println(PostData.length());
-    
-    //client.println("Content-Type: application/x-www-form-urlencoded;");
+    client.println("Connection: close");
     client.println("Content-Type: application/json;");
-   // client.print("Content-Length: ");
-    //client.println(PostData.length());  
+    client.print("Content-Length: ");
+    client.println(PostData.length());  
     
     client.println();
     client.println(PostData);
-    //client.println();
+    client.println();
   }
   else {
     // kf you didn't get a connection to the server:

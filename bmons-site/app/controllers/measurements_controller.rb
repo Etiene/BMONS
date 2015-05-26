@@ -1,6 +1,7 @@
 class MeasurementsController < ApplicationController
   skip_before_filter :authenticate_user! # we do not need devise authentication here
-  http_basic_authenticate_with name: "test", password: "test", except: [:index, :show, :destroy, :edit]
+  #http_basic_authenticate_with name: "test", password: "test", except: [:index, :show, :destroy, :edit]
+	http_basic_authenticate_with :name => 'bmons', :password => 'bmons' if Rails.env.production?
   before_action :set_measurement, only: [:show, :edit, :update, :destroy]
   skip_before_action :verify_authenticity_token
 
