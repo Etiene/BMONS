@@ -1,0 +1,8 @@
+Hello, <%= @user.name %>
+========================
+
+You are receiving this email because the hive <%= @measurement.sensor.beehive.name %> has raised an alert.
+
+<%= @alert.message %>
+
+The measurement taken at <%= @measurement.datetime %> was of  <%= @measurement.value %> <%= @alert.sensor.unity %>, which is <%= (@alert.comparisonArray[(@alert.comparison).to_i]).downcase %> <%= @alert.threshold %> <%= @alert.sensor.unity %>.

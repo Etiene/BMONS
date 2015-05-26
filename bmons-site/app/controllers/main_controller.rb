@@ -14,6 +14,7 @@ class MainController < ApplicationController
       beehive.sensors.each do |sensor| 
 
         str = str + "{ key: \"#{sensor.name} (#{sensor.unity})\", color: \"#{colors[c]}\", values: [ "
+        #to-do / improvement: limit amount of measurements
         sensor.measurements.each do |measurement| 
           str = str + "{x:#{(measurement.datetime).to_time.to_i},y:#{measurement.value}}, "
           
@@ -43,6 +44,6 @@ class MainController < ApplicationController
 
 
   def checkAlerts
-
+    #TEST
   end
 end

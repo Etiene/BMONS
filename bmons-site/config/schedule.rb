@@ -21,6 +21,8 @@
 
 
 every '* * * * *' do
-	command 'echo "hello world" > /home/bmons/BMONS/bmons-site/cron.out'
+	#runner "Alert.checkAlerts", :environment => 'development' #CHANGE ENVIRONMENT WHEN NECESSARY
+	command "cd /home/bmons/BMONS/bmons-site && rails runner Alert.checkAlerts"
+	command 'echo "Running checkAlerts 2" > /home/bmons/BMONS/bmons-site/cron.out'
 end
 

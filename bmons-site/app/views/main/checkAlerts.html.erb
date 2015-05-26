@@ -1,12 +1,18 @@
 <% 
-
+	#TEST
+	
+	#Alert.checkAlerts
     alerts = Alert.all
     alerts.each do |alert| 
       last_log = AlertLog.where(alert_id: alert.id).last
       produceAlert = false
       if last_log
+      	diff = (Time.now - last_log.created_at).to_i / 60
+      	if diff > alert.frequency
+      		produceAlert = true
+      	end
         %>
-TO DO : Compare dates
+TO DO : Compare dates <%= diff/60 %>
      <%
       else
       	produceAlert = true
@@ -20,8 +26,21 @@ TO DO : Compare dates
 	<%= last_measurement.value %> <%= alert.comparison %> <%= alert.threshold %> 
 	     <%
 	      if last_measurement and ((alert.comparison.to_i == 0 and last_measurement.value < alert.threshold) or (last_measurement and alert.comparison.to_i == 1 and last_measurement.value == alert.threshold) or (last_measurement and alert.comparison.to_i == 2 and last_measurement.value > alert.threshold))
+
+	      	sent = UserMailer.alert_email(alert.user,alert,last_measurement).deliver_now
+	      	alertLog = AlertLog.new
+	      	alertLog.message = alert.message
+	      	alertLog.recipient = alert.user.email
+	      	alertLog.alert_id = alert.id
+	      	if sent 
+	      		alertLog.status = 200
+	      	else
+	      		alertLog.status = 500
+	      	end
+	      	alertLog.save
+
 	 %>
-	error
+	SEND ALERT:<%= alert.user.email %>
 	     
 	     <%
 	 	  else

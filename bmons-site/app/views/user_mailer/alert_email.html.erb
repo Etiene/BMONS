@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello, <%= @user.name %></h1>
+    <p>
+      You are receiving this email because the hive <%= @measurement.sensor.beehive.name %> has raised an alert.
+    </p>
+
+    <p>
+     <%= @alert.message %>
+    </p>
+
+    <p>
+      The measurement taken at <%= @measurement.datetime %> was of  <%= @measurement.value %> <%= @alert.sensor.unity %>, which is <%= (@alert.comparisonArray[(@alert.comparison).to_i]).downcase %> <%= @alert.threshold %> <%= @alert.sensor.unity %>.
+    </p>
+  </body>
+</html>
